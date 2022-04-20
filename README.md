@@ -7,7 +7,7 @@
 - ❤️ Family is everything to me.
 - 💻 Coding is my passion.
 - 👯 I enjoy collaborating with other developers, and also working solo.
-- 🥅 2021 Goal: Contribute to the open source community a total of 1000 times.
+- 🥅 2022 Goal: Code like no one's watching.
 - 🧗 I enjoy the outdoors and going on road trips. 
 
 ### Look into my world:
@@ -98,6 +98,8 @@
 
 <div align="center">
   <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+  <img src="https://img.shields.io/badge/gitlab-%215151515.svg?style=for-the-badge&logo=gitlab&logoColor=white" alt="GitLab"/>
+  <img src="https://img.shields.io/badge/bitbucket-%215151515.svg?style=for-the-badge&logo=bitbucket&logoColor=blue" alt="BitBucket"/>
   <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git"/>  
 </div>
 
@@ -111,7 +113,8 @@
 <h4 align="center">Preferred OS</h4>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alg="Windows" />
+  <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows" />
+  <img src="https://img.shields.io/badge/Linux-55ffD6?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" />
 </div>
 
 ### Soft Skills
