@@ -6,6 +6,8 @@ Would like to collab on more open source things, depending on the value you feel
 
 Current skillset:
 - javascript
+- c#
+- sql
 - git
 - bash
 - linux
