@@ -1,13 +1,55 @@
-👋 Hello, World! I’m here for the memes, code sharing, and open source collaboration.
+# 👋 Hello, Fellow Code Enthusiasts!
 
-💼 Professional Journey: From leading web service development at Insight Global to mentoring junior engineers at Fiserv, I’ve worn many hats in the tech industry.
+I'm a Senior Software Engineer who believes in the power of standardized development environments and AI-assisted coding - but done right, with proper guardrails and best practices.
 
-💻 Tech Stack: Proficient in JavaScript, C#, Bash, YAML, VIM, and VS Code. I specialize in full-stack development and have expertise in Model View View-Model (MVVM) and Model View Controller (MVC) architectures.
+## 🚀 Professional Journey
 
-🌐 Open Source: Eager to contribute and collaborate on open source projects. Let’s discuss how I can bring value to your team!
+Currently spearheading development initiatives at Fiserv, where I:
+- 🔄 Led the migration from Jenkins to GitHub Actions, optimizing CI/CD workflows
+- 🛠️ Develop full-stack applications using .NET, C#, React, and JavaScript
+- 🔒 Integrate enterprise security tools like Fortify SCA and Audit Workbench
+- 🤝 Mentor teams in standardized development practices
 
-🎓 Education: Currently pursuing a Multidisciplinary Degree with a Concentration in Computer Science at the University of Nebraska At Omaha. Just 5 classes away from graduating!
+## 💻 Tech Arsenal
 
-🔗 Let’s Connect: Feel free to reach out on LinkedIn or check out my projects on GitHub.
+```yaml
+languages: [C#, JavaScript, SQL, XML, YAML, Groovy]
+frameworks: [.NET 4.8 & 6+, React]
+tools: [
+  "Git/GitHub",
+  "VS Code/Visual Studio",
+  "CyberArk",
+  "Splunk",
+  "Confluence",
+  "ServiceNow",
+  "Jenkins",
+  "GitHub Actions"
+]
+current_focus: "Building developer-friendly environments that just work"
+```
 
-🎨 Portfolio Project: Check out my portfolio site, a standalone project hosted on its own domain. It’s built with three.js, SCSS, and Framer Motion for styling, and uses Netlify and CI/CD for real-time updates.
+## 🎯 Featured Project
+
+Check out my [Development Environment](link-to-repo) project - born from real-world enterprise challenges, it's my solution to the "it works on my machine" problem. Built with:
+- Multiple distribution methods (DockerHub/BitTorrent)
+- Enterprise-grade security scanning
+- AI-friendly workflow integration
+- Comprehensive documentation
+
+## 🎓 Academic Pursuit
+
+5 classes away from completing my Multidisciplinary Degree with a Computer Science concentration at the University of Nebraska At Omaha. Because learning never stops!
+
+## 🤖 AI + Development Philosophy
+
+I'm a strong proponent of AI-assisted development, but with a twist:
+- Structured, documented approaches
+- Clear guardrails and best practices
+- Focus on reproducible results
+- Enterprise-ready methodologies
+
+## 📫 Let's Connect!
+
+- [LinkedIn](https://www.linkedin.com/in/bcalderonmorales-cmoe?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B%2B9EI8SKhTSSqWUYdSihb4g%3D%3D) - Professional updates
+
+_"The best code is the code that never needs to be written" - but when we do write it, let's make it maintainable, secure, and properly documented!_
