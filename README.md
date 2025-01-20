@@ -1,6 +1,6 @@
 # 👋 Hello, Fellow Code Enthusiasts!
 
-I'm a Senior Software Engineer who believes in the power of standardized development environments and AI-assisted coding - but done right, with proper guardrails and best practices.
+I'm a Software Engineer who believes in the power of standardized development environments and AI-assisted coding - but done right, with proper guardrails and best practices.
 
 ## 🚀 Professional Journey
 
@@ -30,7 +30,7 @@ current_focus: "Building developer-friendly environments that just work"
 
 ## 🎯 Featured Project
 
-Check out my [Development Environment](link-to-repo) project - born from real-world enterprise challenges, it's my solution to the "it works on my machine" problem. Built with:
+Check out my [Development Environment](https://github.com/BA-CalderonMorales/dev-environment) project - born from real-world enterprise challenges, it's my solution to the "it works on my machine" problem. Built with:
 - Multiple distribution methods (DockerHub/BitTorrent)
 - Enterprise-grade security scanning
 - AI-friendly workflow integration
