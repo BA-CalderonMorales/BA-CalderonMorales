@@ -1,4 +1,4 @@
-# Hi, I'm B. Calderon Morales 👋
+# Hi, I'm Brandon A. Calderon Morales 👋
 
 **Software Engineer, Sr. Professional**  
 Omaha, Nebraska, United States  
