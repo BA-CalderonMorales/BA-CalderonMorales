@@ -1,5 +1,3 @@
-<div align="center">
-
 # 👋 Hey there, code voyeur!
 
 Just here to snoop on cool repos, star the gems, and maybe contribute if the mood strikes. Oh, and share dank coding memes. Because what's GitHub without a little fun?
@@ -29,10 +27,6 @@ features:
   - "Multi-OS support"
   - "Comprehensive documentation site"
 
-distribution:
-  - "DockerHub"
-  - "CLI tool in development"
-
 ## 🛠️ Tech Arsenal
 
 **Core Stack:**
@@ -42,14 +36,6 @@ infrastructure:
   - "GitHub Actions"
   - "Enterprise security tooling"
   - "AI-assisted workflow integration"
-
-## 📚 Documentation Hub
-
-[![Documentation Status](https://img.shields.io/badge/Docs-Active_Development-yellow)](docs/README.md)
-- Quick Start Guide 🚀
-- Contribution Guidelines 🤝
-- Security Protocols 🔒
-- Troubleshooting 🛠️
 
 ## 🎓 Academic Pursuits
 education:
@@ -63,11 +49,4 @@ education:
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/bcalderonmorales-cmoe)
 [![GitHub](https://img.shields.io/badge/GitHub-Profile-black)](https://github.com/BA-CalderonMorales)
 
-**Project Participation:**
-- 🌟 Star the [dev-environment repo](https://github.com/BA-CalderonMorales/dev-environment)
-- 🍴 Fork to customize your implementation
-- 🐛 Submit issues through GitHub
-
 ----"The best environment is the one that gets out of your way - until you need guardrails." - Current Development Mantra
-
-<\div>
