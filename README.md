@@ -1,100 +1,46 @@
-# 👋 Code Voyeur's Lair 
+````markdown
+# Hi, I'm B. Calderon Morales
 
-[![LinkedIn](https://img.shields.io/badge/Let's_Connect-LinkedIn-blue)](https://www.linkedin.com/in/bcalderonmorales-cmoe)
-[![Dev Memes](https://img.shields.io/badge/Dank_Memes-Level_9000-green)](https://github.com/topics/memes)
+I'm a passionate marketing leader with extensive experience in digital marketing, brand management, and strategic innovation. My career has been driven by a commitment to creative storytelling and data-driven strategy, helping brands connect with their audiences in meaningful ways.
 
-```mermaid
-graph TD
-    A[Visitor] --> B{Interests?}
-    B -->|Code| C[Tech Radar ↓]
-    B -->|Laughs| D[Meme Vault ↓]
-    B -->|Collab| E[Contribution Flow ↓]
-```
+## Professional Timeline
 
-## 🛠️ Tech Arsenal Radar
-
-```mermaid
-quadrantChart
-    title Tech Stack Radar
-    x-axis "Adoption"
-    y-axis "Impact"
-    quadrant-1 "Core Tools"
-    quadrant-2 "Emerging Tech"
-    quadrant-3 "Legacy"
-    quadrant-4 "Evaluation"
-    "C#": [0.8, 0.8]
-    "Docker": [0.9, 0.75]
-    "Rust": [0.6, 0.9]
-    "GitHub Actions": [0.85, 0.7]
-    "CyberArk": [0.7, 0.6]
-```
-
-## 🚀 Contribution Workflow
-
-```mermaid
-journey
-    title From Visitor to Collaborator
-    section Discover
-      Visit Profile: 5: Visitor
-      View Projects: 3: Curious
-    section Engage
-      Star Repos: 3: Fan
-      Meme Exchange: 4: Ally
-    section Commit
-      PR Submitted: 5: Contributor
-      Security Audit: 4: Guardian
-```
-
-## 🧠 Knowledge Matrix
-
-```mermaid
-mindmap
-  root((B.A. Calderon-Morales))
-    CI/CD Modernization
-      GitHub Actions
-      Pipeline Security
-    Dev Environment
-      Docker Magic
-      Rust CLI Tools
-    Security
-      SCA Patterns
-      Audit Workflows
-    Memeology
-      CI/CD Humor
-      Rust Dad Jokes
-```
-
-## 📌 Live Project Map
+Below is a visual representation of my career progression. *(The dates and titles below are illustrative—please update them with your actual milestones.)*
 
 ```mermaid
 gantt
-    title Dev Environment Roadmap
     dateFormat  YYYY-MM-DD
-    section Core
-    Docker Optimizations      :active, des1, 2024-03-01, 2024-05-30
-    Rust Migration            :active, des2, 2024-04-01, 2024-06-15
-    section Extensions
-    Windows Support           :crit, 2024-05-01, 2024-07-15
-    AI Guardrail Integration  :2024-06-01, 2024-08-01
+    title Career Timeline
+    section Early Career
+    Marketing Manager       :active, m1, 2015-01-01, 2y
+    section Mid Career
+    Director of Marketing   :active, m2, 2017-01-01, 3y
+    section Leadership
+    Chief Marketing Officer :active, m3, 2020-01-01, 2y
 ```
 
-## 📚 Academic Synergy
+## Skills & Expertise
+
+Here's a quick visual overview of my core skills and areas of expertise:
 
 ```mermaid
-flowchart LR
-    UNO[UNO CS Courses] -->|Algorithms| DockerOpt[Docker Optimizations]
-    UNO -->|Security| CyberArk[Prod Security]
-    UNO -->|Sys Design| EnvDesign[Dev Environment]
-    UNO -->|CLI Tools| RustCLI[Rust Migration]
+flowchart TD
+    A[Marketing Strategy] --> B[Digital Marketing]
+    A --> C[Brand Management]
+    B --> D[SEO & SEM]
+    B --> E[Social Media Marketing]
+    C --> F[Creative Direction]
+    C --> G[Market Research]
 ```
 
+## Projects & Initiatives
+
+Throughout my career, I've led innovative projects that bridge creative marketing with data analytics, fostering growth and engagement for diverse brands. My approach combines strategic planning with hands-on execution, ensuring every campaign resonates with its target audience.
+
+## Connect with Me
+
+For a more detailed look at my professional journey and accomplishments, visit my [LinkedIn profile](http://linkedin.com/in/bcalderonmorales-cmoe).
+
 ---
 
-🔍 **Deep Dive Links**  
-[![Project Status](https://img.shields.io/badge/Active_Project-Dev_Environment-orange)](https://github.com/BA-CalderonMorales/dev-environment) 
-[![Meme Vault](https://img.shields.io/badge/Dankest_Meme-Weekly_Update-green)](https://img.shields.io/badge/Meme_Source-Trust_Me_Bro-8A2BE2)
-
----
-
-> "The environment should amplify your flow - not fight it. Unless you're fighting prod bugs. Then gloves off."  
-> *- Latest Wisdom Drop*
+Feel free to explore my repositories to see my work in action!
