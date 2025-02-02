@@ -1,55 +1,73 @@
-# 👋 Hello, Fellow Code Enthusiasts!
+<div align="center">
 
-I'm a Software Engineer who believes in the power of standardized development environments and AI-assisted coding - but done right, with proper guardrails and best practices.
+# 👋 Hey there, code voyeur!
 
-## 🚀 Professional Journey
+Just here to snoop on cool repos, star the gems, and maybe contribute if the mood strikes. Oh, and share dank coding memes. Because what's GitHub without a little fun?
 
-Currently spearheading development initiatives at Fiserv, where I:
-- 🔄 Led the migration from Jenkins to GitHub Actions, optimizing CI/CD workflows
-- 🛠️ Develop full-stack applications using .NET, C#, React, and JavaScript
-- 🔒 Integrate enterprise security tools like Fortify SCA and Audit Workbench
-- 🤝 Mentor teams in standardized development practices
+## 🚀 Professional Journey & Philosophy
 
-## 💻 Tech Arsenal
+**Current Role at Fiserv:**
+- 🔄 CI/CD Modernization: Migrated Jenkins to GitHub Actions
+- 🛠️ Full-Stack Development: .NET/C# + React/JavaScript
+- 🔒 Security Integration: Fortify SCA, CyberArk, Audit Workbench
+- 🧠 Dev Environment Advocacy: Standardized practices across teams
 
-```yaml
-languages: [C#, JavaScript, SQL, XML, YAML, Groovy]
-frameworks: [.NET 4.8 & 6+, React]
-tools: [
-  "Git/GitHub",
-  "VS Code/Visual Studio",
-  "CyberArk",
-  "Splunk",
-  "Confluence",
-  "ServiceNow",
-  "Jenkins",
-  "GitHub Actions"
-]
-current_focus: "Building developer-friendly environments that just work"
-```
+**AI + Development Principles:**
+ai_guardrails:
+  - "Structured, documented approaches"
+  - "Reproducible environment parity"
+  - "Enterprise-grade security scanning"
+  - "Maintainability over magic"
 
-## 🎯 Featured Project
+## 💻 Active Project: Development Environment
 
-Check out my [Development Environment](https://github.com/BA-CalderonMorales/dev-environment) project - born from real-world enterprise challenges, it's my solution to the "it works on my machine" problem. Built with:
-- Multiple distribution methods (DockerHub/BitTorrent)
-- Enterprise-grade security scanning
-- AI-friendly workflow integration
-- Comprehensive documentation
+**Current Focus** [![Project Status](https://img.shields.io/badge/Status-Active_Development-orange)](https://github.com/BA-CalderonMorales/dev-environment)
+features:
+  - "Docker optimizations (smaller images)"
+  - "CI/CD pipeline improvements"
+  - "Bash → Rust modernization"
+  - "Multi-OS support"
+  - "Comprehensive documentation site"
 
-## 🎓 Academic Pursuit
+distribution:
+  - "DockerHub"
+  - "CLI tool in development"
 
-5 classes away from completing my Multidisciplinary Degree with a Computer Science concentration at the University of Nebraska At Omaha. Because learning never stops!
+## 🛠️ Tech Arsenal
 
-## 🤖 AI + Development Philosophy
+**Core Stack:**
+languages: [C#, JavaScript, SQL, XML, YAML, Groovy, Rust]
+infrastructure: 
+  - "Docker"
+  - "GitHub Actions"
+  - "Enterprise security tooling"
+  - "AI-assisted workflow integration"
 
-I'm a strong proponent of AI-assisted development, but with a twist:
-- Structured, documented approaches
-- Clear guardrails and best practices
-- Focus on reproducible results
-- Enterprise-ready methodologies
+## 📚 Documentation Hub
 
-## 📫 Let's Connect!
+[![Documentation Status](https://img.shields.io/badge/Docs-Active_Development-yellow)](docs/README.md)
+- Quick Start Guide 🚀
+- Contribution Guidelines 🤝
+- Security Protocols 🔒
+- Troubleshooting 🛠️
 
-- [LinkedIn](https://www.linkedin.com/in/bcalderonmorales-cmoe?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B%2B9EI8SKhTSSqWUYdSihb4g%3D%3D) - Professional updates
+## 🎓 Academic Pursuits
+education:
+  institution: "University of Nebraska At Omaha"
+  status: "5 classes remaining"
+  focus: "Multidisciplinary Degree (CS Concentration)"
+  philosophy: "Practical theory integration"
 
-_"The best code is the code that never needs to be written" - but when we do write it, let's make it maintainable, secure, and properly documented!_
+## 🤝 Connect & Contribute
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/bcalderonmorales-cmoe)
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-black)](https://github.com/BA-CalderonMorales)
+
+**Project Participation:**
+- 🌟 Star the [dev-environment repo](https://github.com/BA-CalderonMorales/dev-environment)
+- 🍴 Fork to customize your implementation
+- 🐛 Submit issues through GitHub
+
+----"The best environment is the one that gets out of your way - until you need guardrails." - Current Development Mantra
+
+<\div>
