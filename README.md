@@ -1,52 +1,100 @@
-# 👋 Hey there, code voyeur!
+# 👋 Code Voyeur's Lair 
 
-Just here to snoop on cool repos, star the gems, and maybe contribute if the mood strikes. Oh, and share dank coding memes. Because what's GitHub without a little fun?
+[![LinkedIn](https://img.shields.io/badge/Let's_Connect-LinkedIn-blue)](https://www.linkedin.com/in/bcalderonmorales-cmoe)
+[![Dev Memes](https://img.shields.io/badge/Dank_Memes-Level_9000-green)](https://github.com/topics/memes)
 
-## 🚀 Professional Journey & Philosophy
+```mermaid
+graph TD
+    A[Visitor] --> B{Interests?}
+    B -->|Code| C[Tech Radar ↓]
+    B -->|Laughs| D[Meme Vault ↓]
+    B -->|Collab| E[Contribution Flow ↓]
+```
 
-**Current Role at Fiserv:**
-- 🔄 CI/CD Modernization: Migrated Jenkins to GitHub Actions
-- 🛠️ Full-Stack Development: .NET/C# + React/JavaScript
-- 🔒 Security Integration: Fortify SCA, CyberArk, Audit Workbench
-- 🧠 Dev Environment Advocacy: Standardized practices across teams
+## 🛠️ Tech Arsenal Radar
 
-**AI + Development Principles:**
-ai_guardrails:
-  - "Structured, documented approaches"
-  - "Reproducible environment parity"
-  - "Enterprise-grade security scanning"
-  - "Maintainability over magic"
+```mermaid
+quadrantChart
+    title Tech Stack Radar
+    x-axis "Adoption"
+    y-axis "Impact"
+    quadrant-1 "Core Tools"
+    quadrant-2 "Emerging Tech"
+    quadrant-3 "Legacy"
+    quadrant-4 "Evaluation"
+    "C#": [0.8, 0.8]
+    "Docker": [0.9, 0.75]
+    "Rust": [0.6, 0.9]
+    "GitHub Actions": [0.85, 0.7]
+    "CyberArk": [0.7, 0.6]
+```
 
-## 💻 Active Project: Development Environment
+## 🚀 Contribution Workflow
 
-**Current Focus** [![Project Status](https://img.shields.io/badge/Status-Active_Development-orange)](https://github.com/BA-CalderonMorales/dev-environment)
-features:
-  - "Docker optimizations (smaller images)"
-  - "CI/CD pipeline improvements"
-  - "Bash → Rust modernization"
-  - "Multi-OS support"
-  - "Comprehensive documentation site"
+```mermaid
+journey
+    title From Visitor to Collaborator
+    section Discover
+      Visit Profile: 5: Visitor
+      View Projects: 3: Curious
+    section Engage
+      Star Repos: 3: Fan
+      Meme Exchange: 4: Ally
+    section Commit
+      PR Submitted: 5: Contributor
+      Security Audit: 4: Guardian
+```
 
-## 🛠️ Tech Arsenal
+## 🧠 Knowledge Matrix
 
-**Core Stack:**
-languages: [C#, JavaScript, SQL, XML, YAML, Groovy, Rust]
-infrastructure: 
-  - "Docker"
-  - "GitHub Actions"
-  - "Enterprise security tooling"
-  - "AI-assisted workflow integration"
+```mermaid
+mindmap
+  root((B.A. Calderon-Morales))
+    CI/CD Modernization
+      GitHub Actions
+      Pipeline Security
+    Dev Environment
+      Docker Magic
+      Rust CLI Tools
+    Security
+      SCA Patterns
+      Audit Workflows
+    Memeology
+      CI/CD Humor
+      Rust Dad Jokes
+```
 
-## 🎓 Academic Pursuits
-education:
-  institution: "University of Nebraska At Omaha"
-  status: "5 classes remaining"
-  focus: "Multidisciplinary Degree (CS Concentration)"
-  philosophy: "Practical theory integration"
+## 📌 Live Project Map
 
-## 🤝 Connect & Contribute
+```mermaid
+gantt
+    title Dev Environment Roadmap
+    dateFormat  YYYY-MM-DD
+    section Core
+    Docker Optimizations      :active, des1, 2024-03-01, 2024-05-30
+    Rust Migration            :active, des2, 2024-04-01, 2024-06-15
+    section Extensions
+    Windows Support           :crit, 2024-05-01, 2024-07-15
+    AI Guardrail Integration  :2024-06-01, 2024-08-01
+```
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/bcalderonmorales-cmoe)
-[![GitHub](https://img.shields.io/badge/GitHub-Profile-black)](https://github.com/BA-CalderonMorales)
+## 📚 Academic Synergy
 
-----"The best environment is the one that gets out of your way - until you need guardrails." - Current Development Mantra
+```mermaid
+flowchart LR
+    UNO[UNO CS Courses] -->|Algorithms| DockerOpt[Docker Optimizations]
+    UNO -->|Security| CyberArk[Prod Security]
+    UNO -->|Sys Design| EnvDesign[Dev Environment]
+    UNO -->|CLI Tools| RustCLI[Rust Migration]
+```
+
+---
+
+🔍 **Deep Dive Links**  
+[![Project Status](https://img.shields.io/badge/Active_Project-Dev_Environment-orange)](https://github.com/BA-CalderonMorales/dev-environment) 
+[![Meme Vault](https://img.shields.io/badge/Dankest_Meme-Weekly_Update-green)](https://img.shields.io/badge/Meme_Source-Trust_Me_Bro-8A2BE2)
+
+---
+
+> "The environment should amplify your flow - not fight it. Unless you're fighting prod bugs. Then gloves off."  
+> *- Latest Wisdom Drop*
