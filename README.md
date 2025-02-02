@@ -131,5 +131,3 @@ Feel free to reach out for mentorship, collaboration, or innovative project disc
 [brandon.ceemoe@gmail.com](mailto:brandon.ceemoe@gmail.com) | [LinkedIn](https://www.linkedin.com/in/bcalderonmorales-cmoe)
 
 *Thank you for visiting my profile!*
-```
-
