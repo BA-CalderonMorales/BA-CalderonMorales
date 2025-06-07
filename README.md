@@ -12,7 +12,7 @@ Product-Minded Engineer - _**Building resilient code with strategic vision.**_
 A playful SVG solar system built with pure SVG animations:
 
 <p align="center">
-  <img src="assets/orbit.svg" alt="Animated solar orbit" style="width:100%;" />
+  <img src="assets/orbit.svg" alt="Animated solar orbit" style="width:80%;" />
 </p>
 
 </details>
