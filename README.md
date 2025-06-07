@@ -46,9 +46,9 @@ I'm bilingual (English/Spanish), a lifelong learner, and a fan of automating eve
 <details>
 <summary>Orbiting Animation</summary>
 
-Interactive SVG demonstrating an orbit effect:
+A playful SVG solar system built with pure SVG animations:
 
-<img src="assets/orbit.svg" alt="Orbiting circle animation" />
+<img src="assets/orbit.svg" alt="Animated solar orbit" />
 
 </details>
 
