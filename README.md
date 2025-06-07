@@ -43,7 +43,7 @@ I'm bilingual (English/Spanish), a lifelong learner, and a fan of automating eve
 
 </details>
 
-<details>
+<details open>
 <summary>Orbiting Animation</summary>
 
 A playful SVG solar system built with pure SVG animations:
