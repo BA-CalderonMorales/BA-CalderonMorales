@@ -7,13 +7,14 @@ Product-Minded Engineer - _**Building resilient code with strategic vision.**_
 </div>
 
 <details open>
-<summary>Orbiting Animation</summary>
+<summary>Interstellar Animation - Codex helped!</summary>
 
 A playful SVG solar system built with pure SVG animations:
 
 <p align="center">
   <img src="assets/orbit.svg" alt="Animated solar orbit" style="width:80%;" />
 </p>
+<p align="center">Curious how it works? Ping me and mention Codex!</p>
 
 </details>
 
