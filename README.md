@@ -1,6 +1,21 @@
+<div align="center">
+
 # Brandon A. Calderon Morales
 
 Product-Minded Engineer - _**Building resilient code with strategic vision.**_
+
+</div>
+
+<details open>
+<summary>Orbiting Animation</summary>
+
+A playful SVG solar system built with pure SVG animations:
+
+<p align="center">
+  <img src="assets/orbit.svg" alt="Animated solar orbit" style="width:100%;" />
+</p>
+
+</details>
 
 <details>
 <summary>Quick Intro</summary>
@@ -40,15 +55,6 @@ I'm bilingual (English/Spanish), a lifelong learner, and a fan of automating eve
 - Check out my docs site for a deeper dive into my projects and experiments.
 - Feel free to connect on [LinkedIn](https://www.linkedin.com/in/brandon-calderon-morales/). Mention GitHub so I know where you found me.
 - Open an issue or start a discussion in this repo if you have questions or just want to say hi.
-
-</details>
-
-<details open>
-<summary>Orbiting Animation</summary>
-
-A playful SVG solar system built with pure SVG animations:
-
-<img src="assets/orbit.svg" alt="Animated solar orbit" />
 
 </details>
 
