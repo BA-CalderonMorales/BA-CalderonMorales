@@ -1,6 +1,6 @@
-# Brandon A. Calderon Morales – Product-Minded Engineer & DevOps Enthusiast
+# Brandon A. Calderon Morales
 
-**Building resilient code with strategic vision 🚀.**
+Product-Minded Engineer - _**Building resilient code with strategic vision 🚀.**_
 
 ## Quick Intro
 Once a U.S. Marine managing legal cases, I'm now a self-taught software engineer pursuing a computer science degree. I love turning messy problems into reliable systems and documenting what I learn along the way.
