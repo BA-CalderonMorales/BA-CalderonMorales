@@ -31,6 +31,7 @@ Once a U.S. Marine managing legal cases, I'm now a self-taught software engineer
 - **Docs-as-Code Portfolio:** [My Life as a Dev](https://ba-calderonmorales.github.io/my-life-as-a-dev/) is built with MkDocs Material and a custom AI plugin that helps generate content.
 - **Rust Terminal Forge:** A web-based terminal emulator combining Rust tools with a React interface.
 - **Shadow Scroll Blossom:** My creative coding playground for generative art in the browser.
+- **Immersive Awe Canvas:** An interactive 3D canvas playground on [GitHub](https://github.com/BA-CalderonMorales/immersive-awe-canvas).
 
 </details>
 
