@@ -6,7 +6,7 @@ Product-Minded Engineer - _**Building resilient code with strategic vision.**_
 
 </div>
 
-<details open>
+<details>
 <summary>Interstellar Animation - Codex helped!</summary>
 
 A playful SVG solar system built with pure SVG animations:
