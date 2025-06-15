@@ -25,7 +25,7 @@ Once a U.S. Marine managing legal cases, I'm now a self-taught software engineer
 
 </details>
 
-<details>
+<details open>
 <summary>Current Projects & Interests</summary>
 
 - **Docs-as-Code Portfolio:** [My Life as a Dev](https://ba-calderonmorales.github.io/my-life-as-a-dev/) ([repo](https://github.com/BA-CalderonMorales/my-life-as-a-dev)) showcases MkDocs Material with a custom AI plugin.
