@@ -29,9 +29,12 @@ Once a U.S. Marine managing legal cases, I'm now a self-taught software engineer
 <summary>Current Projects & Interests</summary>
 
 - **Docs-as-Code Portfolio:** [My Life as a Dev](https://ba-calderonmorales.github.io/my-life-as-a-dev/) ([repo](https://github.com/BA-CalderonMorales/my-life-as-a-dev)) showcases MkDocs Material with a custom AI plugin.
-- **Immersive Awe Canvas:** [Demo](https://ba-calderonmorales.github.io/immersive-awe-canvas/) ([repo](https://github.com/BA-CalderonMorales/immersive-awe-canvas)) for interactive 3D experiments.
-- **Shadow Scroll Blossom:** [Demo](https://ba-calderonmorales.github.io/shadow-scroll-blossom/) ([repo](https://github.com/BA-CalderonMorales/shadow-scroll-blossom)) is my creative coding playground.
+- **Immersive Awe Canvas:** [Demo](https://immersive-awe-canvas.lovable.app) ([repo](https://github.com/BA-CalderonMorales/immersive-awe-canvas)) for interactive 3D experiments.
+  - [QA](https://ba-calderonmorales.github.io/immersive-awe-canvas): If broken, you can visit Demo link above.
+- **Shadow Scroll Blossom:** [Demo](https://ba-calderonmorales.github.io/shadow-scroll-blossom) ([repo](https://github.com/BA-CalderonMorales/shadow-scroll-blossom)) is my creative coding playground.
+  - Working on getting QA and PROD domains setup.  
 - **Rust Terminal Forge:** [Demo](https://ba-calderonmorales.github.io/rust-terminal-forge/) ([repo](https://github.com/BA-CalderonMorales/rust-terminal-forge)) merges Rust tooling with a React interface.
+  - - Working on getting QA and PROD domains setup. 
 
 </details>
 
