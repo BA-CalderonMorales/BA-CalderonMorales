@@ -34,7 +34,7 @@ Once a U.S. Marine managing legal cases, I'm now a self-taught software engineer
 - **Shadow Scroll Blossom:** [Demo](https://ba-calderonmorales.github.io/shadow-scroll-blossom) ([repo](https://github.com/BA-CalderonMorales/shadow-scroll-blossom)) is my creative coding playground.
   - Working on getting QA and PROD domains setup.  
 - **Rust Terminal Forge:** [Demo](https://ba-calderonmorales.github.io/rust-terminal-forge/) ([repo](https://github.com/BA-CalderonMorales/rust-terminal-forge)) merges Rust tooling with a React interface.
-  - - Working on getting QA and PROD domains setup. 
+  - Working on getting QA and PROD domains setup. 
 
 </details>
 
