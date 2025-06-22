@@ -2,19 +2,17 @@
 
 # Brandon A. Calderon Morales
 
-Product-Minded Engineer - _**Building resilient code with strategic vision.**_
+Product-Minded Engineer
 
 </div>
 
-<details>
-<summary>Interstellar Animation - Codex helped!</summary>
-
-A playful SVG solar system built with pure SVG animations:
+<details open>
+<summary><em>Art has many forms.</em></summary>
 
 <p align="center">
   <img src="assets/orbit.svg" alt="Animated solar orbit" style="width:80%;" />
 </p>
-<p align="center">Curious how it works? Ping me and mention Codex!</p>
+<p align="center"><em>I like to help people find that art.</em></p>
 
 </details>
 
