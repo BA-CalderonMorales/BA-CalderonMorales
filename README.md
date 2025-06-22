@@ -58,7 +58,7 @@ I'm bilingual (English/Spanish), a lifelong learner, and a fan of automating eve
 <summary>Let's Connect</summary>
 
 - Check out my docs site for a deeper dive into my projects and experiments.
-- Feel free to connect on [LinkedIn](https://www.linkedin.com/in/brandon-calderon-morales/). Mention GitHub so I know where you found me.
+- Feel free to connect on [LinkedIn](https://www.linkedin.com/in/bcalderonmorales-cmoe/). Mention GitHub so I know where you found me.
 - Open an issue or start a discussion in this repo if you have questions or just want to say hi.
 
 </details>
