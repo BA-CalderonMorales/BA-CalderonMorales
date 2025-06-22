@@ -10,6 +10,57 @@
       <stop offset="100%" stop-color="rgba(25,25,112,0.02)" />
     </radialGradient>
     
+    <!-- Realistic planet surface gradients -->
+    <radialGradient id="rockyPlanet" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#b8860b" />
+      <stop offset="60%" stop-color="#8c7853" />
+      <stop offset="100%" stop-color="#654321" />
+    </radialGradient>
+    
+    <radialGradient id="oceanPlanet" cx="25%" cy="25%" r="75%">
+      <stop offset="0%" stop-color="#87ceeb" />
+      <stop offset="40%" stop-color="#4169e1" />
+      <stop offset="80%" stop-color="#191970" />
+      <stop offset="100%" stop-color="#000080" />
+    </radialGradient>
+    
+    <radialGradient id="gasPlanet" cx="35%" cy="25%" r="80%">
+      <stop offset="0%" stop-color="#daa520" />
+      <stop offset="50%" stop-color="#cd853f" />
+      <stop offset="85%" stop-color="#8b4513" />
+      <stop offset="100%" stop-color="#654321" />
+    </radialGradient>
+    
+    <radialGradient id="outerGiant" cx="40%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ff7f50" />
+      <stop offset="60%" stop-color="#ff4500" />
+      <stop offset="100%" stop-color="#8b0000" />
+    </radialGradient>
+    
+    <!-- Varied shooting star trails -->
+    <linearGradient id="meteorTrail1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0)" />
+      <stop offset="15%" stop-color="rgba(135,206,250,0.05)" />
+      <stop offset="40%" stop-color="rgba(255,255,255,0.15)" />
+      <stop offset="80%" stop-color="rgba(255,255,255,0.4)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0.8)" />
+    </linearGradient>
+    
+    <linearGradient id="meteorTrail2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(255,215,0,0)" />
+      <stop offset="25%" stop-color="rgba(255,165,0,0.08)" />
+      <stop offset="60%" stop-color="rgba(255,255,255,0.2)" />
+      <stop offset="85%" stop-color="rgba(255,255,255,0.5)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0.9)" />
+    </linearGradient>
+    
+    <linearGradient id="meteorTrail3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(173,216,230,0)" />
+      <stop offset="20%" stop-color="rgba(135,206,250,0.06)" />
+      <stop offset="50%" stop-color="rgba(255,255,255,0.18)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0.7)" />
+    </linearGradient>
+    
     <!-- 3D depth gradients for layered space -->
     <radialGradient id="depthGradient1" cx="20%" cy="30%" r="70%">
       <stop offset="0%" stop-color="rgba(138,43,226,0.03)" />
@@ -20,14 +71,7 @@
       <stop offset="100%" stop-color="rgba(138,43,226,0.005)" />
     </radialGradient>
     
-    <!-- Enhanced shooting star trail -->
-    <linearGradient id="shootingTrail" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="rgba(255,255,255,0)" />
-      <stop offset="20%" stop-color="rgba(135,206,250,0.1)" />
-      <stop offset="60%" stop-color="rgba(255,255,255,0.6)" />
-      <stop offset="100%" stop-color="rgba(255,255,255,1)" />
-    </linearGradient>
-    
+    <!-- Enhanced atmospheric filters -->
     <filter id="glow">
       <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
       <feMerge>
@@ -36,36 +80,78 @@
       </feMerge>
     </filter>
     
-    <!-- Subtle depth blur for background layers -->
+    <!-- Planetary atmosphere filter -->
+    <filter id="planetBlur">
+      <feGaussianBlur stdDeviation="0.15" result="softEdge"/>
+      <feMerge>
+        <feMergeNode in="softEdge"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Deep background blur -->
     <filter id="depthBlur">
-      <feGaussianBlur stdDeviation="0.3" result="blur"/>
+      <feGaussianBlur stdDeviation="0.4" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
     
-    <!-- Enhanced particle system for cosmic dust -->
+    <!-- Atmospheric depth for distant objects -->
+    <filter id="atmosphericDepth">
+      <feGaussianBlur stdDeviation="0.6" result="atmosphere"/>
+      <feColorMatrix in="atmosphere" type="matrix" 
+                     values="0.8 0.8 1 0 0  0.8 0.8 1 0 0  0.9 0.9 1 0 0  0 0 0 0.4 0"/>
+      <feMerge>
+        <feMergeNode in="atmosphere"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Cosmic dust and particle system -->
     <filter id="cosmicDust">
-      <feTurbulence baseFrequency="0.02" numOctaves="3" result="noise"/>
+      <feTurbulence baseFrequency="0.015" numOctaves="4" result="noise"/>
       <feColorMatrix in="noise" type="saturate" values="0"/>
       <feComponentTransfer result="particles">
-        <feFuncA type="discrete" tableValues="0 0 0 0 0.1 0 0 0.05 0 0.2"/>
+        <feFuncA type="discrete" tableValues="0 0 0 0 0.08 0 0 0.03 0 0.15 0 0 0.05"/>
       </feComponentTransfer>
       <feComposite operator="screen" in="particles" in2="SourceGraphic"/>
     </filter>
-  </defs>  <!-- Deep space layers for 3D depth -->
-  <rect width="200" height="100" fill="url(#depthGradient1)" opacity="0.3" filter="url(#cosmicDust)"/>
-  <rect width="200" height="100" fill="url(#depthGradient2)" opacity="0.2"/>
+    
+    <!-- Solar wind effect -->
+    <filter id="solarWind">
+      <feTurbulence baseFrequency="0.008" numOctaves="2" result="wind"/>
+      <feColorMatrix in="wind" type="matrix" 
+                     values="1 0.9 0.7 0 0  1 0.9 0.7 0 0  1 0.9 0.7 0 0  0 0 0 0.1 0"/>
+      <feComposite operator="screen" in="wind" in2="SourceGraphic"/>
+    </filter>
+  </defs>  <!-- Living cosmic environment with breathing atmosphere -->
+  <rect width="200" height="100" fill="url(#depthGradient1)" opacity="0.4" filter="url(#cosmicDust)">
+    <animate attributeName="opacity" values="0.3;0.5;0.3" dur="300s" repeatCount="indefinite"/>
+  </rect>
+  <rect width="200" height="100" fill="url(#depthGradient2)" opacity="0.3">
+    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="240s" repeatCount="indefinite"/>
+  </rect>
   
-  <!-- Far background nebula layer (furthest) -->
-  <ellipse cx="60" cy="70" rx="80" ry="30" fill="url(#nebulaGradient)" opacity="0.4" filter="url(#depthBlur)">
-    <animate attributeName="opacity" values="0.3;0.5;0.3" dur="180s" repeatCount="indefinite"/>
+  <!-- Solar wind emanating from star -->
+  <ellipse cx="100" cy="50" rx="90" ry="45" fill="none" stroke="url(#sunGradient)" stroke-width="0.1" opacity="0" filter="url(#solarWind)">
+    <animate attributeName="rx" values="90;120;90" dur="180s" repeatCount="indefinite"/>
+    <animate attributeName="ry" values="45;60;45" dur="180s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.15;0" dur="180s" repeatCount="indefinite"/>
   </ellipse>
   
-  <!-- Mid-distance nebula layer -->
-  <ellipse cx="140" cy="25" rx="60" ry="20" fill="url(#nebulaGradient)" opacity="0.3" transform="rotate(30 140 25)" filter="url(#depthBlur)">
-    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="240s" repeatCount="indefinite"/>
+  <!-- Layered nebula with organic movement -->
+  <ellipse cx="60" cy="70" rx="85" ry="32" fill="url(#nebulaGradient)" opacity="0.5" filter="url(#atmosphericDepth)">
+    <animate attributeName="opacity" values="0.4;0.6;0.4" dur="420s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate" 
+                      values="0 60 70;2 60 70;0 60 70" dur="600s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <ellipse cx="140" cy="25" rx="65" ry="22" fill="url(#nebulaGradient)" opacity="0.35" transform="rotate(25 140 25)" filter="url(#atmosphericDepth)">
+    <animate attributeName="opacity" values="0.25;0.45;0.25" dur="480s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate" 
+                      values="25 140 25;28 140 25;25 140 25" dur="720s" repeatCount="indefinite"/>
   </ellipse>  <!-- Multi-layered star field with 3D depth -->
   <!-- Far distant stars (smallest, most numerous) -->
   <g fill="white" opacity="0.3" filter="url(#depthBlur)">
@@ -130,96 +216,198 @@
     <circle cx="185" cy="20" r="0.3" opacity="0.8">
       <animate attributeName="opacity" values="0.6;0.9;0.6" dur="14s" repeatCount="indefinite"/>
     </circle>
-  </g>  <!-- Enhanced central star with corona depth -->
-  <circle cx="100" cy="50" r="6" fill="url(#sunGradient)" opacity="0.2" filter="url(#glow)"/>
-  <circle cx="100" cy="50" r="4.5" fill="url(#sunGradient)" opacity="0.4" filter="url(#glow)"/>
-  <circle cx="100" cy="50" r="4" fill="url(#sunGradient)" filter="url(#glow)">
-    <animate attributeName="r" values="4;4.3;4" dur="8s" repeatCount="indefinite"/>
-  </circle>  <!-- Planets with enhanced 3D orbital mechanics -->
-  <!-- Inner planet with subtle orbital inclination -->
+  </g>  <!-- Enhanced central star with living solar activity -->
+  <g id="sun">
+    <!-- Solar wind corona -->
+    <circle cx="100" cy="50" r="8" fill="url(#sunGradient)" opacity="0.15" filter="url(#solarWind)">
+      <animate attributeName="r" values="8;11;8" dur="25s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.15;0.08;0.15" dur="25s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Mid corona -->
+    <circle cx="100" cy="50" r="6" fill="url(#sunGradient)" opacity="0.25" filter="url(#glow)">
+      <animate attributeName="r" values="6;7.2;6" dur="18s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.25;0.15;0.25" dur="18s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Inner corona -->
+    <circle cx="100" cy="50" r="4.8" fill="url(#sunGradient)" opacity="0.4" filter="url(#glow)">
+      <animate attributeName="r" values="4.8;5.5;4.8" dur="12s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Solar core -->
+    <circle cx="100" cy="50" r="4" fill="url(#sunGradient)" filter="url(#glow)">
+      <animate attributeName="r" values="4;4.2;4" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Solar flares (rare events) -->
+    <ellipse cx="100" cy="50" rx="7" ry="2" fill="url(#sunGradient)" opacity="0" transform="rotate(45 100 50)">
+      <animate attributeName="opacity" values="0;0.3;0;0;0;0;0;0.2;0" dur="90s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" 
+                        values="45 100 50;50 100 50;45 100 50" dur="90s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>  <!-- Realistic planetary system with atmospheric depth -->
+  
+  <!-- Mercury-like rocky planet with heat shimmer -->
   <g>
-    <ellipse cx="100" cy="50" rx="15" ry="7" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="0.3" stroke-dasharray="1,2"/>
-    <circle cx="115" cy="50" r="0.8" fill="#8c7853" opacity="0.9" filter="url(#depthBlur)"/>
+    <ellipse cx="100" cy="50" rx="15" ry="7" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="0.2" stroke-dasharray="1,3"/>
+    <circle cx="115" cy="50" r="1.2" fill="url(#rockyPlanet)" opacity="0.3" filter="url(#atmosphericDepth)"/> <!-- heat haze -->
+    <circle cx="115" cy="50" r="0.9" fill="url(#rockyPlanet)" filter="url(#planetBlur)">
+      <animate attributeName="fill-opacity" values="0.9;1;0.9" dur="16s" repeatCount="indefinite"/>
+    </circle>
     <animateTransform attributeName="transform" type="rotate" from="0 100 50" to="360 100 50" dur="12s" repeatCount="indefinite"/>
   </g>
   
-  <!-- Second planet with atmospheric glow -->
+  <!-- Venus-like planet with thick atmosphere -->
   <g>
-    <ellipse cx="100" cy="50" rx="25" ry="11" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="0.3" stroke-dasharray="2,3"/>
-    <circle cx="125" cy="50" r="1.8" fill="#4169e1" opacity="0.3" filter="url(#glow)"/> <!-- atmosphere -->
-    <circle cx="125" cy="50" r="1.2" fill="#4169e1" opacity="0.9">
-      <animate attributeName="fill" values="#4169e1;#1e90ff;#4169e1" dur="20s" repeatCount="indefinite"/>
+    <ellipse cx="100" cy="50" rx="25" ry="11" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.2" stroke-dasharray="2,4"/>
+    <!-- Thick atmosphere -->
+    <circle cx="125" cy="50" r="2.2" fill="url(#oceanPlanet)" opacity="0.2" filter="url(#atmosphericDepth)"/>
+    <circle cx="125" cy="50" r="1.8" fill="url(#oceanPlanet)" opacity="0.4" filter="url(#planetBlur)"/>
+    <!-- Planet surface -->
+    <circle cx="125" cy="50" r="1.3" fill="url(#oceanPlanet)" filter="url(#planetBlur)">
+      <animate attributeName="fill" values="url(#oceanPlanet);rgba(65,105,225,0.9);url(#oceanPlanet)" dur="28s" repeatCount="indefinite"/>
     </circle>
+    <!-- Atmospheric swirls -->
+    <ellipse cx="125" cy="50" rx="1.9" ry="0.8" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.1" opacity="0">
+      <animate attributeName="opacity" values="0;0.3;0" dur="20s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" from="0 125 50" to="360 125 50" dur="8s" repeatCount="indefinite"/>
+    </ellipse>
     <animateTransform attributeName="transform" type="rotate" from="180 100 50" to="540 100 50" dur="24s" repeatCount="indefinite"/>
   </g>
   
-  <!-- Third planet with moon system -->
+  <!-- Earth-like planet with moon and realistic atmosphere -->
   <g>
-    <ellipse cx="100" cy="50" rx="35" ry="15" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="0.3" stroke-dasharray="3,4"/>
+    <ellipse cx="100" cy="50" rx="35" ry="15" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="0.2" stroke-dasharray="3,5"/>
     <g>
-      <!-- Planet -->
-      <circle cx="135" cy="50" r="1.8" fill="#cd853f" opacity="0.8"/>
-      <!-- Moon orbit -->
-      <ellipse cx="135" cy="50" rx="3.5" ry="2" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.1"/>
-      <!-- Moon -->
-      <circle cx="138.5" cy="50" r="0.3" fill="#c0c0c0" opacity="0.7">
-        <animateTransform attributeName="transform" type="rotate" from="0 135 50" to="360 135 50" dur="4s" repeatCount="indefinite"/>
+      <!-- Atmosphere glow -->
+      <circle cx="135" cy="50" r="2.4" fill="rgba(135,206,250,0.15)" filter="url(#atmosphericDepth)"/>
+      <circle cx="135" cy="50" r="2.0" fill="rgba(65,105,225,0.2)" filter="url(#planetBlur)"/>
+      <!-- Planet surface with continents -->
+      <circle cx="135" cy="50" r="1.8" fill="url(#gasPlanet)" filter="url(#planetBlur)">
+        <animate attributeName="fill" values="url(#gasPlanet);rgba(205,133,63,0.9);url(#gasPlanet)" dur="32s" repeatCount="indefinite"/>
       </circle>
+      <!-- Surface features -->
+      <ellipse cx="135" cy="50" rx="1.2" ry="0.6" fill="rgba(139,69,19,0.3)" transform="rotate(15 135 50)" filter="url(#planetBlur)"/>
+      <!-- Moon orbital path -->
+      <ellipse cx="135" cy="50" rx="4.2" ry="2.8" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="0.1"/>
+      <!-- Realistic moon with phases -->
+      <g>
+        <circle cx="139.2" cy="50" r="0.35" fill="#e6e6e6" filter="url(#planetBlur)"/>
+        <ellipse cx="139.2" cy="50" rx="0.2" ry="0.35" fill="#b8b8b8" opacity="0.6">
+          <animate attributeName="rx" values="0.2;0;0.2" dur="6s" repeatCount="indefinite"/>
+        </ellipse>
+        <animateTransform attributeName="transform" type="rotate" from="0 135 50" to="360 135 50" dur="6s" repeatCount="indefinite"/>
+      </g>
     </g>
     <animateTransform attributeName="transform" type="rotate" from="90 100 50" to="450 100 50" dur="36s" repeatCount="indefinite"/>
   </g>
   
-  <!-- Outer gas giant with ring system -->
+  <!-- Massive gas giant with complex ring system and moons -->
   <g>
-    <ellipse cx="100" cy="50" rx="45" ry="18" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.3" stroke-dasharray="4,6"/>
+    <ellipse cx="100" cy="50" rx="45" ry="18" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.2" stroke-dasharray="4,7"/>
     <g>
-      <!-- Ring system -->
-      <ellipse cx="145" cy="50" rx="3.5" ry="0.7" fill="none" stroke="rgba(255,215,0,0.2)" stroke-width="0.2"/>
-      <ellipse cx="145" cy="50" rx="4.5" ry="0.9" fill="none" stroke="rgba(255,215,0,0.15)" stroke-width="0.15"/>
-      <!-- Gas giant -->
-      <circle cx="145" cy="50" r="1.5" fill="#ff4500" opacity="0.8">
-        <animate attributeName="opacity" values="0.7;0.9;0.7" dur="15s" repeatCount="indefinite"/>
+      <!-- Gas giant atmosphere layers -->
+      <circle cx="145" cy="50" r="2.8" fill="url(#outerGiant)" opacity="0.3" filter="url(#atmosphericDepth)"/>
+      <circle cx="145" cy="50" r="2.2" fill="url(#outerGiant)" opacity="0.6" filter="url(#planetBlur)"/>
+      <circle cx="145" cy="50" r="1.8" fill="url(#outerGiant)" filter="url(#planetBlur)">
+        <animate attributeName="fill" values="url(#outerGiant);rgba(255,69,0,0.8);url(#outerGiant)" dur="20s" repeatCount="indefinite"/>
+      </circle>
+      <!-- Atmospheric bands -->
+      <ellipse cx="145" cy="50" rx="2.0" ry="0.4" fill="none" stroke="rgba(139,0,0,0.3)" stroke-width="0.1" filter="url(#planetBlur)"/>
+      <ellipse cx="145" cy="50" rx="1.6" ry="0.3" fill="none" stroke="rgba(255,140,0,0.2)" stroke-width="0.08" filter="url(#planetBlur)"/>
+      
+      <!-- Complex ring system -->
+      <ellipse cx="145" cy="50" rx="3.8" ry="0.6" fill="none" stroke="rgba(255,215,0,0.25)" stroke-width="0.15" filter="url(#planetBlur)"/>
+      <ellipse cx="145" cy="50" rx="4.5" ry="0.7" fill="none" stroke="rgba(255,215,0,0.18)" stroke-width="0.12" filter="url(#planetBlur)"/>
+      <ellipse cx="145" cy="50" rx="5.2" ry="0.8" fill="none" stroke="rgba(255,215,0,0.12)" stroke-width="0.08" filter="url(#planetBlur)"/>
+      
+      <!-- Major moon -->
+      <circle cx="150.5" cy="50" r="0.25" fill="#d3d3d3" filter="url(#planetBlur)">
+        <animateTransform attributeName="transform" type="rotate" from="0 145 50" to="360 145 50" dur="8s" repeatCount="indefinite"/>
+      </circle>
+      
+      <!-- Smaller moon -->
+      <circle cx="149" cy="50" r="0.15" fill="#c0c0c0" filter="url(#planetBlur)">
+        <animateTransform attributeName="transform" type="rotate" from="180 145 50" to="540 145 50" dur="5s" repeatCount="indefinite"/>
       </circle>
     </g>
     <animateTransform attributeName="transform" type="rotate" from="270 100 50" to="-90 100 50" dur="48s" repeatCount="indefinite"/>
   </g>
   
-  <!-- Asteroid belt layer -->
-  <g opacity="0.4" filter="url(#depthBlur)">
-    <circle cx="72" cy="48" r="0.15" fill="#8c7853">
+  <!-- Realistic asteroid belt with varied sizes and compositions -->
+  <g opacity="0.5" filter="url(#atmosphericDepth)">
+    <circle cx="72" cy="48" r="0.18" fill="#8c7853" filter="url(#planetBlur)">
       <animateTransform attributeName="transform" type="rotate" from="0 100 50" to="360 100 50" dur="28s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="78" cy="52" r="0.1" fill="#a0522d">
+    <circle cx="78" cy="52" r="0.12" fill="#a0522d" filter="url(#planetBlur)">
       <animateTransform attributeName="transform" type="rotate" from="45 100 50" to="405 100 50" dur="32s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="75" cy="50" r="0.12" fill="#696969">
+    <circle cx="75" cy="50" r="0.15" fill="#696969" filter="url(#planetBlur)">
       <animateTransform attributeName="transform" type="rotate" from="90 100 50" to="450 100 50" dur="30s" repeatCount="indefinite"/>
     </circle>
+    <circle cx="74" cy="49" r="0.08" fill="#cd853f" filter="url(#planetBlur)">
+      <animateTransform attributeName="transform" type="rotate" from="135 100 50" to="495 100 50" dur="26s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="76" cy="51" r="0.1" fill="#778899" filter="url(#planetBlur)">
+      <animateTransform attributeName="transform" type="rotate" from="225 100 50" to="585 100 50" dur="34s" repeatCount="indefinite"/>
+    </circle>
   </g>  <!-- Enhanced realistic shooting stars (background meteors) -->
-  <g opacity="0">
-    <path d="M0,0 Q-18,-3 -28,-1 Q-20,-1 -8,0 Q-20,1 -28,1 Q-18,3 0,0" fill="url(#shootingTrail)" opacity="0.4"/>
-    <path d="M0,0 Q-12,-2 -20,-0.5 Q-14,-0.5 -6,0 Q-14,0.5 -20,0.5 Q-12,2 0,0" fill="url(#shootingTrail)" opacity="0.6"/>
-    <circle cx="0" cy="0" r="0.6" fill="white" opacity="0.9"/>
-    <animate attributeName="opacity" values="0;0.8;0.8;0" dur="6s" begin="3s;45s;87s" repeatCount="indefinite"/>
+  
+  <!-- Far distant bright meteor -->
+  <g opacity="0" filter="url(#atmosphericDepth)">
+    <path d="M0,0 Q-35,-4 -55,-1.5 Q-42,-2 -18,0 Q-42,2 -55,1.5 Q-35,4 0,0" fill="url(#meteorTrail1)" opacity="0.25"/>
+    <path d="M0,0 Q-22,-2.5 -38,-1 Q-28,-1.5 -12,0 Q-28,1.5 -38,1 Q-22,2.5 0,0" fill="url(#meteorTrail1)" opacity="0.4"/>
+    <path d="M0,0 Q-12,-1.5 -22,-0.5 Q-16,-0.8 -6,0 Q-16,0.8 -22,0.5 Q-12,1.5 0,0" fill="url(#meteorTrail1)" opacity="0.7"/>
+    <circle cx="0" cy="0" r="0.3" fill="white" opacity="0.6" filter="url(#planetBlur)"/>
+    <animate attributeName="opacity" values="0;0.6;0.9;0.5;0" dur="4s" begin="8s;52s;96s;140s" repeatCount="indefinite"/>
     <animateTransform attributeName="transform" type="translate" 
-                      values="-25 12; 180 65; 225 88" dur="6s" begin="3s;45s;87s" repeatCount="indefinite"/>
+                      values="-35 18; 140 45; 190 62; 235 78" dur="4s" begin="8s;52s;96s;140s" repeatCount="indefinite"/>
   </g>
   
-  <g opacity="0">
-    <path d="M0,0 Q-22,-4 -35,-2 Q-25,-2 -10,0 Q-25,2 -35,2 Q-22,4 0,0" fill="url(#shootingTrail)" opacity="0.4"/>
-    <path d="M0,0 Q-15,-2.5 -25,-1 Q-18,-1 -8,0 Q-18,1 -25,1 Q-15,2.5 0,0" fill="url(#shootingTrail)" opacity="0.6"/>
-    <circle cx="0" cy="0" r="0.7" fill="white" opacity="0.9"/>
-    <animate attributeName="opacity" values="0;0.9;0.9;0" dur="7s" begin="18s;65s;112s" repeatCount="indefinite"/>
+  <!-- Medium distance golden meteor -->
+  <g opacity="0" filter="url(#atmosphericDepth)">
+    <path d="M0,0 Q-28,-3 -45,-1 Q-35,-1.5 -15,0 Q-35,1.5 -45,1 Q-28,3 0,0" fill="url(#meteorTrail2)" opacity="0.3"/>
+    <path d="M0,0 Q-18,-2 -32,-0.8 Q-24,-1 -10,0 Q-24,1 -32,0.8 Q-18,2 0,0" fill="url(#meteorTrail2)" opacity="0.5"/>
+    <path d="M0,0 Q-10,-1.2 -18,-0.4 Q-14,-0.6 -5,0 Q-14,0.6 -18,0.4 Q-10,1.2 0,0" fill="url(#meteorTrail2)" opacity="0.8"/>
+    <circle cx="0" cy="0" r="0.35" fill="#ffd700" opacity="0.7" filter="url(#planetBlur)"/>
+    <animate attributeName="opacity" values="0;0.7;1;0.6;0" dur="3.5s" begin="22s;68s;114s;160s" repeatCount="indefinite"/>
     <animateTransform attributeName="transform" type="translate" 
-                      values="225 8; 50 45; -30 82" dur="7s" begin="18s;65s;112s" repeatCount="indefinite"/>
+                      values="220 12; 80 38; 25 55; -25 72" dur="3.5s" begin="22s;68s;114s;160s" repeatCount="indefinite"/>
   </g>
   
-  <g opacity="0">
-    <path d="M0,0 Q-15,-2 -24,-0.8 Q-17,-0.8 -7,0 Q-17,0.8 -24,0.8 Q-15,2 0,0" fill="url(#shootingTrail)" opacity="0.5"/>
-    <circle cx="0" cy="0" r="0.5" fill="white" opacity="0.8"/>
-    <animate attributeName="opacity" values="0;0.7;0.7;0" dur="5s" begin="32s;78s;125s" repeatCount="indefinite"/>
+  <!-- Close but small meteor -->
+  <g opacity="0" filter="url(#atmosphericDepth)">
+    <path d="M0,0 Q-20,-2.5 -35,-0.8 Q-26,-1.2 -12,0 Q-26,1.2 -35,0.8 Q-20,2.5 0,0" fill="url(#meteorTrail3)" opacity="0.35"/>
+    <path d="M0,0 Q-13,-1.5 -24,-0.5 Q-18,-0.8 -8,0 Q-18,0.8 -24,0.5 Q-13,1.5 0,0" fill="url(#meteorTrail3)" opacity="0.6"/>
+    <circle cx="0" cy="0" r="0.25" fill="white" opacity="0.8" filter="url(#planetBlur)"/>
+    <animate attributeName="opacity" values="0;0.8;0.9;0.4;0" dur="3s" begin="35s;82s;128s" repeatCount="indefinite"/>
     <animateTransform attributeName="transform" type="translate" 
-                      values="210 25; 90 55; -20 85" dur="5s" begin="32s;78s;125s" repeatCount="indefinite"/>
+                      values="205 35; 110 55; 45 75" dur="3s" begin="35s;82s;128s" repeatCount="indefinite"/>
+  </g>
+  
+  <!-- Very distant tiny meteors -->
+  <g opacity="0" filter="url(#atmosphericDepth)">
+    <path d="M0,0 Q-15,-1.5 -26,-0.5 Q-20,-0.8 -8,0 Q-20,0.8 -26,0.5 Q-15,1.5 0,0" fill="url(#meteorTrail1)" opacity="0.2"/>
+    <circle cx="0" cy="0" r="0.15" fill="white" opacity="0.4" filter="url(#planetBlur)"/>
+    <animate attributeName="opacity" values="0;0.4;0.5;0" dur="2.5s" begin="45s;95s;145s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate" 
+                      values="-20 25; 120 50; 160 65" dur="2.5s" begin="45s;95s;145s" repeatCount="indefinite"/>
+  </g>
+  
+  <g opacity="0" filter="url(#atmosphericDepth)">
+    <path d="M0,0 Q-12,-1 -22,-0.3 Q-16,-0.5 -6,0 Q-16,0.5 -22,0.3 Q-12,1 0,0" fill="url(#meteorTrail3)" opacity="0.25"/>
+    <circle cx="0" cy="0" r="0.12" fill="white" opacity="0.35" filter="url(#planetBlur)"/>
+    <animate attributeName="opacity" values="0;0.35;0.4;0" dur="2s" begin="62s;112s;162s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate" 
+                      values="190 15; 85 40; 35 60" dur="2s" begin="62s;112s;162s" repeatCount="indefinite"/>
+  </g>
+  
+  <!-- Rare bright fireball (very distant) -->
+  <g opacity="0" filter="url(#atmosphericDepth)">
+    <path d="M0,0 Q-42,-5 -68,-2 Q-52,-3 -22,0 Q-52,3 -68,2 Q-42,5 0,0" fill="url(#meteorTrail2)" opacity="0.2"/>
+    <path d="M0,0 Q-28,-3 -48,-1.5 Q-36,-2 -16,0 Q-36,2 -48,1.5 Q-28,3 0,0" fill="url(#meteorTrail2)" opacity="0.3"/>
+    <path d="M0,0 Q-18,-2 -32,-1 Q-24,-1.3 -10,0 Q-24,1.3 -32,1 Q-18,2 0,0" fill="url(#meteorTrail2)" opacity="0.5"/>
+    <circle cx="0" cy="0" r="0.4" fill="#ffd700" opacity="0.8" filter="url(#planetBlur)"/>
+    <animate attributeName="opacity" values="0;0.8;1;0.7;0.3;0" dur="6s" begin="75s;195s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate" 
+                      values="-40 8; 120 40; 180 62; 240 84" dur="6s" begin="75s;195s" repeatCount="indefinite"/>
   </g>  <!-- Subtle cosmic phenomena in background -->
   <!-- Distant quasar pulses -->
   <g opacity="0">
