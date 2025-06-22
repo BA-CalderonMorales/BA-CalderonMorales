@@ -2,7 +2,7 @@
 
 # Brandon A. Calderon Morales
 
-Product-Minded Engineer
+Product-Minded Software Engineer
 
 </div>
 
