@@ -10,7 +10,7 @@ Product-Minded Software Engineer
 <summary><em>Art has many forms.</em></summary>
 
 <p align="center">
-  <img src="assets/orbit.svg" alt="Animated solar orbit" style="width:80%;" />
+  <img src="assets/orbit.svg" alt="Animated solar orbit" style="width:100%;" />
 </p>
 <p align="center"><em>I like to help people find that art.</em></p>
 
