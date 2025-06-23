@@ -1,20 +1,20 @@
+<p align="center">
+  <em>Art has many forms.</em>
+</p>
+
+<p align="center">
+  <img src="assets/orbit.svg" alt="Animated solar orbit" style="width:100%;" />
+</p>
+
+<p align="center"><em>I like to help people find their art.</em></p>
+
 <div align="center">
 
 # Brandon A. Calderon Morales
 
 Product-Minded Software Engineer
-
+  
 </div>
-
-<details open>
-<summary><em>Art has many forms.</em></summary>
-
-<p align="center">
-  <img src="assets/orbit.svg" alt="Animated solar orbit" style="width:100%;" />
-</p>
-<p align="center"><em>I like to help people find their art.</em></p>
-
-</details>
 
 <details>
 <summary>Quick Intro</summary>
