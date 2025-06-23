@@ -26,10 +26,43 @@
       <stop offset="50%" stop-color="rgba(255,215,0,0.03)" />
       <stop offset="100%" stop-color="rgba(255,140,0,0)" />
     </radialGradient>
+    <!-- Enhanced nebula gradients inspired by NASA imagery -->
     <radialGradient id="nebulaGradient" cx="30%" cy="70%" r="60%">
-      <stop offset="0%" stop-color="rgba(138,43,226,0.1)" />
-      <stop offset="50%" stop-color="rgba(75,0,130,0.05)" />
-      <stop offset="100%" stop-color="rgba(25,25,112,0.02)" />
+      <stop offset="0%" stop-color="rgba(255,20,147,0.15)" />
+      <stop offset="30%" stop-color="rgba(138,43,226,0.12)" />
+      <stop offset="60%" stop-color="rgba(75,0,130,0.08)" />
+      <stop offset="100%" stop-color="rgba(25,25,112,0.03)" />
+    </radialGradient>
+    
+    <!-- Emission nebula (pinks and reds like in star formation regions) -->
+    <radialGradient id="emissionNebula" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="rgba(255,105,180,0.2)" />
+      <stop offset="30%" stop-color="rgba(220,20,60,0.15)" />
+      <stop offset="60%" stop-color="rgba(139,0,139,0.1)" />
+      <stop offset="100%" stop-color="rgba(72,61,139,0.05)" />
+    </radialGradient>
+    
+    <!-- Reflection nebula (blues and teals) -->
+    <radialGradient id="reflectionNebula" cx="20%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="rgba(0,191,255,0.18)" />
+      <stop offset="40%" stop-color="rgba(30,144,255,0.12)" />
+      <stop offset="70%" stop-color="rgba(65,105,225,0.08)" />
+      <stop offset="100%" stop-color="rgba(25,25,112,0.04)" />
+    </radialGradient>
+    
+    <!-- Dark nebula (dust lanes) -->
+    <radialGradient id="darkNebula" cx="60%" cy="20%" r="50%">
+      <stop offset="0%" stop-color="rgba(0,0,0,0.3)" />
+      <stop offset="50%" stop-color="rgba(25,25,25,0.2)" />
+      <stop offset="100%" stop-color="rgba(0,0,0,0)" />
+    </radialGradient>
+    
+    <!-- Planetary nebula (cyan and green hues) -->
+    <radialGradient id="planetaryNebula" cx="80%" cy="60%" r="40%">
+      <stop offset="0%" stop-color="rgba(0,255,255,0.25)" />
+      <stop offset="30%" stop-color="rgba(0,250,154,0.18)" />
+      <stop offset="60%" stop-color="rgba(32,178,170,0.12)" />
+      <stop offset="100%" stop-color="rgba(0,100,0,0.05)" />
     </radialGradient>
     
     <!-- Realistic planet surface gradients -->
@@ -126,24 +159,38 @@
       </feMerge>
     </filter>
     
-    <!-- Cosmic dust and particle system with expanded boundaries -->
+    <!-- Enhanced cosmic dust with more variety -->
     <filter id="cosmicDust" x="-50%" y="-50%" width="200%" height="200%">
       <feTurbulence baseFrequency="0.015" numOctaves="4" result="noise"/>
       <feColorMatrix in="noise" type="saturate" values="0"/>
       <feComponentTransfer result="particles">
-        <feFuncA type="discrete" tableValues="0 0 0 0 0.08 0 0 0.03 0 0.15 0 0 0.05"/>
+        <feFuncA type="discrete" tableValues="0 0 0 0 0.12 0 0 0.06 0 0.18 0 0 0.08 0 0.15"/>
       </feComponentTransfer>
       <feComposite operator="screen" in="particles" in2="SourceGraphic"/>
     </filter>
     
-    <!-- Solar wind effect with expanded boundaries -->
-    <filter id="solarWind" x="-100%" y="-100%" width="300%" height="300%">
-      <feTurbulence baseFrequency="0.008" numOctaves="2" result="wind"/>
+    <!-- Interstellar medium (fine cosmic gas) -->
+    <filter id="interstellarMedium" x="-100%" y="-100%" width="300%" height="300%">
+      <feTurbulence baseFrequency="0.008" numOctaves="3" result="gas"/>
+      <feColorMatrix in="gas" type="matrix" 
+                     values="0.3 0.1 0.8 0 0  0.2 0.3 0.9 0 0  0.4 0.2 1 0 0  0 0 0 0.08 0"/>
+      <feComposite operator="screen" in="gas" in2="SourceGraphic"/>
+    </filter>
+    
+    <!-- Stellar wind with color variations -->
+    <filter id="stellarWind" x="-100%" y="-100%" width="300%" height="300%">
+      <feTurbulence baseFrequency="0.012" numOctaves="2" result="wind"/>
       <feColorMatrix in="wind" type="matrix" 
-                     values="1 0.9 0.7 0 0  1 0.9 0.7 0 0  1 0.9 0.7 0 0  0 0 0 0.1 0"/>
+                     values="1 0.8 0.4 0 0  0.9 0.6 0.8 0 0  0.7 0.9 1 0 0  0 0 0 0.12 0"/>
       <feComposite operator="screen" in="wind" in2="SourceGraphic"/>
     </filter>
-  </defs>  <!-- Living cosmic environment with breathing atmosphere -->
+  </defs>  <!-- Enhanced multi-layered cosmic background -->
+  <!-- Base cosmic medium -->
+  <rect width="200" height="100" fill="url(#reflectionNebula)" opacity="0.6" filter="url(#interstellarMedium)">
+    <animate attributeName="opacity" values="0.5;0.7;0.5" dur="400s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Deep space dust layers -->
   <rect width="200" height="100" fill="url(#depthGradient1)" opacity="0.4" filter="url(#cosmicDust)">
     <animate attributeName="opacity" values="0.3;0.5;0.3" dur="300s" repeatCount="indefinite"/>
   </rect>
@@ -151,24 +198,46 @@
     <animate attributeName="opacity" values="0.2;0.4;0.2" dur="240s" repeatCount="indefinite"/>
   </rect>
   
-  <!-- Solar wind emanating from star -->
-  <ellipse cx="100" cy="50" rx="90" ry="45" fill="none" stroke="url(#sunCorona)" stroke-width="0.1" opacity="0" filter="url(#solarWind)">
+  <!-- Enhanced stellar wind from central star -->
+  <ellipse cx="100" cy="50" rx="90" ry="45" fill="none" stroke="url(#sunCorona)" stroke-width="0.1" opacity="0" filter="url(#stellarWind)">
     <animate attributeName="rx" values="90;120;90" dur="180s" repeatCount="indefinite"/>
     <animate attributeName="ry" values="45;60;45" dur="180s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0;0.15;0" dur="180s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.18;0" dur="180s" repeatCount="indefinite"/>
   </ellipse>
   
-  <!-- Layered nebula with organic movement -->
-  <ellipse cx="60" cy="70" rx="85" ry="32" fill="url(#nebulaGradient)" opacity="0.5" filter="url(#atmosphericDepth)">
-    <animate attributeName="opacity" values="0.4;0.6;0.4" dur="420s" repeatCount="indefinite"/>
+  <!-- Complex multi-layered nebulae inspired by NASA imagery -->
+  
+  <!-- Large emission nebula (star formation region) -->
+  <ellipse cx="40" cy="75" rx="95" ry="35" fill="url(#emissionNebula)" opacity="0.7" filter="url(#atmosphericDepth)">
+    <animate attributeName="opacity" values="0.6;0.8;0.6" dur="420s" repeatCount="indefinite"/>
     <animateTransform attributeName="transform" type="rotate" 
-                      values="0 60 70;2 60 70;0 60 70" dur="600s" repeatCount="indefinite"/>
+                      values="0 40 75;3 40 75;0 40 75" dur="600s" repeatCount="indefinite"/>
   </ellipse>
   
-  <ellipse cx="140" cy="25" rx="65" ry="22" fill="url(#nebulaGradient)" opacity="0.35" transform="rotate(25 140 25)" filter="url(#atmosphericDepth)">
-    <animate attributeName="opacity" values="0.25;0.45;0.25" dur="480s" repeatCount="indefinite"/>
+  <!-- Reflection nebula (blue dust clouds) -->
+  <ellipse cx="160" cy="20" rx="75" ry="28" fill="url(#reflectionNebula)" opacity="0.6" transform="rotate(30 160 20)" filter="url(#atmosphericDepth)">
+    <animate attributeName="opacity" values="0.5;0.7;0.5" dur="480s" repeatCount="indefinite"/>
     <animateTransform attributeName="transform" type="rotate" 
-                      values="25 140 25;28 140 25;25 140 25" dur="720s" repeatCount="indefinite"/>
+                      values="30 160 20;33 160 20;30 160 20" dur="720s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <!-- Planetary nebula -->
+  <ellipse cx="170" cy="85" rx="45" ry="20" fill="url(#planetaryNebula)" opacity="0.8" transform="rotate(-20 170 85)" filter="url(#atmosphericDepth)">
+    <animate attributeName="opacity" values="0.7;0.9;0.7" dur="350s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate" 
+                      values="-20 170 85;-18 170 85;-20 170 85" dur="500s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <!-- Dark dust lane cutting through bright regions -->
+  <ellipse cx="80" cy="35" rx="120" ry="15" fill="url(#darkNebula)" opacity="0.6" transform="rotate(15 80 35)" filter="url(#depthBlur)">
+    <animate attributeName="opacity" values="0.5;0.7;0.5" dur="380s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <!-- Secondary emission region -->
+  <ellipse cx="30" cy="25" rx="60" ry="25" fill="url(#emissionNebula)" opacity="0.5" transform="rotate(-10 30 25)" filter="url(#atmosphericDepth)">
+    <animate attributeName="opacity" values="0.4;0.6;0.4" dur="450s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate" 
+                      values="-10 30 25;-8 30 25;-10 30 25" dur="650s" repeatCount="indefinite"/>
   </ellipse>  <!-- Multi-layered star field with 3D depth -->
   <!-- Far distant stars (smallest, most numerous) -->
   <g fill="white" opacity="0.3" filter="url(#depthBlur)">
@@ -232,6 +301,30 @@
     </circle>
     <circle cx="185" cy="20" r="0.3" opacity="0.8">
       <animate attributeName="opacity" values="0.6;0.9;0.6" dur="14s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Additional bright emission region stars inspired by NASA imagery -->
+    <circle cx="65" cy="88" r="0.45" fill="#ff69b4" opacity="0.7">
+      <animate attributeName="opacity" values="0.5;0.9;0.5" dur="22s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="125" cy="85" r="0.38" fill="#ff1493" opacity="0.8">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="19s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Bright emission knots (like HII regions in NASA images) -->
+  <g opacity="0.6">
+    <circle cx="35" cy="80" r="0.8" fill="rgba(255,20,147,0.4)" filter="url(#glow)">
+      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="25s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="0.8;1.2;0.8" dur="25s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="165" cy="25" r="0.6" fill="rgba(0,191,255,0.5)" filter="url(#glow)">
+      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="30s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="0.6;0.9;0.6" dur="30s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="175" cy="82" r="0.7" fill="rgba(0,255,255,0.45)" filter="url(#glow)">
+      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="28s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="0.7;1.0;0.7" dur="28s" repeatCount="indefinite"/>
     </circle>
   <!-- Enhanced central star with seamless glow - no filters -->
   <g id="sun">
@@ -417,8 +510,9 @@
     <animate attributeName="opacity" values="0;0.15;0.2;0" dur="1.2s" begin="200s;380s" repeatCount="indefinite"/>
     <animateTransform attributeName="transform" type="translate" 
                       values="150 22; 90 38; 50 52" dur="1.2s" begin="200s;380s" repeatCount="indefinite"/>
-  </g>  <!-- Subtle cosmic phenomena in background -->
-  <!-- Distant quasar pulses -->
+  </g>  <!-- Enhanced cosmic phenomena inspired by NASA deep space imagery -->
+  
+  <!-- Distant quasar pulses with varied colors -->
   <g opacity="0">
     <circle cx="25" cy="25" r="0.4" fill="#ff69b4" opacity="0.6" filter="url(#depthBlur)"/>
     <animate attributeName="opacity" values="0;0.4;0;0;0;0.4;0;0;0" dur="45s" repeatCount="indefinite"/>
@@ -429,20 +523,44 @@
     <animate attributeName="opacity" values="0;0;0.3;0;0;0;0.3;0;0" dur="60s" begin="15s" repeatCount="indefinite"/>
   </g>
   
-  <!-- Floating cosmic orbs (reduced intensity) -->
+  <!-- Additional distant pulsars -->
   <g opacity="0">
-    <circle cx="0" cy="0" r="1.2" fill="rgba(138,43,226,0.2)" filter="url(#depthBlur)"/>
-    <animate attributeName="opacity" values="0;0.3;0" dur="80s" begin="25s;145s" repeatCount="indefinite"/>
-    <animateTransform attributeName="transform" type="translate" 
-                      values="30 35; 170 65; 190 35" dur="80s" begin="25s;145s" repeatCount="indefinite"/>
+    <circle cx="15" cy="88" r="0.25" fill="#ff4500" opacity="0.4" filter="url(#depthBlur)"/>
+    <animate attributeName="opacity" values="0;0.3;0;0;0;0.3;0;0;0" dur="38s" begin="8s" repeatCount="indefinite"/>
   </g>
   
   <g opacity="0">
-    <circle cx="0" cy="0" r="0.8" fill="rgba(75,0,130,0.25)" filter="url(#depthBlur)"/>
-    <animate attributeName="opacity" values="0;0.25;0" dur="100s" begin="55s;185s" repeatCount="indefinite"/>
+    <circle cx="190" cy="12" r="0.35" fill="#9370db" opacity="0.5" filter="url(#depthBlur)"/>
+    <animate attributeName="opacity" values="0;0;0.4;0;0;0;0.4;0;0" dur="52s" begin="22s" repeatCount="indefinite"/>
+  </g>
+  
+  <!-- Floating nebular wisps and cosmic clouds -->
+  <g opacity="0">
+    <ellipse cx="0" cy="0" rx="1.8" ry="0.8" fill="rgba(255,20,147,0.15)" filter="url(#depthBlur)"/>
+    <animate attributeName="opacity" values="0;0.4;0" dur="120s" begin="30s;180s" repeatCount="indefinite"/>
     <animateTransform attributeName="transform" type="translate" 
-                      values="170 25; 40 75; 20 85" dur="100s" begin="55s;185s" repeatCount="indefinite"/>
-  </g>  <script type="application/ecmascript"><![CDATA[    function edgePos() {      const side = Math.floor(Math.random() * 4);      switch(side) {        case 0: return [Math.random() * 200, 0];        case 1: return [200, Math.random() * 100];        case 2: return [Math.random() * 200, 100];        case 3: return [0, Math.random() * 100];      }
+                      values="20 30; 180 70; 200 40" dur="120s" begin="30s;180s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate" additive="sum"
+                      values="0 0 0; 15 0 0; 0 0 0" dur="120s" begin="30s;180s" repeatCount="indefinite"/>
+  </g>
+  
+  <g opacity="0">
+    <ellipse cx="0" cy="0" rx="1.4" ry="0.6" fill="rgba(0,191,255,0.18)" filter="url(#depthBlur)"/>
+    <animate attributeName="opacity" values="0;0.35;0" dur="100s" begin="65s;195s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate" 
+                      values="180 20; 30 80; 10 90" dur="100s" begin="65s;195s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate" additive="sum"
+                      values="0 0 0; -20 0 0; 0 0 0" dur="100s" begin="65s;195s" repeatCount="indefinite"/>
+  </g>
+  
+  <g opacity="0">
+    <ellipse cx="0" cy="0" rx="1.0" ry="0.5" fill="rgba(0,255,255,0.2)" filter="url(#depthBlur)"/>
+    <animate attributeName="opacity" values="0;0.3;0" dur="90s" begin="45s;165s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate" 
+                      values="160 25; 50 75; 30 85" dur="90s" begin="45s;165s" repeatCount="indefinite"/>
+  </g>
+  
+  <script type="application/ecmascript"><![CDATA[    function edgePos() {      const side = Math.floor(Math.random() * 4);      switch(side) {        case 0: return [Math.random() * 200, 0];        case 1: return [200, Math.random() * 100];        case 2: return [Math.random() * 200, 100];        case 3: return [0, Math.random() * 100];      }
     }
 
     function resetPath(id) {
