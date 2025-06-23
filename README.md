@@ -12,7 +12,7 @@ Product-Minded Software Engineer
 <p align="center">
   <img src="assets/orbit.svg" alt="Animated solar orbit" style="width:100%;" />
 </p>
-<p align="center"><em>I like to help people find that art.</em></p>
+<p align="center"><em>I like to help people find their art.</em></p>
 
 </details>
 
