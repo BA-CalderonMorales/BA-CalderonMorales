@@ -3,9 +3,12 @@
 </p>
 
 <p align="center">
-  <img src="assets/orbit.svg" alt="Animated solar orbit" style="width:100%;" />
+  <a href="assets/orbit.html">
+    <img src="assets/orbit.svg" alt="Animated solar orbit" style="width:100%;" />
+  </a>
+  <br/>
+  <em><a href="assets/orbit.html">Explore the Infinite Zoom Fractal »</a></em>
 </p>
-
 <p align="center"><em>I like to help people find their art.</em></p>
 
 <div align="center">
