@@ -2,9 +2,9 @@
   <em>Art has many forms.</em>
 </p>
 
-<p align="center">
+<div align="center">
   <iframe src="assets/orbit.html" width="100%" height="400" style="border:none;"></iframe>
-</p>
+</div>
 
 <p align="center"><em>I like to help people find their art.</em></p>
 
