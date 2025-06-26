@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/orbit.svg" alt="Animated solar orbit" style="width:100%;" />
+  <object data="assets/orbit.html" type="text/html" style="width:100%; height:400px;"></object>
 </p>
 
 <p align="center"><em>I like to help people find their art.</em></p>
