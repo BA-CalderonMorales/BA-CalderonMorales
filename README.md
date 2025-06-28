@@ -13,7 +13,7 @@
 # Brandon A. Calderon Morales
 
 Product-Minded Software Engineer
-  
+
 </div>
 
 <details>
@@ -30,9 +30,9 @@ Once a U.S. Marine managing legal cases, I'm now a self-taught software engineer
 - **Immersive Awe Canvas:** [Demo](https://immersive-awe-canvas.lovable.app) ([repo](https://github.com/BA-CalderonMorales/immersive-awe-canvas)) for interactive 3D experiments.
   - [QA](https://ba-calderonmorales.github.io/immersive-awe-canvas): If broken, you can visit Demo link above.
 - **Shadow Scroll Blossom:** [Demo](https://ba-calderonmorales.github.io/shadow-scroll-blossom) ([repo](https://github.com/BA-CalderonMorales/shadow-scroll-blossom)) is my creative coding playground.
-  - Working on getting QA and PROD domains setup.  
+  - Working on getting QA and PROD domains setup.
 - **Rust Terminal Forge:** [Demo](https://ba-calderonmorales.github.io/rust-terminal-forge/) ([repo](https://github.com/BA-CalderonMorales/rust-terminal-forge)) merges Rust tooling with a React interface.
-  - Working on getting QA and PROD domains setup. 
+  - Working on getting QA and PROD domains setup.
 
 </details>
 
@@ -65,6 +65,7 @@ I'm bilingual (English/Spanish), a lifelong learner, and a fan of automating eve
 <summary>Repository Scripts</summary>
 
 Run `./scripts/check-links.sh` to verify that all links in the README are reachable. The script uses only `bash` and `curl` and avoids any package managers.
+Run `./scripts/check-trailing-whitespace.sh README.md` to ensure Markdown files don't contain trailing spaces. This keeps diffs clean and prevents lint errors.
 
 </details>
 
