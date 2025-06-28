@@ -16,6 +16,7 @@ Use the helper scripts under `scripts/` during feature work:
 
 - `scripts/check-links.sh` – ensure documentation links are valid
 - `scripts/check-markdown.sh` – run all checks on repository Markdown files
+- `scripts/run-ci-checks.sh` – execute all repository checks in one command
 
 Run the provided scripts and any tests before pushing changes. CI mirrors these commands.
 
@@ -46,5 +47,6 @@ After merging into `develop`, automatically open a PR that merges `develop` into
 ## Continuous Integration
 
 CI jobs use the same helper scripts and do **not** install dependencies with package managers. The Super-Linter runs on every pull request via `.github/workflows/super-linter.yml`.
+The workflow in `.github/workflows/scripts-ci.yml` runs `scripts/run-ci-checks.sh` on every push and pull request.
 
 Find ways to mitigate any current Super-Linter failures as we continue to make incremental changes. However, failures should not mean we break existing functionality and the way the UI looks today. Take a balanced approach here.
