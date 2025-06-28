@@ -66,6 +66,7 @@ I'm bilingual (English/Spanish), a lifelong learner, and a fan of automating eve
 
 Run `./scripts/check-links.sh` to verify that all links in the README are reachable. The script uses only `bash` and `curl` and avoids any package managers.
 Run `./scripts/check-trailing-whitespace.sh README.md` to ensure Markdown files don't contain trailing spaces. This keeps diffs clean and prevents lint errors.
+Run `./scripts/check-markdown.sh` to run link and whitespace checks on all Markdown files.
 
 </details>
 
