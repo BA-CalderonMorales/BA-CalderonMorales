@@ -1,0 +1,14 @@
+name: Scripts CI
+
+on:
+  pull_request:
+  push:
+    branches: [develop, main]
+
+jobs:
+  script-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run repository checks
+        run: ./scripts/run-ci-checks.sh
