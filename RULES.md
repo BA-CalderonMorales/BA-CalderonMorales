@@ -10,17 +10,13 @@ These rules keep development consistent across the project. The document is inte
 
 ## Local Workflow
 
-Use these npm scripts during feature work:
+All automation must rely only on the tools committed in this repository or those already available on the system. **Do not use npm or any other package manager.**
 
-- `npm ci` – install dependencies
-- `npm start` – run the Metro bundler
-- `npm run ios` – run the iOS app
-- `npm run android` – run the Android app
-- `npm test` – run the full test suite
-- `npm run typecheck` – run TypeScript checks
-- `npm run build` – build release artifacts with Fastlane
+Use the helper scripts under `scripts/` during feature work:
 
-Run `npm ci`, `npm test`, `npm run typecheck`, and `npm run build` before pushing changes. CI uses the same commands.
+- `scripts/check-links.sh` – ensure documentation links are valid
+
+Run the provided scripts and any tests before pushing changes. CI mirrors these commands.
 
 ## Commit Standards
 
@@ -48,6 +44,6 @@ After merging into `develop`, automatically open a PR that merges `develop` into
 
 ## Continuous Integration
 
-All dependencies must be installed with `npm ci` in CI jobs. The Super-Linter runs on every pull request via `.github/workflows/super-linter.yml`.
+CI jobs use the same helper scripts and do **not** install dependencies with package managers. The Super-Linter runs on every pull request via `.github/workflows/super-linter.yml`.
 
 Find ways to mitigate any current Super-Linter failures as we continue to make incremental changes. However, failures should not mean we break existing functionality and the way the UI looks today. Take a balanced approach here.
