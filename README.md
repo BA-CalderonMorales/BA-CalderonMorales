@@ -61,4 +61,11 @@ I'm bilingual (English/Spanish), a lifelong learner, and a fan of automating eve
 
 </details>
 
+<details>
+<summary>Repository Scripts</summary>
+
+Run `./scripts/check-links.sh` to verify that all links in the README are reachable. The script uses only `bash` and `curl` and avoids any package managers.
+
+</details>
+
 Cheers!
