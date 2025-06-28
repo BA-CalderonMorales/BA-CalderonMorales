@@ -15,6 +15,7 @@ All automation must rely only on the tools committed in this repository or those
 Use the helper scripts under `scripts/` during feature work:
 
 - `scripts/check-links.sh` – ensure documentation links are valid
+- `scripts/check-markdown.sh` – run all checks on repository Markdown files
 
 Run the provided scripts and any tests before pushing changes. CI mirrors these commands.
 
