@@ -1,5 +1,126 @@
-<svg width="400" height="200" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+<svg width="400" height="200" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg" 
+     xmlns:xlink="http://www.w3.org/1999/xlink" 
+     role="img" 
+     aria-labelledby="solar-system-title solar-system-desc"
+     style="cursor: pointer; user-select: none;">
+  
+  <title id="solar-system-title">Interactive Solar System Animation</title>
+  <desc id="solar-system-desc">An immersive animated solar system showing planets orbiting around a central star with dynamic lighting, atmospheric effects, and interactive elements. Hover over celestial bodies to explore.</desc>
   <defs>
+    <!-- Modern CSS animations and interactions -->
+    <style type="text/css">
+      <![CDATA[
+        /* Interactive hover effects */
+        .planet-group:hover .planet-surface {
+          transform: scale(1.15);
+          transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+        
+        .planet-group:hover .planet-atmosphere {
+          opacity: 0.8;
+          transition: opacity 0.3s ease-in-out;
+        }
+        
+        .planet-group:hover .planet-info {
+          opacity: 1;
+          transition: opacity 0.3s ease-in-out;
+        }
+        
+        .star-group:hover .sun-core {
+          transform: scale(1.1);
+          transition: transform 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+        
+        .star-group:hover .sun-flare {
+          opacity: 0.6;
+          transition: opacity 0.3s ease-in-out;
+        }
+        
+        /* Enhanced twinkling effects */
+        .star-twinkle {
+          animation: twinkle 3s ease-in-out infinite;
+        }
+        
+        @keyframes twinkle {
+          0%, 100% { opacity: 0.3; transform: scale(1); }
+          50% { opacity: 1; transform: scale(1.2); }
+        }
+        
+        /* Pulsing nebula effects */
+        .nebula-pulse {
+          animation: nebula-breathe 8s ease-in-out infinite;
+        }
+        
+        @keyframes nebula-breathe {
+          0%, 100% { opacity: 0.4; transform: scale(1); }
+          50% { opacity: 0.7; transform: scale(1.05); }
+        }
+        
+        /* Orbital trail effects */
+        .orbital-trail {
+          stroke-dasharray: 2, 4;
+          animation: orbit-dash 20s linear infinite;
+        }
+        
+        @keyframes orbit-dash {
+          0% { stroke-dashoffset: 0; }
+          100% { stroke-dashoffset: 20; }
+        }
+        
+        /* Meteor shower effects */
+        .meteor-shower {
+          animation: meteor-streak 4s ease-out infinite;
+        }
+        
+        @keyframes meteor-streak {
+          0% { opacity: 0; transform: translateX(-20px) translateY(-10px); }
+          10% { opacity: 1; }
+          90% { opacity: 1; }
+          100% { opacity: 0; transform: translateX(120px) translateY(60px); }
+        }
+        
+        /* Floating particle effects */
+        .cosmic-particle {
+          animation: float-particle 15s ease-in-out infinite;
+        }
+        
+        @keyframes float-particle {
+          0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.2; }
+          25% { transform: translateY(-5px) rotate(90deg); opacity: 0.6; }
+          50% { transform: translateY(0px) rotate(180deg); opacity: 0.4; }
+          75% { transform: translateY(5px) rotate(270deg); opacity: 0.8; }
+        }
+        
+        /* Responsive scaling */
+        @media (max-width: 768px) {
+          .planet-group:hover .planet-surface {
+            transform: scale(1.08);
+          }
+        }
+        
+        /* Planet info labels */
+        .planet-info {
+          opacity: 0;
+          font-family: system-ui, -apple-system, sans-serif;
+          font-size: 2px;
+          font-weight: 600;
+          text-anchor: middle;
+          pointer-events: none;
+          transition: opacity 0.3s ease-in-out;
+        }
+        
+        /* Interactive cursor hints */
+        .interactive-element {
+          cursor: pointer;
+          transition: all 0.2s ease-in-out;
+        }
+        
+        .interactive-element:hover {
+          filter: brightness(1.1);
+        }
+      ]]>
+    </style>
+    
     <!-- Seamless sun gradients that fade to transparent -->
     <radialGradient id="sunCore" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#fff8dc" />
@@ -121,6 +242,43 @@
       <stop offset="100%" stop-color="rgba(138,43,226,0.005)" />
     </radialGradient>
     
+    <!-- Advanced immersive gradients for modern effects -->
+    <radialGradient id="quantumField" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="rgba(0,255,255,0.1)" />
+      <stop offset="30%" stop-color="rgba(138,43,226,0.08)" />
+      <stop offset="60%" stop-color="rgba(255,20,147,0.06)" />
+      <stop offset="100%" stop-color="rgba(0,0,0,0)" />
+    </radialGradient>
+    
+    <radialGradient id="cosmicLens" cx="40%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.15)" />
+      <stop offset="50%" stop-color="rgba(0,191,255,0.1)" />
+      <stop offset="100%" stop-color="rgba(138,43,226,0.05)" />
+    </radialGradient>
+    
+    <!-- Particle system patterns -->
+    <pattern id="starDust" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="3" r="0.1" fill="rgba(255,255,255,0.3)" />
+      <circle cx="8" cy="7" r="0.15" fill="rgba(255,255,255,0.2)" />
+      <circle cx="15" cy="12" r="0.08" fill="rgba(255,255,255,0.4)" />
+      <circle cx="5" cy="15" r="0.12" fill="rgba(255,255,255,0.25)" />
+      <circle cx="18" cy="5" r="0.09" fill="rgba(255,255,255,0.35)" />
+    </pattern>
+    
+    <pattern id="nebulaTexture" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="8" r="2" fill="rgba(255,20,147,0.05)" opacity="0.6" />
+      <circle cx="20" cy="15" r="3" fill="rgba(138,43,226,0.04)" opacity="0.7" />
+      <circle cx="12" cy="25" r="1.5" fill="rgba(0,191,255,0.06)" opacity="0.5" />
+    </pattern>
+    
+    <linearGradient id="aurorealis" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(0,255,127,0.2)" />
+      <stop offset="25%" stop-color="rgba(0,191,255,0.15)" />
+      <stop offset="50%" stop-color="rgba(138,43,226,0.12)" />
+      <stop offset="75%" stop-color="rgba(255,20,147,0.1)" />
+      <stop offset="100%" stop-color="rgba(255,69,0,0.08)" />
+    </linearGradient>
+    
     <!-- Enhanced atmospheric filters with expanded boundaries for sun glow -->
     <filter id="glow" x="-150%" y="-150%" width="400%" height="400%">
       <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
@@ -184,9 +342,74 @@
                      values="1 0.8 0.4 0 0  0.9 0.6 0.8 0 0  0.7 0.9 1 0 0  0 0 0 0.12 0"/>
       <feComposite operator="screen" in="wind" in2="SourceGraphic"/>
     </filter>
-  </defs>  <!-- Enhanced multi-layered cosmic background -->
+    
+    <!-- Advanced immersive filters -->
+    <filter id="quantumGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="0.8" result="quantum"/>
+      <feColorMatrix in="quantum" type="matrix" 
+                     values="0.2 0.8 1.2 0 0  0.8 0.2 1.5 0 0  1.2 1.5 0.2 0 0  0 0 0 0.3 0"/>
+      <feComposite operator="screen" in="quantum" in2="SourceGraphic"/>
+    </filter>
+    
+    <filter id="holographicShimmer" x="-50%" y="-50%" width="200%" height="200%">
+      <feTurbulence baseFrequency="0.02" numOctaves="2" result="shimmer"/>
+      <feColorMatrix in="shimmer" type="matrix" 
+                     values="1.2 0.2 0.8 0 0  0.2 1.2 0.8 0 0  0.8 0.8 1.2 0 0  0 0 0 0.15 0"/>
+      <feComposite operator="screen" in="shimmer" in2="SourceGraphic"/>
+    </filter>
+    
+    <filter id="energyField" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="1.2" result="field"/>
+      <feColorMatrix in="field" type="hueRotate" values="120"/>
+      <feComposite operator="multiply" in="field" in2="SourceGraphic"/>
+    </filter>
+    
+    <filter id="cosmicRadiation" x="-60%" y="-60%" width="220%" height="220%">
+      <feTurbulence baseFrequency="0.01" numOctaves="3" result="radiation"/>
+      <feColorMatrix in="radiation" type="matrix" 
+                     values="0.8 1.2 0.4 0 0  1.2 0.4 0.8 0 0  0.4 0.8 1.2 0 0  0 0 0 0.08 0"/>
+      <feComposite operator="overlay" in="radiation" in2="SourceGraphic"/>
+    </filter>
+    
+    <!-- Parallax depth masks -->
+    <mask id="depthMask1">
+      <rect width="200" height="100" fill="white" opacity="0.8"/>
+    </mask>
+    
+    <mask id="depthMask2">
+      <rect width="200" height="100" fill="white" opacity="0.6"/>
+    </mask>
+    
+    <mask id="depthMask3">
+      <rect width="200" height="100" fill="white" opacity="0.4"/>
+    </mask>
+    
+    <!-- Clipping paths for advanced effects -->
+    <clipPath id="visibleArea">
+      <rect width="200" height="100"/>
+    </clipPath>
+  </defs>
+  
+  <!-- Enhanced multi-layered cosmic background with parallax depth -->
+  
+  <!-- Deep space foundation layer -->
+  <rect width="200" height="100" fill="url(#quantumField)" opacity="0.3" mask="url(#depthMask3)" class="cosmic-particle">
+    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="500s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Quantum field background -->
+  <rect width="200" height="100" fill="url(#starDust)" opacity="0.4" filter="url(#quantumGlow)">
+    <animateTransform attributeName="transform" type="translate" 
+                      values="0 0; -5 -2; 0 0" dur="800s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Holographic shimmer layer -->
+  <rect width="200" height="100" fill="url(#cosmicLens)" opacity="0.2" filter="url(#holographicShimmer)">
+    <animate attributeName="opacity" values="0.1;0.3;0.1" dur="600s" repeatCount="indefinite"/>
+  </rect>
+  
   <!-- Base cosmic medium -->
-  <rect width="200" height="100" fill="url(#reflectionNebula)" opacity="0.6" filter="url(#interstellarMedium)">
+  <rect width="200" height="100" fill="url(#reflectionNebula)" opacity="0.6" filter="url(#interstellarMedium)" mask="url(#depthMask2)">
     <animate attributeName="opacity" values="0.5;0.7;0.5" dur="400s" repeatCount="indefinite"/>
   </rect>
   
@@ -204,6 +427,53 @@
     <animate attributeName="ry" values="45;60;45" dur="180s" repeatCount="indefinite"/>
     <animate attributeName="opacity" values="0;0.18;0" dur="180s" repeatCount="indefinite"/>
   </ellipse>
+  
+  <!-- Advanced floating particle systems -->
+  <g class="cosmic-particle" opacity="0.4">
+    <circle cx="30" cy="20" r="0.3" fill="url(#aurorealis)" filter="url(#energyField)">
+      <animateTransform attributeName="transform" type="translate" 
+                        values="0 0; 15 8; 0 0" dur="45s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="170" cy="30" r="0.25" fill="url(#aurorealis)" filter="url(#energyField)">
+      <animateTransform attributeName="transform" type="translate" 
+                        values="0 0; -12 -5; 0 0" dur="38s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="60" cy="80" r="0.35" fill="url(#aurorealis)" filter="url(#energyField)">
+      <animateTransform attributeName="transform" type="translate" 
+                        values="0 0; -8 12; 0 0" dur="52s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Quantum energy streams -->
+  <g class="cosmic-particle" opacity="0.3">
+    <path d="M20,10 Q60,30 100,15 Q140,0 180,25" stroke="url(#quantumField)" stroke-width="0.2" fill="none" filter="url(#quantumGlow)">
+      <animate attributeName="stroke-dasharray" values="0 20; 10 10; 0 20" dur="25s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.5;0.2" dur="25s" repeatCount="indefinite"/>
+    </path>
+    <path d="M10,70 Q50,85 90,70 Q130,55 170,80" stroke="url(#quantumField)" stroke-width="0.15" fill="none" filter="url(#quantumGlow)">
+      <animate attributeName="stroke-dasharray" values="0 15; 8 7; 0 15" dur="32s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.15;0.4;0.15" dur="32s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Aurora-like energy curtains -->
+  <g class="nebula-pulse" opacity="0.25">
+    <ellipse cx="80" cy="20" rx="20" ry="40" fill="url(#aurorealis)" filter="url(#holographicShimmer)" transform="rotate(15 80 20)">
+      <animate attributeName="opacity" values="0.2;0.4;0.2" dur="40s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" 
+                        values="15 80 20; 20 80 20; 15 80 20" dur="60s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="130" cy="75" rx="15" ry="35" fill="url(#aurorealis)" filter="url(#holographicShimmer)" transform="rotate(-20 130 75)">
+      <animate attributeName="opacity" values="0.15;0.35;0.15" dur="45s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" 
+                        values="-20 130 75; -15 130 75; -20 130 75" dur="55s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+  
+  <!-- Cosmic radiation field -->
+  <rect width="200" height="100" fill="url(#nebulaTexture)" opacity="0.2" filter="url(#cosmicRadiation)">
+    <animate attributeName="opacity" values="0.15;0.25;0.15" dur="350s" repeatCount="indefinite"/>
+  </rect>
   
   <!-- Complex multi-layered nebulae inspired by NASA imagery -->
   
@@ -264,30 +534,30 @@
   </g>
   
   <!-- Mid-distance stars (medium size, twinkling) -->
-  <g fill="white" opacity="0.6">
-    <circle cx="25" cy="35" r="0.2">
+  <g fill="white" opacity="0.6" class="star-twinkle">
+    <circle cx="25" cy="35" r="0.2" class="interactive-element">
       <animate attributeName="opacity" values="0.4;0.8;0.4" dur="8s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="70" cy="10" r="0.25">
+    <circle cx="70" cy="10" r="0.25" class="interactive-element">
       <animate attributeName="opacity" values="0.3;0.9;0.3" dur="12s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="120" cy="40" r="0.2">
+    <circle cx="120" cy="40" r="0.2" class="interactive-element">
       <animate attributeName="opacity" values="0.5;0.7;0.5" dur="6s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="170" cy="35" r="0.3">
+    <circle cx="170" cy="35" r="0.3" class="interactive-element">
       <animate attributeName="opacity" values="0.4;1;0.4" dur="10s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="30" cy="75" r="0.25">
+    <circle cx="30" cy="75" r="0.25" class="interactive-element">
       <animate attributeName="opacity" values="0.3;0.8;0.3" dur="9s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="160" cy="80" r="0.2">
+    <circle cx="160" cy="80" r="0.2" class="interactive-element">
       <animate attributeName="opacity" values="0.4;0.9;0.4" dur="7s" repeatCount="indefinite"/>
     </circle>
   </g>
   
   <!-- Foreground bright stars (largest, brightest) -->
-  <g fill="white">
-    <circle cx="10" cy="15" r="0.3" opacity="0.8">
+  <g fill="white" class="star-twinkle">
+    <circle cx="10" cy="15" r="0.3" opacity="0.8" class="interactive-element">
       <animate attributeName="opacity" values="0.6;1;0.6" dur="15s" repeatCount="indefinite"/>
     </circle>
     <circle cx="45" cy="20" r="0.35" opacity="0.9">
@@ -326,16 +596,22 @@
       <animate attributeName="opacity" values="0.4;0.8;0.4" dur="28s" repeatCount="indefinite"/>
       <animate attributeName="r" values="0.7;1.0;0.7" dur="28s" repeatCount="indefinite"/>
     </circle>
-  <!-- Enhanced central star with seamless glow - no filters -->
-  <g id="sun">
+  <!-- Enhanced central star with seamless glow and interactivity -->
+  <g id="sun" class="star-group interactive-element" aria-label="Central Star">
     <!-- Outermost aura - largest and most transparent -->
-    <circle cx="100" cy="50" r="15" fill="url(#sunAura)">
+    <circle cx="100" cy="50" r="15" fill="url(#sunAura)" filter="url(#quantumGlow)">
       <animate attributeName="r" values="15;18;15" dur="30s" repeatCount="indefinite"/>
       <animate attributeName="opacity" values="0.6;0.3;0.6" dur="30s" repeatCount="indefinite"/>
     </circle>
     
+    <!-- Interactive energy field -->
+    <circle cx="100" cy="50" r="12" fill="url(#quantumField)" opacity="0" class="sun-flare">
+      <animate attributeName="r" values="12;16;12" dur="35s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.2;0" dur="35s" repeatCount="indefinite"/>
+    </circle>
+    
     <!-- Solar wind corona -->
-    <circle cx="100" cy="50" r="10" fill="url(#sunCorona)">
+    <circle cx="100" cy="50" r="10" fill="url(#sunCorona)" filter="url(#holographicShimmer)">
       <animate attributeName="r" values="10;12;10" dur="25s" repeatCount="indefinite"/>
       <animate attributeName="opacity" values="0.8;0.5;0.8" dur="25s" repeatCount="indefinite"/>
     </circle>
@@ -351,88 +627,101 @@
     </circle>
     
     <!-- Solar core -->
-    <circle cx="100" cy="50" r="3.5" fill="url(#sunCore)">
+    <circle cx="100" cy="50" r="3.5" fill="url(#sunCore)" class="sun-core">
       <animate attributeName="r" values="3.5;3.8;3.5" dur="8s" repeatCount="indefinite"/>
     </circle>
     
-    <!-- Solar flares (rare events) -->
-    <ellipse cx="100" cy="50" rx="8" ry="2" fill="url(#sunGlow)" opacity="0" transform="rotate(45 100 50)">
+    <!-- Enhanced solar flares with modern effects -->
+    <ellipse cx="100" cy="50" rx="8" ry="2" fill="url(#sunGlow)" opacity="0" transform="rotate(45 100 50)" class="sun-flare" filter="url(#energyField)">
       <animate attributeName="opacity" values="0;0.4;0;0;0;0;0;0.2;0" dur="90s" repeatCount="indefinite"/>
       <animateTransform attributeName="transform" type="rotate" 
                         values="45 100 50;50 100 50;45 100 50" dur="90s" repeatCount="indefinite"/>
     </ellipse>
     
-    <ellipse cx="100" cy="50" rx="6" ry="1.5" fill="url(#sunCorona)" opacity="0" transform="rotate(-30 100 50)">
+    <ellipse cx="100" cy="50" rx="6" ry="1.5" fill="url(#sunCorona)" opacity="0" transform="rotate(-30 100 50)" class="sun-flare" filter="url(#energyField)">
       <animate attributeName="opacity" values="0;0;0.3;0;0;0;0.15;0;0" dur="75s" repeatCount="indefinite"/>
       <animateTransform attributeName="transform" type="rotate" 
                         values="-30 100 50;-25 100 50;-30 100 50" dur="75s" repeatCount="indefinite"/>
     </ellipse>
+    
+    <!-- Solar prominence effects -->
+    <ellipse cx="100" cy="50" rx="9" ry="1.8" fill="url(#aurorealis)" opacity="0" transform="rotate(120 100 50)" class="sun-flare">
+      <animate attributeName="opacity" values="0;0;0.25;0;0;0;0;0.15;0;0" dur="110s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" 
+                        values="120 100 50;125 100 50;120 100 50" dur="110s" repeatCount="indefinite"/>
+    </ellipse>
+    
+    <!-- Information label (appears on hover) -->
+    <text x="100" y="65" class="planet-info" fill="white">Central Star</text>
   </g>
-  </g>  <!-- Realistic planetary system with atmospheric depth -->
+  <!-- Enhanced planetary system with atmospheric depth and interactivity -->
   
   <!-- Mercury-like rocky planet with heat shimmer -->
-  <g>
-    <ellipse cx="100" cy="50" rx="15" ry="7" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="0.2" stroke-dasharray="1,3"/>
-    <circle cx="115" cy="50" r="1.2" fill="url(#rockyPlanet)" opacity="0.3" filter="url(#atmosphericDepth)"/> <!-- heat haze -->
-    <circle cx="115" cy="50" r="0.9" fill="url(#rockyPlanet)" filter="url(#planetBlur)">
+  <g class="planet-group" aria-label="Inner Rocky Planet">
+    <ellipse cx="100" cy="50" rx="15" ry="7" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="0.2" stroke-dasharray="1,3" class="orbital-trail"/>
+    <circle cx="115" cy="50" r="1.2" fill="url(#rockyPlanet)" opacity="0.3" filter="url(#atmosphericDepth)" class="planet-atmosphere"/> <!-- heat haze -->
+    <circle cx="115" cy="50" r="0.9" fill="url(#rockyPlanet)" filter="url(#planetBlur)" class="planet-surface interactive-element">
       <animate attributeName="fill-opacity" values="0.9;1;0.9" dur="16s" repeatCount="indefinite"/>
     </circle>
+    <text x="115" y="55" class="planet-info" fill="#ffcc66">Mercury</text>
     <animateTransform attributeName="transform" type="rotate" from="0 100 50" to="360 100 50" dur="12s" repeatCount="indefinite"/>
   </g>
   
   <!-- Venus-like planet with thick atmosphere -->
-  <g>
-    <ellipse cx="100" cy="50" rx="25" ry="11" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.2" stroke-dasharray="2,4"/>
+  <g class="planet-group" aria-label="Venus-like Planet">
+    <ellipse cx="100" cy="50" rx="25" ry="11" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.2" stroke-dasharray="2,4" class="orbital-trail"/>
     <!-- Thick atmosphere -->
-    <circle cx="125" cy="50" r="2.2" fill="url(#oceanPlanet)" opacity="0.2" filter="url(#atmosphericDepth)"/>
-    <circle cx="125" cy="50" r="1.8" fill="url(#oceanPlanet)" opacity="0.4" filter="url(#planetBlur)"/>
+    <circle cx="125" cy="50" r="2.2" fill="url(#oceanPlanet)" opacity="0.2" filter="url(#atmosphericDepth)" class="planet-atmosphere"/>
+    <circle cx="125" cy="50" r="1.8" fill="url(#oceanPlanet)" opacity="0.4" filter="url(#planetBlur)" class="planet-atmosphere"/>
     <!-- Planet surface -->
-    <circle cx="125" cy="50" r="1.3" fill="url(#oceanPlanet)" filter="url(#planetBlur)">
+    <circle cx="125" cy="50" r="1.3" fill="url(#oceanPlanet)" filter="url(#planetBlur)" class="planet-surface interactive-element">
       <animate attributeName="fill" values="url(#oceanPlanet);rgba(65,105,225,0.9);url(#oceanPlanet)" dur="28s" repeatCount="indefinite"/>
     </circle>
     <!-- Atmospheric swirls -->
-    <ellipse cx="125" cy="50" rx="1.9" ry="0.8" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.1" opacity="0">
+    <ellipse cx="125" cy="50" rx="1.9" ry="0.8" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.1" opacity="0" class="planet-atmosphere">
       <animate attributeName="opacity" values="0;0.3;0" dur="20s" repeatCount="indefinite"/>
       <animateTransform attributeName="transform" type="rotate" from="0 125 50" to="360 125 50" dur="8s" repeatCount="indefinite"/>
     </ellipse>
+    <text x="125" y="55" class="planet-info" fill="#66ccff">Venus</text>
     <animateTransform attributeName="transform" type="rotate" from="180 100 50" to="540 100 50" dur="24s" repeatCount="indefinite"/>
   </g>
   
   <!-- Earth-like planet with moon and realistic atmosphere -->
-  <g>
-    <ellipse cx="100" cy="50" rx="35" ry="15" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="0.2" stroke-dasharray="3,5"/>
+  <g class="planet-group" aria-label="Earth-like Planet with Moon">
+    <ellipse cx="100" cy="50" rx="35" ry="15" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="0.2" stroke-dasharray="3,5" class="orbital-trail"/>
     <g>
       <!-- Atmosphere glow -->
-      <circle cx="135" cy="50" r="2.4" fill="rgba(135,206,250,0.15)" filter="url(#atmosphericDepth)"/>
-      <circle cx="135" cy="50" r="2.0" fill="rgba(65,105,225,0.2)" filter="url(#planetBlur)"/>
+      <circle cx="135" cy="50" r="2.4" fill="rgba(135,206,250,0.15)" filter="url(#atmosphericDepth)" class="planet-atmosphere"/>
+      <circle cx="135" cy="50" r="2.0" fill="rgba(65,105,225,0.2)" filter="url(#planetBlur)" class="planet-atmosphere"/>
       <!-- Planet surface with continents -->
-      <circle cx="135" cy="50" r="1.8" fill="url(#gasPlanet)" filter="url(#planetBlur)">
+      <circle cx="135" cy="50" r="1.8" fill="url(#gasPlanet)" filter="url(#planetBlur)" class="planet-surface interactive-element">
         <animate attributeName="fill" values="url(#gasPlanet);rgba(205,133,63,0.9);url(#gasPlanet)" dur="32s" repeatCount="indefinite"/>
       </circle>
       <!-- Surface features -->
       <ellipse cx="135" cy="50" rx="1.2" ry="0.6" fill="rgba(139,69,19,0.3)" transform="rotate(15 135 50)" filter="url(#planetBlur)"/>
       <!-- Moon orbital path -->
-      <ellipse cx="135" cy="50" rx="4.2" ry="2.8" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="0.1"/>
+      <ellipse cx="135" cy="50" rx="4.2" ry="2.8" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="0.1" class="orbital-trail"/>
       <!-- Realistic moon with phases -->
-      <g>
+      <g class="interactive-element" aria-label="Moon">
         <circle cx="139.2" cy="50" r="0.35" fill="#e6e6e6" filter="url(#planetBlur)"/>
         <ellipse cx="139.2" cy="50" rx="0.2" ry="0.35" fill="#b8b8b8" opacity="0.6">
           <animate attributeName="rx" values="0.2;0;0.2" dur="6s" repeatCount="indefinite"/>
         </ellipse>
         <animateTransform attributeName="transform" type="rotate" from="0 135 50" to="360 135 50" dur="6s" repeatCount="indefinite"/>
       </g>
+      <text x="135" y="58" class="planet-info" fill="#66ff99">Earth</text>
     </g>
     <animateTransform attributeName="transform" type="rotate" from="90 100 50" to="450 100 50" dur="36s" repeatCount="indefinite"/>
   </g>
   
   <!-- Massive gas giant with complex ring system and moons -->
-  <g>
-    <ellipse cx="100" cy="50" rx="45" ry="18" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.2" stroke-dasharray="4,7"/>
+  <g class="planet-group" aria-label="Gas Giant with Rings and Moons">
+    <ellipse cx="100" cy="50" rx="45" ry="18" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.2" stroke-dasharray="4,7" class="orbital-trail"/>
     <g>
       <!-- Gas giant atmosphere layers -->
-      <circle cx="145" cy="50" r="2.8" fill="url(#outerGiant)" opacity="0.3" filter="url(#atmosphericDepth)"/>
-      <circle cx="145" cy="50" r="2.2" fill="url(#outerGiant)" opacity="0.6" filter="url(#planetBlur)"/>
-      <circle cx="145" cy="50" r="1.8" fill="url(#outerGiant)" filter="url(#planetBlur)">
+      <circle cx="145" cy="50" r="2.8" fill="url(#outerGiant)" opacity="0.3" filter="url(#atmosphericDepth)" class="planet-atmosphere"/>
+      <circle cx="145" cy="50" r="2.2" fill="url(#outerGiant)" opacity="0.6" filter="url(#planetBlur)" class="planet-atmosphere"/>
+      <circle cx="145" cy="50" r="1.8" fill="url(#outerGiant)" filter="url(#planetBlur)" class="planet-surface interactive-element">
         <animate attributeName="fill" values="url(#outerGiant);rgba(255,69,0,0.8);url(#outerGiant)" dur="20s" repeatCount="indefinite"/>
       </circle>
       <!-- Atmospheric bands -->
@@ -440,19 +729,21 @@
       <ellipse cx="145" cy="50" rx="1.6" ry="0.3" fill="none" stroke="rgba(255,140,0,0.2)" stroke-width="0.08" filter="url(#planetBlur)"/>
       
       <!-- Complex ring system -->
-      <ellipse cx="145" cy="50" rx="3.8" ry="0.6" fill="none" stroke="rgba(255,215,0,0.25)" stroke-width="0.15" filter="url(#planetBlur)"/>
-      <ellipse cx="145" cy="50" rx="4.5" ry="0.7" fill="none" stroke="rgba(255,215,0,0.18)" stroke-width="0.12" filter="url(#planetBlur)"/>
-      <ellipse cx="145" cy="50" rx="5.2" ry="0.8" fill="none" stroke="rgba(255,215,0,0.12)" stroke-width="0.08" filter="url(#planetBlur)"/>
+      <ellipse cx="145" cy="50" rx="3.8" ry="0.6" fill="none" stroke="rgba(255,215,0,0.25)" stroke-width="0.15" filter="url(#planetBlur)" class="orbital-trail"/>
+      <ellipse cx="145" cy="50" rx="4.5" ry="0.7" fill="none" stroke="rgba(255,215,0,0.18)" stroke-width="0.12" filter="url(#planetBlur)" class="orbital-trail"/>
+      <ellipse cx="145" cy="50" rx="5.2" ry="0.8" fill="none" stroke="rgba(255,215,0,0.12)" stroke-width="0.08" filter="url(#planetBlur)" class="orbital-trail"/>
       
       <!-- Major moon -->
-      <circle cx="150.5" cy="50" r="0.25" fill="#d3d3d3" filter="url(#planetBlur)">
+      <circle cx="150.5" cy="50" r="0.25" fill="#d3d3d3" filter="url(#planetBlur)" class="interactive-element" aria-label="Large Moon">
         <animateTransform attributeName="transform" type="rotate" from="0 145 50" to="360 145 50" dur="8s" repeatCount="indefinite"/>
       </circle>
       
       <!-- Smaller moon -->
-      <circle cx="149" cy="50" r="0.15" fill="#c0c0c0" filter="url(#planetBlur)">
+      <circle cx="149" cy="50" r="0.15" fill="#c0c0c0" filter="url(#planetBlur)" class="interactive-element" aria-label="Small Moon">
         <animateTransform attributeName="transform" type="rotate" from="180 145 50" to="540 145 50" dur="5s" repeatCount="indefinite"/>
       </circle>
+      
+      <text x="145" y="60" class="planet-info" fill="#ff9966">Jupiter</text>
     </g>
     <animateTransform attributeName="transform" type="rotate" from="270 100 50" to="-90 100 50" dur="48s" repeatCount="indefinite"/>
   </g>
@@ -503,13 +794,42 @@
                       values="40 18; 120 48; 180 72" dur="2.2s" begin="140s;320s" repeatCount="indefinite"/>
   </g>
   
-  <!-- Ultra-subtle background meteor -->
-  <g opacity="0" filter="url(#atmosphericDepth)">
-    <path d="M0,0 Q-6,-0.6 -11,-0.2 Q-8,-0.3 -3,0 Q-8,0.3 -11,0.2 Q-6,0.6 0,0" fill="url(#distantMeteor1)" opacity="0.1"/>
-    <circle cx="0" cy="0" r="0.05" fill="white" opacity="0.2" filter="url(#atmosphericDepth)"/>
-    <animate attributeName="opacity" values="0;0.15;0.2;0" dur="1.2s" begin="200s;380s" repeatCount="indefinite"/>
+  <!-- Advanced meteor shower system with modern effects -->
+  
+  <!-- Major meteor with modern CSS animation -->
+  <g class="meteor-shower" opacity="0">
+    <path d="M0,0 Q-15,-1.5 -25,-0.6 Q-20,-0.8 -8,0 Q-20,0.8 -25,0.6 Q-15,1.5 0,0" 
+          fill="url(#aurorealis)" opacity="0.3" filter="url(#quantumGlow)"/>
+    <circle cx="0" cy="0" r="0.12" fill="white" opacity="0.8" filter="url(#holographicShimmer)"/>
+    <animate attributeName="opacity" values="0;0.8;1;0.6;0" dur="3.5s" begin="30s;180s;330s" repeatCount="indefinite"/>
     <animateTransform attributeName="transform" type="translate" 
-                      values="150 22; 90 38; 50 52" dur="1.2s" begin="200s;380s" repeatCount="indefinite"/>
+                      values="20 10; 180 90; 200 100" dur="3.5s" begin="30s;180s;330s" repeatCount="indefinite"/>
+  </g>
+  
+  <!-- Quantum meteor streak -->
+  <g class="meteor-shower" opacity="0">
+    <path d="M0,0 Q-18,-2 -30,-0.8 Q-25,-1 -10,0 Q-25,1 -30,0.8 Q-18,2 0,0" 
+          fill="url(#quantumField)" opacity="0.4" filter="url(#energyField)"/>
+    <circle cx="0" cy="0" r="0.08" fill="#00ffff" opacity="0.6" filter="url(#quantumGlow)"/>
+    <animate attributeName="opacity" values="0;0.6;0.8;0.4;0" dur="2.8s" begin="120s;280s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate" 
+                      values="190 8; 30 85; 10 95" dur="2.8s" begin="120s;280s" repeatCount="indefinite"/>
+  </g>
+  
+  <!-- Particle burst meteor -->
+  <g class="meteor-shower cosmic-particle" opacity="0">
+    <path d="M0,0 Q-12,-1.2 -20,-0.5 Q-15,-0.6 -6,0 Q-15,0.6 -20,0.5 Q-12,1.2 0,0" 
+          fill="url(#distantMeteor3)" opacity="0.18" filter="url(#cosmicRadiation)"/>
+    <circle cx="0" cy="0" r="0.1" fill="white" opacity="0.35" filter="url(#atmosphericDepth)"/>
+    <!-- Particle trail -->
+    <g opacity="0.2">
+      <circle cx="-5" cy="0" r="0.02" fill="white" opacity="0.4"/>
+      <circle cx="-10" cy="0" r="0.015" fill="white" opacity="0.3"/>
+      <circle cx="-15" cy="0" r="0.01" fill="white" opacity="0.2"/>
+    </g>
+    <animate attributeName="opacity" values="0;0.3;0.35;0.2;0" dur="2.2s" begin="140s;320s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate" 
+                      values="40 18; 120 48; 180 72" dur="2.2s" begin="140s;320s" repeatCount="indefinite"/>
   </g>  <!-- Enhanced cosmic phenomena inspired by NASA deep space imagery -->
   
   <!-- Distant quasar pulses with varied colors -->
@@ -560,35 +880,194 @@
                       values="160 25; 50 75; 30 85" dur="90s" begin="45s;165s" repeatCount="indefinite"/>
   </g>
   
-  <script type="application/ecmascript"><![CDATA[    function edgePos() {      const side = Math.floor(Math.random() * 4);      switch(side) {        case 0: return [Math.random() * 200, 0];        case 1: return [200, Math.random() * 100];        case 2: return [Math.random() * 200, 100];        case 3: return [0, Math.random() * 100];      }
+  <script type="application/ecmascript"><![CDATA[
+    // Modern immersive interactive system
+    let interactionState = {
+      isInteracting: false,
+      lastInteraction: 0,
+      particleCount: 0
+    };
+
+    // Enhanced random positioning for dynamic elements
+    function generateRandomPosition() {
+      const side = Math.floor(Math.random() * 4);
+      switch(side) {
+        case 0: return [Math.random() * 200, 0]; // top
+        case 1: return [200, Math.random() * 100]; // right
+        case 2: return [Math.random() * 200, 100]; // bottom
+        case 3: return [0, Math.random() * 100]; // left
+      }
     }
 
-    function resetPath(id) {
-      const element = document.getElementById(id);
-      if (element) {
-        const start = edgePos();
-        const end = edgePos();
-        const animateTransform = element.querySelector('animateTransform');
-        if (animateTransform) {
-          animateTransform.setAttribute('values', `${start[0]} ${start[1]}; ${end[0]} ${end[1]}`);
+    // Dynamic particle creation for user interactions
+    function createInteractionParticle(x, y) {
+      const svg = document.querySelector('svg');
+      const particle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      
+      particle.setAttribute('cx', x);
+      particle.setAttribute('cy', y);
+      particle.setAttribute('r', '0.5');
+      particle.setAttribute('fill', `url(#quantumField)`);
+      particle.setAttribute('opacity', '0.8');
+      particle.setAttribute('filter', 'url(#quantumGlow)');
+      particle.classList.add('cosmic-particle');
+      
+      // Animate particle expansion and fade
+      const animate = document.createElementNS('http://www.w3.org/2000/svg', 'animate');
+      animate.setAttribute('attributeName', 'r');
+      animate.setAttribute('values', '0.5;2;0');
+      animate.setAttribute('dur', '2s');
+      animate.setAttribute('begin', '0s');
+      
+      const fadeOut = document.createElementNS('http://www.w3.org/2000/svg', 'animate');
+      fadeOut.setAttribute('attributeName', 'opacity');
+      fadeOut.setAttribute('values', '0.8;0.3;0');
+      fadeOut.setAttribute('dur', '2s');
+      fadeOut.setAttribute('begin', '0s');
+      
+      particle.appendChild(animate);
+      particle.appendChild(fadeOut);
+      svg.appendChild(particle);
+      
+      // Remove particle after animation
+      setTimeout(() => {
+        if (particle.parentNode) {
+          particle.parentNode.removeChild(particle);
+        }
+      }, 2100);
+    }
+
+    // Enhanced cosmic phenomena with dynamic behavior
+    function triggerCosmicEvent() {
+      const phenomena = ['quantumFluctuation', 'stellarFlare', 'energyWave'];
+      const eventType = phenomena[Math.floor(Math.random() * phenomena.length)];
+      
+      switch(eventType) {
+        case 'quantumFluctuation':
+          const quantumElements = document.querySelectorAll('[filter*="quantumGlow"]');
+          quantumElements.forEach(el => {
+            el.style.opacity = Math.random() * 0.5 + 0.3;
+            setTimeout(() => el.style.opacity = '', 2000);
+          });
+          break;
+          
+        case 'stellarFlare':
+          const sun = document.getElementById('sun');
+          if (sun) {
+            const flares = sun.querySelectorAll('.sun-flare');
+            flares.forEach(flare => {
+              flare.style.opacity = '0.6';
+              setTimeout(() => flare.style.opacity = '', 3000);
+            });
+          }
+          break;
+          
+        case 'energyWave':
+          const energyElements = document.querySelectorAll('[filter*="energyField"]');
+          energyElements.forEach((el, index) => {
+            setTimeout(() => {
+              el.style.filter = 'url(#holographicShimmer)';
+              setTimeout(() => el.style.filter = '', 1500);
+            }, index * 200);
+          });
+          break;
+      }
+    }
+
+    // Interactive hover effects for celestial bodies
+    function initializeInteractivity() {
+      const interactiveElements = document.querySelectorAll('.interactive-element');
+      
+      interactiveElements.forEach(element => {
+        element.addEventListener('mouseenter', function(e) {
+          interactionState.isInteracting = true;
+          interactionState.lastInteraction = Date.now();
+          
+          // Create interaction particle at cursor position
+          const rect = element.getBoundingClientRect();
+          const svgRect = document.querySelector('svg').getBoundingClientRect();
+          const x = ((e.clientX - svgRect.left) / svgRect.width) * 200;
+          const y = ((e.clientY - svgRect.top) / svgRect.height) * 100;
+          
+          createInteractionParticle(x, y);
+        });
+        
+        element.addEventListener('mouseleave', function() {
+          interactionState.isInteracting = false;
+        });
+      });
+    }
+
+    // Dynamic orbital path updates
+    function updateOrbitalPaths() {
+      const orbitalTrails = document.querySelectorAll('.orbital-trail');
+      orbitalTrails.forEach(trail => {
+        const currentOffset = parseFloat(trail.style.strokeDashoffset) || 0;
+        trail.style.strokeDashoffset = (currentOffset + 0.1) % 20;
+      });
+    }
+
+    // Responsive scaling based on viewport
+    function updateResponsiveScaling() {
+      const svg = document.querySelector('svg');
+      const container = svg.parentElement;
+      if (container) {
+        const containerWidth = container.offsetWidth;
+        if (containerWidth < 768) {
+          svg.style.transform = 'scale(0.8)';
+        } else if (containerWidth < 1024) {
+          svg.style.transform = 'scale(0.9)';
+        } else {
+          svg.style.transform = 'scale(1)';
         }
       }
     }
 
-    // Add mysterious randomness to movements
-    function addMystery() {
-      const orbs = ['orb1', 'orb2'];
-      orbs.forEach(orbId => {
-        const orb = document.getElementById(orbId);
-        if (orb && Math.random() > 0.7) {
-          const opacity = Math.random() * 0.5 + 0.3;
-          orb.style.opacity = opacity;
-        }
-      });
+    // Ambient particle generation
+    function generateAmbientParticles() {
+      if (interactionState.particleCount < 3 && Math.random() > 0.98) {
+        const pos = generateRandomPosition();
+        createInteractionParticle(pos[0], pos[1]);
+        interactionState.particleCount++;
+        setTimeout(() => interactionState.particleCount--, 2100);
+      }
     }
 
-    setInterval(addMystery, 8000);
-    setInterval(() => resetPath('shootingStar'), 60000);
-    setInterval(() => resetPath('comet'), 80000);
+    // Main animation loop
+    function animationLoop() {
+      updateOrbitalPaths();
+      generateAmbientParticles();
+      
+      // Trigger random cosmic events
+      if (Math.random() > 0.999) {
+        triggerCosmicEvent();
+      }
+      
+      requestAnimationFrame(animationLoop);
+    }
+
+    // Initialize when DOM is ready
+    document.addEventListener('DOMContentLoaded', function() {
+      initializeInteractivity();
+      updateResponsiveScaling();
+      
+      // Start animation loop
+      animationLoop();
+      
+      // Handle window resize
+      window.addEventListener('resize', updateResponsiveScaling);
+      
+      // Periodic cosmic events
+      setInterval(triggerCosmicEvent, 15000 + Math.random() * 10000);
+    });
+
+    // Legacy compatibility
+    function edgePos() {
+      return generateRandomPosition();
+    }
+
+    function addMystery() {
+      triggerCosmicEvent();
+    }
   ]]></script>
 </svg>
