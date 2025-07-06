@@ -34,7 +34,7 @@ Once a U.S. Marine managing legal cases, I'm now a self-taught software engineer
   - [PROD](https://shadow-scroll-blossom.lovable.app/): If broken, visit fallback QA link.
   - [QA](https://ba-calderonmorales.github.io/shadow-scroll-blossom): If broken, feel free to contact me to see what's happening.
 - **Rust Terminal Forge:** [repo](https://github.com/BA-CalderonMorales/rust-terminal-forge): idea that merges Rust tooling with a React interface.
-  - [PROD - Unstable](https://rust-terminal-forge.lovable.app/): Currently broken, working on a fix. Visit QA below to keep track of updates. 
+  - [PROD - Unstable](https://rust-terminal-forge.lovable.app/): Currently broken, working on a fix. Visit QA below to keep track of updates.
   - [QA](https://ba-calderonmorales.github.io/rust-terminal-forge/): If broken, feel free to contact me to see what's happening.
 
 </details>
