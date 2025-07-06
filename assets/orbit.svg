@@ -261,6 +261,37 @@
     <circle cx="128" cy="68" r="0.1"/>
     <circle cx="148" cy="88" r="0.1"/>
     <circle cx="172" cy="75" r="0.1"/>
+    <animateTransform attributeName="transform" type="translate"
+                      values="0 0; 4 1; 0 0" dur="120s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Wandering orbs add subtle foreground movement -->
+  <g id="orb1" opacity="0.5">
+    <circle cx="0" cy="0" r="0.4" fill="white" filter="url(#depthBlur)"/>
+    <animateTransform attributeName="transform" type="translate"
+                      values="20 20; 180 70" dur="50s" repeatCount="indefinite"/>
+  </g>
+  <g id="orb2" opacity="0.5">
+    <circle cx="0" cy="0" r="0.3" fill="white" filter="url(#depthBlur)"/>
+    <animateTransform attributeName="transform" type="translate"
+                      values="180 30; 40 60" dur="60s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Dynamic shooting star controlled by script -->
+  <g id="shootingStar" opacity="0">
+    <path d="M0 0 L4 0" stroke="white" stroke-width="0.15"/>
+    <animate attributeName="opacity" values="0;0.9;0" dur="1.2s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate"
+                      values="10 10; 150 70" dur="1.2s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Occasional comet sweep -->
+  <g id="comet" opacity="0">
+    <path d="M0 0 L6 0" stroke="white" stroke-width="0.2"/>
+    <circle cx="0" cy="0" r="0.3" fill="white"/>
+    <animate attributeName="opacity" values="0;0.8;0" dur="2s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate"
+                      values="50 0; 0 80" dur="2s" repeatCount="indefinite"/>
   </g>
   
   <!-- Mid-distance stars (medium size, twinkling) -->
@@ -283,6 +314,8 @@
     <circle cx="160" cy="80" r="0.2">
       <animate attributeName="opacity" values="0.4;0.9;0.4" dur="7s" repeatCount="indefinite"/>
     </circle>
+    <animateTransform attributeName="transform" type="translate"
+                      values="0 0; -5 -2; 0 0" dur="90s" repeatCount="indefinite"/>
   </g>
   
   <!-- Foreground bright stars (largest, brightest) -->
@@ -310,6 +343,8 @@
     <circle cx="125" cy="85" r="0.38" fill="#ff1493" opacity="0.8">
       <animate attributeName="opacity" values="0.6;1;0.6" dur="19s" repeatCount="indefinite"/>
     </circle>
+    <animateTransform attributeName="transform" type="translate"
+                      values="0 0; 6 3; 0 0" dur="60s" repeatCount="indefinite"/>
   </g>
   
   <!-- Bright emission knots (like HII regions in NASA images) -->
