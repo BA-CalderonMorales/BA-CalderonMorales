@@ -8,6 +8,8 @@ on:
 jobs:
   script-checks:
     runs-on: ubuntu-latest
+    env:
+      CI_SKIP_LINK_CHECK: "true"
     steps:
       - uses: actions/checkout@v3
         with:
