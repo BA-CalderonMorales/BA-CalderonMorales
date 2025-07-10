@@ -468,7 +468,6 @@
       <animate attributeName="r" values="3.5;3.7;3.5" dur="12s" repeatCount="indefinite"/>
     </circle>
     
-  </g>
   </g>  <!-- Realistic planetary system with atmospheric depth -->
   
   <!-- Mercury-like rocky planet with heat shimmer -->
