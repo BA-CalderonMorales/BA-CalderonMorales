@@ -88,6 +88,67 @@
       <stop offset="100%" stop-color="rgba(25,25,112,0.02)" />
     </linearGradient>
     
+    <!-- Majestic Orion-inspired nebula gradients -->
+    <radialGradient id="orionTrapezium" cx="40%" cy="60%" r="80%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.8)" />
+      <stop offset="15%" stop-color="rgba(255,215,0,0.6)" />
+      <stop offset="40%" stop-color="rgba(255,69,0,0.4)" />
+      <stop offset="70%" stop-color="rgba(220,20,60,0.25)" />
+      <stop offset="100%" stop-color="rgba(75,0,130,0.1)" />
+    </radialGradient>
+    
+    <!-- Horsehead-inspired dark nebula -->
+    <radialGradient id="horseheadDarkNebula" cx="70%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="rgba(0,0,0,0.9)" />
+      <stop offset="30%" stop-color="rgba(25,25,25,0.7)" />
+      <stop offset="60%" stop-color="rgba(50,25,50,0.4)" />
+      <stop offset="100%" stop-color="rgba(75,0,130,0.15)" />
+    </radialGradient>
+    
+    <!-- Eagle Nebula pillar gradient -->
+    <linearGradient id="eaglePillars" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,140,0,0.6)" />
+      <stop offset="30%" stop-color="rgba(255,69,0,0.4)" />
+      <stop offset="60%" stop-color="rgba(139,0,0,0.3)" />
+      <stop offset="100%" stop-color="rgba(25,25,25,0.8)" />
+    </linearGradient>
+    
+    <!-- Crab Nebula filament gradient -->
+    <radialGradient id="crabFilaments" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.9)" />
+      <stop offset="20%" stop-color="rgba(0,255,255,0.7)" />
+      <stop offset="50%" stop-color="rgba(0,191,255,0.5)" />
+      <stop offset="80%" stop-color="rgba(138,43,226,0.3)" />
+      <stop offset="100%" stop-color="rgba(25,25,112,0.1)" />
+    </radialGradient>
+    
+    <!-- Rosette Nebula ionization gradient -->
+    <radialGradient id="rosetteIonization" cx="50%" cy="50%" r="80%">
+      <stop offset="0%" stop-color="rgba(255,20,147,0.8)" />
+      <stop offset="25%" stop-color="rgba(255,69,0,0.6)" />
+      <stop offset="50%" stop-color="rgba(255,140,0,0.4)" />
+      <stop offset="75%" stop-color="rgba(255,215,0,0.2)" />
+      <stop offset="100%" stop-color="rgba(255,248,220,0.05)" />
+    </radialGradient>
+    
+    <!-- Galactic spiral arm gradient -->
+    <linearGradient id="spiralArm" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(255,248,220,0.02)" />
+      <stop offset="20%" stop-color="rgba(255,215,0,0.08)" />
+      <stop offset="40%" stop-color="rgba(255,140,0,0.15)" />
+      <stop offset="60%" stop-color="rgba(255,69,0,0.12)" />
+      <stop offset="80%" stop-color="rgba(220,20,60,0.08)" />
+      <stop offset="100%" stop-color="rgba(75,0,130,0.03)" />
+    </linearGradient>
+    
+    <!-- Aurora gradient for planets -->
+    <linearGradient id="auroraGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(0,255,127,0.8)" />
+      <stop offset="30%" stop-color="rgba(0,255,255,0.6)" />
+      <stop offset="60%" stop-color="rgba(138,43,226,0.4)" />
+      <stop offset="100%" stop-color="rgba(255,20,147,0.2)" />
+    </linearGradient>
+    
     <!-- Realistic planet surface gradients -->
     <radialGradient id="rockyPlanet" cx="30%" cy="30%" r="70%">
       <stop offset="0%" stop-color="#b8860b" />
@@ -170,6 +231,44 @@
       <feDisplacementMap in="SourceGraphic" in2="shimmer" scale="1.5"/>
     </filter>
     
+    <!-- Nebula turbulence filter -->
+    <filter id="nebulaTurbulence" x="-100%" y="-100%" width="300%" height="300%">
+      <feTurbulence baseFrequency="0.01" numOctaves="4" result="turbulence"/>
+      <feColorMatrix in="turbulence" type="matrix" 
+                     values="0.8 0.2 0.9 0 0  0.3 0.7 0.8 0 0  0.9 0.4 1 0 0  0 0 0 0.3 0"/>
+      <feComposite operator="screen" in="turbulence" in2="SourceGraphic"/>
+    </filter>
+    
+    <!-- Stellar nursery filter -->
+    <filter id="stellarNursery" x="-80%" y="-80%" width="260%" height="260%">
+      <feTurbulence baseFrequency="0.025" numOctaves="3" result="nursery"/>
+      <feColorMatrix in="nursery" type="matrix" 
+                     values="1 0.8 0.2 0 0  0.9 0.6 0.8 0 0  0.4 0.9 1 0 0  0 0 0 0.4 0"/>
+      <feComposite operator="screen" in="nursery" in2="SourceGraphic"/>
+    </filter>
+    
+    <!-- Ionization front filter -->
+    <filter id="ionizationFront" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2" result="ionGlow"/>
+      <feColorMatrix in="ionGlow" type="matrix" 
+                     values="1 0.3 0.8 0 0  0.8 0.5 1 0 0  0.2 0.8 1 0 0  0 0 0 0.6 0"/>
+      <feMerge>
+        <feMergeNode in="ionGlow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Cosmic jet filter -->
+    <filter id="cosmicJet" x="-150%" y="-150%" width="400%" height="400%">
+      <feGaussianBlur stdDeviation="3" result="jetGlow"/>
+      <feColorMatrix in="jetGlow" type="matrix" 
+                     values="0.2 0.8 1 0 0  0.3 0.9 1 0 0  0.8 0.5 1 0 0  0 0 0 0.7 0"/>
+      <feMerge>
+        <feMergeNode in="jetGlow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
     <!-- Planetary atmosphere filter -->
     <filter id="planetBlur" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur stdDeviation="0.15" result="softEdge"/>
@@ -230,6 +329,16 @@
     <animate attributeName="opacity" values="0.5;0.7;0.5" dur="400s" repeatCount="indefinite"/>
   </rect>
   
+  <!-- Majestic galactic spiral arms -->
+  <path d="M0,20 Q50,30 100,25 Q150,20 200,30" fill="none" stroke="url(#spiralArm)" stroke-width="8" opacity="0.4" filter="url(#nebulaTurbulence)">
+    <animate attributeName="opacity" values="0.3;0.5;0.3" dur="300s" repeatCount="indefinite"/>
+    <animate attributeName="stroke-width" values="8;12;8" dur="300s" repeatCount="indefinite"/>
+  </path>
+  <path d="M0,80 Q50,70 100,75 Q150,80 200,70" fill="none" stroke="url(#spiralArm)" stroke-width="6" opacity="0.3" filter="url(#nebulaTurbulence)">
+    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="350s" repeatCount="indefinite"/>
+    <animate attributeName="stroke-width" values="6;9;6" dur="350s" repeatCount="indefinite"/>
+  </path>
+  
   <!-- Deep space dust layers -->
   <rect width="200" height="100" fill="url(#depthGradient1)" opacity="0.4" filter="url(#cosmicDust)">
     <animate attributeName="opacity" values="0.3;0.5;0.3" dur="300s" repeatCount="indefinite"/>
@@ -258,6 +367,18 @@
     <animate attributeName="opacity" values="0;0.18;0" dur="180s" repeatCount="indefinite"/>
   </ellipse>
   
+  <!-- Magnificent coronal mass ejection -->
+  <g opacity="0" filter="url(#cosmicJet)">
+    <path d="M100,50 Q80,30 60,10 Q40,5 20,0" fill="none" stroke="url(#sunCorona)" stroke-width="2">
+      <animate attributeName="opacity" values="0;0.8;0" dur="25s" begin="30s;120s;210s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-width" values="2;0.5;0" dur="25s" begin="30s;120s;210s" repeatCount="indefinite"/>
+    </path>
+    <path d="M100,50 Q120,70 140,90 Q160,95 180,100" fill="none" stroke="url(#sunCorona)" stroke-width="1.5">
+      <animate attributeName="opacity" values="0;0.6;0" dur="20s" begin="60s;150s;240s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-width" values="1.5;0.3;0" dur="20s" begin="60s;150s;240s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
   <!-- Pulsing solar wind layers -->
   <ellipse cx="100" cy="50" rx="70" ry="35" fill="none" stroke="url(#sunGlow)" stroke-width="0.08" opacity="0" filter="url(#cosmicGlow)">
     <animate attributeName="rx" values="70;95;70" dur="90s" repeatCount="indefinite"/>
@@ -273,38 +394,88 @@
   
   <!-- Complex multi-layered nebulae inspired by NASA imagery -->
   
-  <!-- Large emission nebula (star formation region) -->
-  <ellipse cx="40" cy="75" rx="95" ry="35" fill="url(#emissionNebula)" opacity="0.7" filter="url(#atmosphericDepth)">
-    <animate attributeName="opacity" values="0.6;0.8;0.6" dur="420s" repeatCount="indefinite"/>
-    <animateTransform attributeName="transform" type="rotate" 
-                      values="0 40 75;3 40 75;0 40 75" dur="600s" repeatCount="indefinite"/>
-  </ellipse>
+  <!-- Magnificent Orion-inspired star formation region -->
+  <g opacity="0.8">
+    <ellipse cx="40" cy="75" rx="95" ry="35" fill="url(#orionTrapezium)" filter="url(#stellarNursery)">
+      <animate attributeName="opacity" values="0.7;0.9;0.7" dur="420s" repeatCount="indefinite"/>
+      <animate attributeName="rx" values="95;100;95" dur="420s" repeatCount="indefinite"/>
+      <animate attributeName="ry" values="35;38;35" dur="420s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" 
+                        values="0 40 75;3 40 75;0 40 75" dur="600s" repeatCount="indefinite"/>
+    </ellipse>
+    <!-- Bright core cluster -->
+    <g fill="rgba(255,255,255,0.9)" filter="url(#ionizationFront)">
+      <circle cx="35" cy="75" r="0.8">
+        <animate attributeName="opacity" values="0.8;1;0.8" dur="15s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="42" cy="72" r="0.6">
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="18s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="38" cy="78" r="0.7">
+        <animate attributeName="opacity" values="0.9;1;0.9" dur="12s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="45" cy="76" r="0.5">
+        <animate attributeName="opacity" values="0.6;0.9;0.6" dur="20s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
   
-  <!-- Reflection nebula (blue dust clouds) -->
-  <ellipse cx="160" cy="20" rx="75" ry="28" fill="url(#reflectionNebula)" opacity="0.6" transform="rotate(30 160 20)" filter="url(#atmosphericDepth)">
-    <animate attributeName="opacity" values="0.5;0.7;0.5" dur="480s" repeatCount="indefinite"/>
-    <animateTransform attributeName="transform" type="rotate" 
-                      values="30 160 20;33 160 20;30 160 20" dur="720s" repeatCount="indefinite"/>
-  </ellipse>
+  <!-- Majestic Horsehead-inspired dark nebula -->
+  <g opacity="0.9">
+    <path d="M140,10 Q155,15 170,12 Q175,20 165,35 Q150,40 140,35 Q130,25 135,15 Q140,10 140,10" 
+          fill="url(#horseheadDarkNebula)" filter="url(#nebulaTurbulence)">
+      <animate attributeName="opacity" values="0.8;0.95;0.8" dur="500s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" 
+                        values="0 155 25;2 155 25;0 155 25" dur="800s" repeatCount="indefinite"/>
+    </path>
+    <!-- Background emission -->
+    <ellipse cx="155" cy="25" rx="25" ry="15" fill="url(#rosetteIonization)" opacity="0.4" filter="url(#ionizationFront)">
+      <animate attributeName="opacity" values="0.3;0.5;0.3" dur="300s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
   
-  <!-- Planetary nebula -->
-  <ellipse cx="170" cy="85" rx="45" ry="20" fill="url(#planetaryNebula)" opacity="0.8" transform="rotate(-20 170 85)" filter="url(#atmosphericDepth)">
-    <animate attributeName="opacity" values="0.7;0.9;0.7" dur="350s" repeatCount="indefinite"/>
-    <animateTransform attributeName="transform" type="rotate" 
-                      values="-20 170 85;-18 170 85;-20 170 85" dur="500s" repeatCount="indefinite"/>
-  </ellipse>
+  <!-- Eagle Nebula-inspired pillars of creation -->
+  <g opacity="0.8">
+    <path d="M15,50 Q20,40 25,35 Q30,30 35,25 Q40,20 45,15 Q50,10 45,5 Q40,8 35,15 Q30,20 25,25 Q20,30 15,35 Q10,40 15,50" 
+          fill="url(#eaglePillars)" filter="url(#stellarNursery)">
+      <animate attributeName="opacity" values="0.7;0.9;0.7" dur="600s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" 
+                        values="0 30 30;-1 30 30;0 30 30" dur="900s" repeatCount="indefinite"/>
+    </path>
+    <path d="M180,60 Q175,50 170,45 Q165,40 160,35 Q155,30 150,25 Q145,20 150,15 Q155,18 160,25 Q165,30 170,35 Q175,40 180,45 Q185,50 180,60" 
+          fill="url(#eaglePillars)" filter="url(#stellarNursery)">
+      <animate attributeName="opacity" values="0.6;0.8;0.6" dur="550s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" 
+                        values="0 165 40;1 165 40;0 165 40" dur="850s" repeatCount="indefinite"/>
+    </path>
+  </g>
   
-  <!-- Dark dust lane cutting through bright regions -->
-  <ellipse cx="80" cy="35" rx="120" ry="15" fill="url(#darkNebula)" opacity="0.6" transform="rotate(15 80 35)" filter="url(#depthBlur)">
-    <animate attributeName="opacity" values="0.5;0.7;0.5" dur="380s" repeatCount="indefinite"/>
-  </ellipse>
+  <!-- Crab Nebula-inspired supernova remnant -->
+  <g opacity="0.7">
+    <ellipse cx="170" cy="85" rx="45" ry="20" fill="url(#crabFilaments)" transform="rotate(-20 170 85)" filter="url(#ionizationFront)">
+      <animate attributeName="opacity" values="0.6;0.8;0.6" dur="350s" repeatCount="indefinite"/>
+      <animate attributeName="rx" values="45;48;45" dur="350s" repeatCount="indefinite"/>
+      <animate attributeName="ry" values="20;22;20" dur="350s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" 
+                        values="-20 170 85;-18 170 85;-20 170 85" dur="500s" repeatCount="indefinite"/>
+    </ellipse>
+    <!-- Pulsar at center -->
+    <circle cx="170" cy="85" r="0.3" fill="rgba(255,255,255,1)" filter="url(#cosmicGlow)">
+      <animate attributeName="opacity" values="1;0.3;1" dur="0.033s" repeatCount="indefinite"/>
+    </circle>
+  </g>
   
-  <!-- Secondary emission region -->
-  <ellipse cx="30" cy="25" rx="60" ry="25" fill="url(#emissionNebula)" opacity="0.5" transform="rotate(-10 30 25)" filter="url(#atmosphericDepth)">
-    <animate attributeName="opacity" values="0.4;0.6;0.4" dur="450s" repeatCount="indefinite"/>
-    <animateTransform attributeName="transform" type="rotate" 
-                      values="-10 30 25;-8 30 25;-10 30 25" dur="650s" repeatCount="indefinite"/>
-  </ellipse>  <!-- Multi-layered star field with 3D depth -->
+  <!-- Rosette-inspired ionization region -->
+  <g opacity="0.6">
+    <circle cx="30" cy="25" r="35" fill="url(#rosetteIonization)" filter="url(#ionizationFront)">
+      <animate attributeName="opacity" values="0.5;0.7;0.5" dur="450s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="35;38;35" dur="450s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Central cavity -->
+    <circle cx="30" cy="25" r="8" fill="rgba(0,0,0,0.6)" filter="url(#depthBlur)">
+      <animate attributeName="r" values="8;10;8" dur="450s" repeatCount="indefinite"/>
+    </circle>
+  </g>  <!-- Multi-layered star field with 3D depth -->
   <!-- Far distant stars (smallest, most numerous) -->
   <g fill="white" opacity="0.3" filter="url(#depthBlur)">
     <circle cx="5" cy="8" r="0.1"/>
@@ -437,6 +608,33 @@
       <animate attributeName="opacity" values="0.4;0.8;0.4" dur="32s" repeatCount="indefinite"/>
       <animate attributeName="r" values="0.4;0.7;0.4" dur="32s" repeatCount="indefinite"/>
     </circle>
+    
+    <!-- Spectacular Wolf-Rayet star -->
+    <g opacity="0.8">
+      <circle cx="85" cy="15" r="0.6" fill="rgba(0,191,255,0.9)" filter="url(#ionizationFront)">
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="8s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="0.6;0.8;0.6" dur="8s" repeatCount="indefinite"/>
+      </circle>
+      <!-- Stellar wind bubble -->
+      <circle cx="85" cy="15" r="3" fill="none" stroke="rgba(0,191,255,0.3)" stroke-width="0.2" filter="url(#cosmicGlow)">
+        <animate attributeName="opacity" values="0.2;0.4;0.2" dur="15s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="3;4;3" dur="15s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    
+    <!-- Brilliant blue supergiant -->
+    <g opacity="0.9">
+      <circle cx="155" cy="12" r="0.7" fill="rgba(173,216,230,0.95)" filter="url(#ionizationFront)">
+        <animate attributeName="opacity" values="0.8;1;0.8" dur="6s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="0.7;0.9;0.7" dur="6s" repeatCount="indefinite"/>
+      </circle>
+      <!-- Massive stellar wind -->
+      <ellipse cx="155" cy="12" rx="5" ry="2" fill="none" stroke="rgba(173,216,230,0.2)" stroke-width="0.15" filter="url(#stellarWind)">
+        <animate attributeName="opacity" values="0.15;0.3;0.15" dur="20s" repeatCount="indefinite"/>
+        <animate attributeName="rx" values="5;7;5" dur="20s" repeatCount="indefinite"/>
+        <animate attributeName="ry" values="2;3;2" dur="20s" repeatCount="indefinite"/>
+      </ellipse>
+    </g>
   <!-- Enhanced central star with seamless glow - no filters -->
   <g id="sun">
     <!-- Outermost aura - largest and most transparent -->
@@ -527,6 +725,17 @@
       <animate attributeName="opacity" values="0;0.3;0" dur="20s" repeatCount="indefinite"/>
       <animateTransform attributeName="transform" type="rotate" from="0 125 50" to="360 125 50" dur="8s" repeatCount="indefinite"/>
     </ellipse>
+    <!-- Magnificent aurora -->
+    <g opacity="0">
+      <path d="M123,47 Q125,45 127,47 Q125,49 123,47" fill="none" stroke="url(#auroraGradient)" stroke-width="0.3" filter="url(#atmosphericShimmer)">
+        <animate attributeName="opacity" values="0;0.8;0" dur="12s" begin="5s;25s;45s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="rotate" from="0 125 50" to="360 125 50" dur="12s" begin="5s;25s;45s" repeatCount="indefinite"/>
+      </path>
+      <path d="M123,53 Q125,55 127,53 Q125,51 123,53" fill="none" stroke="url(#auroraGradient)" stroke-width="0.25" filter="url(#atmosphericShimmer)">
+        <animate attributeName="opacity" values="0;0.6;0" dur="10s" begin="8s;28s;48s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="rotate" from="0 125 50" to="360 125 50" dur="10s" begin="8s;28s;48s" repeatCount="indefinite"/>
+      </path>
+    </g>
     <animateTransform attributeName="transform" type="rotate" from="180 100 50" to="540 100 50" dur="24s" repeatCount="indefinite"/>
   </g>
   
@@ -567,6 +776,13 @@
         <ellipse cx="139.2" cy="50" rx="0.2" ry="0.35" fill="#b8b8b8" opacity="0.6">
           <animate attributeName="rx" values="0.2;0;0.2" dur="6s" repeatCount="indefinite"/>
         </ellipse>
+        <!-- Lunar aurora during solar storms -->
+        <g opacity="0">
+          <ellipse cx="139.2" cy="50" rx="0.6" ry="0.3" fill="none" stroke="url(#auroraGradient)" stroke-width="0.05" filter="url(#atmosphericShimmer)">
+            <animate attributeName="opacity" values="0;0.4;0" dur="8s" begin="15s;45s;75s" repeatCount="indefinite"/>
+            <animateTransform attributeName="transform" type="rotate" from="0 139.2 50" to="360 139.2 50" dur="8s" begin="15s;45s;75s" repeatCount="indefinite"/>
+          </ellipse>
+        </g>
         <animateTransform attributeName="transform" type="rotate" from="0 135 50" to="360 135 50" dur="6s" repeatCount="indefinite"/>
       </g>
     </g>
@@ -612,17 +828,35 @@
         <animate attributeName="stroke-width" values="0.08;0.12;0.08" dur="10s" repeatCount="indefinite"/>
       </ellipse>
       
-      <!-- Major moon -->
-      <circle cx="150.5" cy="50" r="0.25" fill="#d3d3d3" filter="url(#planetBlur)">
-        <animate attributeName="r" values="0.25;0.27;0.25" dur="8s" repeatCount="indefinite"/>
+      <!-- Major moon with magnetosphere -->
+      <g>
+        <circle cx="150.5" cy="50" r="0.25" fill="#d3d3d3" filter="url(#planetBlur)">
+          <animate attributeName="r" values="0.25;0.27;0.25" dur="8s" repeatCount="indefinite"/>
+        </circle>
+        <!-- Io-like volcanic activity -->
+        <g opacity="0">
+          <circle cx="150.5" cy="50" r="0.4" fill="none" stroke="rgba(255,69,0,0.6)" stroke-width="0.03" filter="url(#ionizationFront)">
+            <animate attributeName="opacity" values="0;0.8;0" dur="12s" begin="10s;40s;70s" repeatCount="indefinite"/>
+            <animate attributeName="r" values="0.4;0.6;0.4" dur="12s" begin="10s;40s;70s" repeatCount="indefinite"/>
+          </circle>
+        </g>
         <animateTransform attributeName="transform" type="rotate" from="0 145 50" to="360 145 50" dur="8s" repeatCount="indefinite"/>
-      </circle>
+      </g>
       
-      <!-- Smaller moon -->
-      <circle cx="149" cy="50" r="0.15" fill="#c0c0c0" filter="url(#planetBlur)">
-        <animate attributeName="opacity" values="0.8;1;0.8" dur="5s" repeatCount="indefinite"/>
+      <!-- Europa-like icy moon -->
+      <g>
+        <circle cx="149" cy="50" r="0.15" fill="#e0f6ff" filter="url(#planetBlur)">
+          <animate attributeName="opacity" values="0.8;1;0.8" dur="5s" repeatCount="indefinite"/>
+        </circle>
+        <!-- Subsurface ocean aurora -->
+        <g opacity="0">
+          <ellipse cx="149" cy="50" rx="0.25" ry="0.1" fill="none" stroke="rgba(0,255,255,0.5)" stroke-width="0.02" filter="url(#atmosphericShimmer)">
+            <animate attributeName="opacity" values="0;0.6;0" dur="15s" begin="20s;60s;100s" repeatCount="indefinite"/>
+            <animateTransform attributeName="transform" type="rotate" from="0 149 50" to="360 149 50" dur="15s" begin="20s;60s;100s" repeatCount="indefinite"/>
+          </ellipse>
+        </g>
         <animateTransform attributeName="transform" type="rotate" from="180 145 50" to="540 145 50" dur="5s" repeatCount="indefinite"/>
-      </circle>
+      </g>
     </g>
     <animateTransform attributeName="transform" type="rotate" from="270 100 50" to="-90 100 50" dur="48s" repeatCount="indefinite"/>
   </g>
@@ -774,25 +1008,68 @@
     <animate attributeName="stroke-width" values="0.3;0.1;0" dur="30s" begin="50s;130s;210s" repeatCount="indefinite"/>
   </g>
   
-  <!-- Cosmic web filaments -->
-  <g opacity="0.2" filter="url(#depthBlur)">
-    <path d="M0,0 Q30,20 60,10 Q90,5 120,15 Q150,25 180,20 Q200,15 220,25" fill="none" stroke="rgba(138,43,226,0.1)" stroke-width="0.2"/>
-    <path d="M0,100 Q40,85 80,90 Q120,95 160,85 Q200,80 240,85" fill="none" stroke="rgba(75,0,130,0.08)" stroke-width="0.15"/>
-    <path d="M0,50 Q25,45 50,55 Q75,65 100,50 Q125,35 150,45 Q175,55 200,50" fill="none" stroke="rgba(25,25,112,0.06)" stroke-width="0.1"/>
-    <animate attributeName="opacity" values="0.1;0.3;0.1" dur="180s" repeatCount="indefinite"/>
+  <!-- Magnificent cosmic web filaments -->
+  <g opacity="0.3" filter="url(#nebulaTurbulence)">
+    <path d="M0,0 Q30,20 60,10 Q90,5 120,15 Q150,25 180,20 Q200,15 220,25" fill="none" stroke="rgba(138,43,226,0.15)" stroke-width="0.4"/>
+    <path d="M0,100 Q40,85 80,90 Q120,95 160,85 Q200,80 240,85" fill="none" stroke="rgba(75,0,130,0.12)" stroke-width="0.3"/>
+    <path d="M0,50 Q25,45 50,55 Q75,65 100,50 Q125,35 150,45 Q175,55 200,50" fill="none" stroke="rgba(25,25,112,0.1)" stroke-width="0.2"/>
+    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="180s" repeatCount="indefinite"/>
     <animateTransform attributeName="transform" type="translate" 
                       values="0 0; -20 0; 0 0" dur="180s" repeatCount="indefinite"/>
   </g>
   
-  <!-- Black hole accretion disk -->
+  <!-- Blazing quasar with relativistic jets -->
   <g opacity="0">
-    <ellipse cx="20" cy="80" rx="0" ry="0" fill="url(#cosmicEnergyGradient)" filter="url(#glow)"/>
-    <ellipse cx="20" cy="80" rx="0" ry="0" fill="none" stroke="rgba(255,165,0,0.5)" stroke-width="0.2"/>
-    <animate attributeName="opacity" values="0;0.7;0" dur="35s" begin="75s;160s;245s" repeatCount="indefinite"/>
+    <circle cx="10" cy="50" r="0.2" fill="rgba(255,255,255,1)" filter="url(#ionizationFront)">
+      <animate attributeName="opacity" values="0;1;0" dur="0.5s" begin="25s;75s;125s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Relativistic jet -->
+    <path d="M10,50 L0,45 L0,55 Z" fill="url(#cosmicEnergyGradient)" filter="url(#cosmicJet)">
+      <animate attributeName="opacity" values="0;0.8;0" dur="3s" begin="25s;75s;125s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="scale" values="0,1;8,1;0,1" dur="3s" begin="25s;75s;125s" repeatCount="indefinite"/>
+    </path>
+    <path d="M10,50 L20,45 L20,55 Z" fill="url(#cosmicEnergyGradient)" filter="url(#cosmicJet)">
+      <animate attributeName="opacity" values="0;0.8;0" dur="3s" begin="25s;75s;125s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="scale" values="0,1;8,1;0,1" dur="3s" begin="25s;75s;125s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Magnificent active galactic nucleus -->
+  <g opacity="0">
+    <circle cx="190" cy="50" r="0.3" fill="rgba(255,215,0,0.9)" filter="url(#ionizationFront)">
+      <animate attributeName="opacity" values="0;0.9;0" dur="15s" begin="40s;90s;140s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="0.3;0.5;0.3" dur="15s" begin="40s;90s;140s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Accretion disk -->
+    <ellipse cx="190" cy="50" rx="1.5" ry="0.3" fill="url(#orionTrapezium)" filter="url(#ionizationFront)">
+      <animate attributeName="opacity" values="0;0.7;0" dur="15s" begin="40s;90s;140s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" from="0 190 50" to="360 190 50" dur="2s" begin="40s;90s;140s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+  
+  <!-- Spectacular black hole with gravitational lensing -->
+  <g opacity="0">
+    <!-- Event horizon -->
+    <circle cx="20" cy="80" r="0.8" fill="rgba(0,0,0,0.9)" filter="url(#depthBlur)">
+      <animate attributeName="opacity" values="0;0.9;0" dur="35s" begin="75s;160s;245s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Brilliant accretion disk -->
+    <ellipse cx="20" cy="80" rx="0" ry="0" fill="url(#orionTrapezium)" filter="url(#ionizationFront)"/>
+    <ellipse cx="20" cy="80" rx="0" ry="0" fill="none" stroke="rgba(255,165,0,0.8)" stroke-width="0.3"/>
+    <animate attributeName="opacity" values="0;0.8;0" dur="35s" begin="75s;160s;245s" repeatCount="indefinite"/>
     <animate attributeName="rx" values="0;6;12" dur="35s" begin="75s;160s;245s" repeatCount="indefinite"/>
     <animate attributeName="ry" values="0;1.5;3" dur="35s" begin="75s;160s;245s" repeatCount="indefinite"/>
     <animateTransform attributeName="transform" type="rotate" 
-                      values="0 20 80; 360 20 80" dur="8s" begin="75s;160s;245s" repeatCount="indefinite"/>
+                      values="0 20 80; 360 20 80" dur="1.5s" begin="75s;160s;245s" repeatCount="indefinite"/>
+    <!-- Relativistic jets -->
+    <path d="M20,80 L15,60 L25,60 Z" fill="url(#crabFilaments)" filter="url(#cosmicJet)">
+      <animate attributeName="opacity" values="0;0.9;0" dur="35s" begin="75s;160s;245s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="scale" values="1,0;1,3;1,0" dur="35s" begin="75s;160s;245s" repeatCount="indefinite"/>
+    </path>
+    <path d="M20,80 L15,100 L25,100 Z" fill="url(#crabFilaments)" filter="url(#cosmicJet)">
+      <animate attributeName="opacity" values="0;0.9;0" dur="35s" begin="75s;160s;245s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="scale" values="1,0;1,3;1,0" dur="35s" begin="75s;160s;245s" repeatCount="indefinite"/>
+    </path>
   </g>
   
   <script type="application/ecmascript"><![CDATA[    function edgePos() {      const side = Math.floor(Math.random() * 4);      switch(side) {        case 0: return [Math.random() * 200, 0];        case 1: return [200, Math.random() * 100];        case 2: return [Math.random() * 200, 100];        case 3: return [0, Math.random() * 100];      }
@@ -846,7 +1123,39 @@
       });
     }
     
+    // Stellar activity bursts
+    function createStellarBurst() {
+      const stellarElements = document.querySelectorAll('circle[fill*="rgba(255,255,255"]');
+      stellarElements.forEach(element => {
+        if (Math.random() > 0.92) {
+          const originalR = element.getAttribute('r');
+          element.setAttribute('r', parseFloat(originalR) * 1.5);
+          element.style.opacity = '1';
+          setTimeout(() => {
+            element.setAttribute('r', originalR);
+            element.style.opacity = '';
+          }, 800);
+        }
+      });
+    }
+    
+    // Nebula dynamics
+    function animateNebulae() {
+      const nebulae = document.querySelectorAll('ellipse[fill*="url(#"]');
+      nebulae.forEach(nebula => {
+        if (Math.random() > 0.88) {
+          const currentOpacity = parseFloat(nebula.style.opacity || 0.5);
+          nebula.style.opacity = Math.min(currentOpacity + 0.1, 0.9);
+          setTimeout(() => {
+            nebula.style.opacity = currentOpacity;
+          }, 2000);
+        }
+      });
+    }
+    
     setInterval(triggerCosmicEvent, 12000);
     setInterval(createDepthEffect, 15000);
+    setInterval(createStellarBurst, 8000);
+    setInterval(animateNebulae, 18000);
   ]]></script>
 </svg>
