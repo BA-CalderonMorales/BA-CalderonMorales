@@ -88,19 +88,11 @@
       <stop offset="100%" stop-color="rgba(25,25,112,0.02)" />
     </linearGradient>
     
-    <!-- Subtle deep space gradient -->
-    <radialGradient id="deepSpaceGradient" cx="50%" cy="50%" r="80%">
-      <stop offset="0%" stop-color="rgba(255,215,0,0.15)" />
-      <stop offset="40%" stop-color="rgba(255,69,0,0.08)" />
-      <stop offset="80%" stop-color="rgba(138,43,226,0.04)" />
-      <stop offset="100%" stop-color="rgba(25,25,112,0.02)" />
-    </radialGradient>
-    
-    <!-- Elegant nebula gradient -->
-    <radialGradient id="elegantNebula" cx="30%" cy="70%" r="60%">
-      <stop offset="0%" stop-color="rgba(255,20,147,0.2)" />
-      <stop offset="50%" stop-color="rgba(138,43,226,0.12)" />
-      <stop offset="100%" stop-color="rgba(75,0,130,0.05)" />
+    <!-- Subtle space accent -->
+    <radialGradient id="spaceAccent" cx="50%" cy="50%" r="80%">
+      <stop offset="0%" stop-color="rgba(138,43,226,0.08)" />
+      <stop offset="70%" stop-color="rgba(75,0,130,0.03)" />
+      <stop offset="100%" stop-color="rgba(25,25,112,0.01)" />
     </radialGradient>
     
     <!-- Realistic planet surface gradients -->
@@ -185,9 +177,9 @@
       <feDisplacementMap in="SourceGraphic" in2="shimmer" scale="1.5"/>
     </filter>
     
-    <!-- Gentle cosmic glow filter -->
-    <filter id="gentleGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="1.2" result="softGlow"/>
+    <!-- Minimal glow filter -->
+    <filter id="minimalGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="0.8" result="softGlow"/>
       <feMerge>
         <feMergeNode in="softGlow"/>
         <feMergeNode in="SourceGraphic"/>
@@ -254,31 +246,10 @@
     <animate attributeName="opacity" values="0.5;0.7;0.5" dur="400s" repeatCount="indefinite"/>
   </rect>
   
-  <!-- Subtle deep space background -->
-  <ellipse cx="100" cy="50" rx="120" ry="60" fill="url(#deepSpaceGradient)" opacity="0.6" filter="url(#gentleGlow)">
-    <animate attributeName="opacity" values="0.4;0.8;0.4" dur="180s" repeatCount="indefinite"/>
+  <!-- Subtle space backdrop -->
+  <ellipse cx="100" cy="50" rx="90" ry="45" fill="url(#spaceAccent)" opacity="0.3">
+    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="200s" repeatCount="indefinite"/>
   </ellipse>
-  
-  <!-- Deep space dust layers -->
-  <rect width="200" height="100" fill="url(#depthGradient1)" opacity="0.4" filter="url(#cosmicDust)">
-    <animate attributeName="opacity" values="0.3;0.5;0.3" dur="300s" repeatCount="indefinite"/>
-  </rect>
-  <rect width="200" height="100" fill="url(#depthGradient2)" opacity="0.3">
-    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="240s" repeatCount="indefinite"/>
-  </rect>
-  
-  <!-- Atmospheric glow layers -->
-  <ellipse cx="100" cy="50" rx="100" ry="50" fill="url(#cosmicEnergyGradient)" opacity="0.1" filter="url(#cosmicGlow)">
-    <animate attributeName="opacity" values="0.08;0.15;0.08" dur="180s" repeatCount="indefinite"/>
-    <animate attributeName="rx" values="100;110;100" dur="180s" repeatCount="indefinite"/>
-    <animate attributeName="ry" values="50;55;50" dur="180s" repeatCount="indefinite"/>
-  </ellipse>
-  
-  <!-- Pulsing cosmic atmosphere -->
-  <circle cx="100" cy="50" r="80" fill="url(#quantumGradient)" opacity="0.05" filter="url(#atmosphericShimmer)">
-    <animate attributeName="opacity" values="0.03;0.08;0.03" dur="120s" repeatCount="indefinite"/>
-    <animate attributeName="r" values="80;90;80" dur="120s" repeatCount="indefinite"/>
-  </circle>
   
   <!-- Enhanced stellar wind from central star -->
   <ellipse cx="100" cy="50" rx="90" ry="45" fill="none" stroke="url(#sunCorona)" stroke-width="0.1" opacity="0" filter="url(#stellarWind)">
@@ -287,12 +258,6 @@
     <animate attributeName="opacity" values="0;0.18;0" dur="180s" repeatCount="indefinite"/>
   </ellipse>
   
-  <!-- Subtle solar wind -->
-  <ellipse cx="100" cy="50" rx="80" ry="40" fill="none" stroke="url(#sunCorona)" stroke-width="0.05" opacity="0" filter="url(#gentleGlow)">
-    <animate attributeName="rx" values="80;100;80" dur="120s" repeatCount="indefinite"/>
-    <animate attributeName="ry" values="40;50;40" dur="120s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0;0.15;0" dur="120s" repeatCount="indefinite"/>
-  </ellipse>
   
   <!-- Pulsing solar wind layers -->
   <ellipse cx="100" cy="50" rx="70" ry="35" fill="none" stroke="url(#sunGlow)" stroke-width="0.08" opacity="0" filter="url(#cosmicGlow)">
@@ -307,12 +272,7 @@
     <animate attributeName="opacity" values="0;0.12;0" dur="220s" repeatCount="indefinite"/>
   </ellipse>
   
-  <!-- Elegant background nebula -->
-  <ellipse cx="40" cy="75" rx="80" ry="30" fill="url(#elegantNebula)" opacity="0.6" filter="url(#gentleGlow)">
-    <animate attributeName="opacity" values="0.4;0.8;0.4" dur="300s" repeatCount="indefinite"/>
-    <animateTransform attributeName="transform" type="rotate" 
-                      values="0 40 75;2 40 75;0 40 75" dur="400s" repeatCount="indefinite"/>
-  </ellipse>  <!-- Multi-layered star field with 3D depth -->
+  <!-- Multi-layered star field with 3D depth -->
   <!-- Far distant stars (smallest, most numerous) -->
   <g fill="white" opacity="0.3" filter="url(#depthBlur)">
     <circle cx="5" cy="8" r="0.1"/>
@@ -351,22 +311,6 @@
                       values="180 30; 40 60" dur="60s" repeatCount="indefinite"/>
   </g>
 
-  <!-- Enhanced cosmic energy waves -->
-  <g id="cosmicWave1" opacity="0">
-    <ellipse cx="100" cy="50" rx="0" ry="0" fill="none" stroke="rgba(255,20,147,0.3)" stroke-width="0.2"/>
-    <animate attributeName="opacity" values="0;0.6;0" dur="8s" repeatCount="indefinite"/>
-    <animate attributeName="rx" values="0;80;160" dur="8s" repeatCount="indefinite"/>
-    <animate attributeName="ry" values="0;40;80" dur="8s" repeatCount="indefinite"/>
-    <animate attributeName="stroke-width" values="0.2;0.05;0" dur="8s" repeatCount="indefinite"/>
-  </g>
-
-  <!-- Multi-dimensional energy pulses -->
-  <g id="energyPulse" opacity="0">
-    <circle cx="100" cy="50" r="0" fill="none" stroke="rgba(0,191,255,0.4)" stroke-width="0.3"/>
-    <animate attributeName="opacity" values="0;0.8;0" dur="12s" begin="4s" repeatCount="indefinite"/>
-    <animate attributeName="r" values="0;60;120" dur="12s" begin="4s" repeatCount="indefinite"/>
-    <animate attributeName="stroke-width" values="0.3;0.1;0" dur="12s" begin="4s" repeatCount="indefinite"/>
-  </g>
   
   <!-- Mid-distance stars (medium size, twinkling) -->
   <g fill="white" opacity="0.6">
@@ -421,30 +365,6 @@
                       values="0 0; 6 3; 0 0" dur="60s" repeatCount="indefinite"/>
   </g>
   
-  <!-- Bright emission knots (like HII regions in NASA images) -->
-  <g opacity="0.6">
-    <circle cx="35" cy="80" r="0.8" fill="rgba(255,20,147,0.4)" filter="url(#cosmicGlow)">
-      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="25s" repeatCount="indefinite"/>
-      <animate attributeName="r" values="0.8;1.2;0.8" dur="25s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="165" cy="25" r="0.6" fill="rgba(0,191,255,0.5)" filter="url(#cosmicGlow)">
-      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="r" values="0.6;0.9;0.6" dur="30s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="175" cy="82" r="0.7" fill="rgba(0,255,255,0.45)" filter="url(#cosmicGlow)">
-      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="28s" repeatCount="indefinite"/>
-      <animate attributeName="r" values="0.7;1.0;0.7" dur="28s" repeatCount="indefinite"/>
-    </circle>
-    
-    <!-- Additional pulsing emission regions -->
-    <circle cx="60" cy="20" r="0.5" fill="rgba(255,105,180,0.5)" filter="url(#atmosphericShimmer)">
-      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="35s" repeatCount="indefinite"/>
-      <animate attributeName="r" values="0.5;0.8;0.5" dur="35s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="140" cy="90" r="0.4" fill="rgba(138,43,226,0.6)" filter="url(#cosmicGlow)">
-      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="32s" repeatCount="indefinite"/>
-      <animate attributeName="r" values="0.4;0.7;0.4" dur="32s" repeatCount="indefinite"/>
-    </circle>
     
   <!-- Enhanced central star with seamless glow - no filters -->
   <g id="sun">
@@ -471,28 +391,10 @@
     </circle>
     
     <!-- Solar core -->
-    <circle cx="100" cy="50" r="3.5" fill="url(#sunCore)" filter="url(#cosmicGlow)">
-      <animate attributeName="r" values="3.5;3.8;3.5" dur="8s" repeatCount="indefinite"/>
+    <circle cx="100" cy="50" r="3.5" fill="url(#sunCore)" filter="url(#minimalGlow)">
+      <animate attributeName="r" values="3.5;3.7;3.5" dur="12s" repeatCount="indefinite"/>
     </circle>
     
-    <!-- Pulsing solar chromosphere -->
-    <circle cx="100" cy="50" r="4.2" fill="url(#sunGlow)" opacity="0.6" filter="url(#cosmicGlow)">
-      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="6s" repeatCount="indefinite"/>
-      <animate attributeName="r" values="4.2;4.5;4.2" dur="6s" repeatCount="indefinite"/>
-    </circle>
-    
-    <!-- Solar flares (rare events) -->
-    <ellipse cx="100" cy="50" rx="8" ry="2" fill="url(#sunGlow)" opacity="0" transform="rotate(45 100 50)" filter="url(#cosmicGlow)">
-      <animate attributeName="opacity" values="0;0.4;0;0;0;0;0;0.2;0" dur="90s" repeatCount="indefinite"/>
-      <animateTransform attributeName="transform" type="rotate" 
-                        values="45 100 50;50 100 50;45 100 50" dur="90s" repeatCount="indefinite"/>
-    </ellipse>
-    
-    <ellipse cx="100" cy="50" rx="6" ry="1.5" fill="url(#sunCorona)" opacity="0" transform="rotate(-30 100 50)" filter="url(#atmosphericShimmer)">
-      <animate attributeName="opacity" values="0;0;0.3;0;0;0;0.15;0;0" dur="75s" repeatCount="indefinite"/>
-      <animateTransform attributeName="transform" type="rotate" 
-                        values="-30 100 50;-25 100 50;-30 100 50" dur="75s" repeatCount="indefinite"/>
-    </ellipse>
   </g>
   </g>  <!-- Realistic planetary system with atmospheric depth -->
   
@@ -653,42 +555,6 @@
     <circle cx="76" cy="51" r="0.1" fill="#778899" filter="url(#planetBlur)">
       <animateTransform attributeName="transform" type="rotate" from="225 100 50" to="585 100 50" dur="34s" repeatCount="indefinite"/>
     </circle>
-  </g>  <!-- Gravitational wave distortions -->
-  <g opacity="0" filter="url(#atmosphericDepth)">
-    <ellipse cx="100" cy="50" rx="30" ry="8" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.3"/>
-    <animate attributeName="opacity" values="0;0.4;0" dur="15s" begin="20s;80s;140s" repeatCount="indefinite"/>
-    <animate attributeName="rx" values="30;45;60" dur="15s" begin="20s;80s;140s" repeatCount="indefinite"/>
-    <animate attributeName="ry" values="8;12;16" dur="15s" begin="20s;80s;140s" repeatCount="indefinite"/>
-    <animateTransform attributeName="transform" type="rotate" 
-                      values="0 100 50; 90 100 50; 180 100 50" dur="15s" begin="20s;80s;140s" repeatCount="indefinite"/>
-  </g>
-  
-  <!-- Quantum fluctuations in space-time -->
-  <g opacity="0" filter="url(#atmosphericDepth)">
-    <circle cx="50" cy="30" r="1" fill="rgba(138,43,226,0.3)" filter="url(#glow)"/>
-    <animate attributeName="opacity" values="0;0.6;0" dur="3s" begin="5s;15s;25s;35s" repeatCount="indefinite"/>
-    <animate attributeName="r" values="1;2;0.5" dur="3s" begin="5s;15s;25s;35s" repeatCount="indefinite"/>
-    <animateTransform attributeName="transform" type="translate" 
-                      values="0 0; 20 10; 50 25" dur="3s" begin="5s;15s;25s;35s" repeatCount="indefinite"/>
-  </g>
-  
-  <!-- Dark matter visualization -->
-  <g opacity="0" filter="url(#atmosphericDepth)">
-    <ellipse cx="150" cy="70" rx="8" ry="3" fill="rgba(25,25,112,0.4)" filter="url(#depthBlur)"/>
-    <animate attributeName="opacity" values="0;0.5;0" dur="18s" begin="30s;100s;170s" repeatCount="indefinite"/>
-    <animate attributeName="rx" values="8;15;25" dur="18s" begin="30s;100s;170s" repeatCount="indefinite"/>
-    <animate attributeName="ry" values="3;6;10" dur="18s" begin="30s;100s;170s" repeatCount="indefinite"/>
-    <animateTransform attributeName="transform" type="rotate" 
-                      values="0 150 70; 45 150 70; 90 150 70" dur="18s" begin="30s;100s;170s" repeatCount="indefinite"/>
-  </g>
-  
-  <!-- Cosmic string vibrations -->
-  <g opacity="0" filter="url(#atmosphericDepth)">
-    <path d="M20,40 Q60,20 100,50 Q140,80 180,60" fill="none" stroke="rgba(255,20,147,0.2)" stroke-width="0.5"/>
-    <animate attributeName="opacity" values="0;0.3;0" dur="25s" begin="10s;60s;110s" repeatCount="indefinite"/>
-    <animate attributeName="stroke-width" values="0.5;1.2;0.2" dur="25s" begin="10s;60s;110s" repeatCount="indefinite"/>
-    <animateTransform attributeName="transform" type="translate" 
-                      values="0 0; 0 -5; 0 5; 0 0" dur="25s" begin="10s;60s;110s" repeatCount="indefinite"/>
   </g>  <!-- Enhanced cosmic phenomena inspired by NASA deep space imagery -->
   
   <!-- Cosmic microwave background radiation -->
@@ -814,15 +680,6 @@
 
     setInterval(addMystery, 8000);
     
-    // Enhanced cosmic phenomena
-    function triggerCosmicEvent() {
-      const events = ['cosmicWave1', 'energyPulse'];
-      const randomEvent = events[Math.floor(Math.random() * events.length)];
-      const element = document.getElementById(randomEvent);
-      if (element && Math.random() > 0.6) {
-        element.style.opacity = Math.random() * 0.8 + 0.2;
-      }
-    }
     
     // Multi-dimensional depth effects
     function createDepthEffect() {
@@ -849,8 +706,7 @@
       });
     }
     
-    setInterval(triggerCosmicEvent, 20000);
-    setInterval(createDepthEffect, 25000);
-    setInterval(createTwinkling, 5000);
+    setInterval(createDepthEffect, 30000);
+    setInterval(createTwinkling, 8000);
   ]]></script>
 </svg>
