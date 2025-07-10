@@ -12,7 +12,7 @@
 
 # Brandon A. Calderon Morales
 
-Product-Minded Software Engineer
+Product-Minded Software Engineer <em>w/ 3+ years of XP</em>
 
 </div>
 
