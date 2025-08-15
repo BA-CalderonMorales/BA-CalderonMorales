@@ -12,7 +12,7 @@
 
 # Brandon A. Calderon Morales
 
-Product-Minded Software Engineer <em>w/ 3+ years of XP</em>
+Product-Minded Software Engineer <em>w/ 4 years of XP</em>
 
 </div>
 
@@ -23,16 +23,27 @@ Once a U.S. Marine managing legal cases, I'm now a self-taught software engineer
 
 </details>
 
-<details>
+<details open>
 <summary>Current Projects & Interests</summary>
 
+- **Terminal Jarvis**:
+[![NPM Downloads](https://img.shields.io/npm/dm/terminal-jarvis.svg?logo=npm&label=NPM%20Downloads)](https://www.npmjs.com/package/terminal-jarvis) [![Crates.io Downloads](https://img.shields.io/crates/d/terminal-jarvis.svg?logo=rust&label=Crates.io%20Downloads)](https://crates.io/crates/terminal-jarvis) [![Homebrew](https://img.shields.io/badge/Homebrew-Available-blue.svg?logo=homebrew)](https://github.com/BA-CalderonMorales/homebrew-terminal-jarvis)
+
+  - A unified command center for AI coding tools. Manage and run claude-code, gemini-cli, qwen-code, opencode, llxprt, codex, and crush from one beautiful terminal interface. 
+  - [repo](https://github.com/BA-CalderonMorales/terminal-jarvis): Official Terminal Jarvis repository for folks to fork, explore, and contribute to.
+  - [npm](https://www.npmjs.com/package/terminal-jarvis): Official npm package for folks to download the project and test it out on their local.
+  - [crates](https://crates.io/crates/terminal-jarvis): Official crates(dot)io package for folks to download the project and test it out on their local.
+
 - **Docs-as-Code Portfolio:** [My Life as a Dev](https://ba-calderonmorales.github.io/my-life-as-a-dev/) ([repo](https://github.com/BA-CalderonMorales/my-life-as-a-dev)) showcases MkDocs Material with a custom AI plugin.
+
 - **Immersive Awe Canvas:** [repo](https://github.com/BA-CalderonMorales/immersive-awe-canvas): for interactive 3D experiments.
   - [PROD](https://immersive-awe-canvas.lovable.app): If broken, visit fallback QA link.
   - [QA](https://ba-calderonmorales.github.io/immersive-awe-canvas): If broken, feel free to contact me to see what's happening.
+
 - **Shadow Scroll Blossom:** [repo](https://github.com/BA-CalderonMorales/shadow-scroll-blossom): is my creative coding playground.
   - [PROD](https://shadow-scroll-blossom.lovable.app/): If broken, visit fallback QA link.
   - [QA](https://ba-calderonmorales.github.io/shadow-scroll-blossom): If broken, feel free to contact me to see what's happening.
+
 - **Rust Terminal Forge:** [repo](https://github.com/BA-CalderonMorales/rust-terminal-forge): idea that merges Rust tooling with a React interface.
   - [PROD - Unstable](https://rust-terminal-forge.lovable.app/): Currently broken, working on a fix. Visit QA below to keep track of updates.
   - [QA](https://ba-calderonmorales.github.io/rust-terminal-forge/): If broken, feel free to contact me to see what's happening.
