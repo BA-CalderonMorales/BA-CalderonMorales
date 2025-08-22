@@ -36,6 +36,15 @@ Once a U.S. Marine managing legal cases, I'm now a self-taught software engineer
 
 - **Docs-as-Code Portfolio:** [My Life as a Dev](https://ba-calderonmorales.github.io/my-life-as-a-dev/) ([repo](https://github.com/BA-CalderonMorales/my-life-as-a-dev)) showcases MkDocs Material with a custom AI plugin.
 
+</details>
+
+<details open>
+<summary>Experiments</summary>
+
+Actively testing the actual might of every AI CLI, LLM, SLM, etc. against these three mock levacy repos.
+
+If these still suck, it's because AI in general still is isn't quite there.
+
 - **Immersive Awe Canvas:** [repo](https://github.com/BA-CalderonMorales/immersive-awe-canvas): for interactive 3D experiments.
   - [PROD](https://immersive-awe-canvas.lovable.app): If broken, visit fallback QA link.
   - [QA](https://ba-calderonmorales.github.io/immersive-awe-canvas): If broken, feel free to contact me to see what's happening.
