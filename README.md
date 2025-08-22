@@ -44,7 +44,7 @@ Once a U.S. Marine managing legal cases, I'm now a self-taught software engineer
 
 Actively testing the actual might of every AI CLI, LLM, SLM, etc. against these three mock legacy repos.
 
-If these still suck, it's because AI in general still is isn't quite there.
+If these still suck, it's because AI in general still isn't quite there.
 
 - **Immersive Awe Canvas:** [repo](https://github.com/BA-CalderonMorales/immersive-awe-canvas): for interactive 3D experiments.
   - [PROD](https://immersive-awe-canvas.lovable.app): If broken, visit fallback QA link.
