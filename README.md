@@ -40,6 +40,7 @@ Once a U.S. Marine managing legal cases, I'm now a self-taught software engineer
 
 <details open>
 <summary>Experiments</summary>
+<br />
 
 Actively testing the actual might of every AI CLI, LLM, SLM, etc. against these three mock levacy repos.
 
