@@ -42,7 +42,7 @@ Once a U.S. Marine managing legal cases, I'm now a self-taught software engineer
 <summary>Experiments</summary>
 <br />
 
-Actively testing the actual might of every AI CLI, LLM, SLM, etc. against these three mock levacy repos.
+Actively testing the actual might of every AI CLI, LLM, SLM, etc. against these three mock legacy repos.
 
 If these still suck, it's because AI in general still is isn't quite there.
 
