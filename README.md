@@ -41,7 +41,7 @@ Once a U.S. Marine managing legal cases, I'm now a self-taught software engineer
 
 </details>
 
-<details open>
+<details>
 <summary>Experiments</summary>
 <br />
 
@@ -79,7 +79,7 @@ I'm bilingual (English/Spanish), a lifelong learner, and a fan of automating eve
 
 </details>
 
-<details open>
+<details>
 <summary>Let's Connect</summary>
 
 - Check out my docs site for a deeper dive into my projects and experiments.
