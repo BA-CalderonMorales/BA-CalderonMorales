@@ -32,7 +32,7 @@ Once a U.S. Marine managing legal cases, I'm now a self-taught software engineer
     - [![NPM Downloads](https://img.shields.io/npm/dm/terminal-jarvis.svg?logo=npm&label=NPM%20Downloads)](https://www.npmjs.com/package/terminal-jarvis)
     - [![Crates.io Downloads](https://img.shields.io/crates/d/terminal-jarvis.svg?logo=rust&label=Crates.io%20Downloads)](https://crates.io/crates/terminal-jarvis)
     - [![Homebrew](https://img.shields.io/badge/Homebrew-Available-blue.svg?logo=homebrew)](https://github.com/BA-CalderonMorales/homebrew-terminal-jarvis)
-    - [![GitHub stars](https://img.shields.io/github/stars/BA-CalderonMorales/terminal-jarvis.svg?style=social&label=Star&maxAge=2592000)](https://github.com/BA-CalderonMorales/terminal-jarvis/stargazers)
+    - [![GitHub stars](https://img.shields.io/github/stars/BA-CalderonMorales/terminal-jarvis.svg?style=social&label=Star)](https://github.com/BA-CalderonMorales/terminal-jarvis/stargazers)
   - [repo](https://github.com/BA-CalderonMorales/terminal-jarvis): Official Terminal Jarvis repository for folks to fork, explore, and contribute to.
   - [npm](https://www.npmjs.com/package/terminal-jarvis): Official npm package for folks to download the project and test it out on their local.
   - [crates](https://crates.io/crates/terminal-jarvis): Official crates(dot)io package for folks to download the project and test it out on their local.
