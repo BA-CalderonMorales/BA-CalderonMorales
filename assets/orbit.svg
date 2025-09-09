@@ -1,143 +1,362 @@
 <svg width="400" height="200" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
   <defs>
+    <!-- Enhanced particle gradient with more vibrant colors -->
     <radialGradient id="particle" cx="50%" cy="50%" r="60%">
-      <stop offset="0%" stop-color="rgba(240,250,255,0.9)"/>
-      <stop offset="40%" stop-color="rgba(180,220,255,0.6)"/>
-      <stop offset="80%" stop-color="rgba(120,180,240,0.3)"/>
-      <stop offset="100%" stop-color="rgba(60,120,180,0)"/>
+      <stop offset="0%" stop-color="rgba(120,200,255,0.95)"/>
+      <stop offset="20%" stop-color="rgba(80,170,255,0.85)"/>
+      <stop offset="50%" stop-color="rgba(40,140,220,0.6)"/>
+      <stop offset="80%" stop-color="rgba(20,100,180,0.3)"/>
+      <stop offset="100%" stop-color="rgba(10,60,120,0)"/>
     </radialGradient>
     
+    <!-- Enhanced leader gradient with cosmic glow -->
     <radialGradient id="leader" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="rgba(255,240,200,0.95)"/>
-      <stop offset="50%" stop-color="rgba(255,200,120,0.7)"/>
-      <stop offset="100%" stop-color="rgba(200,150,80,0)"/>
+      <stop offset="0%" stop-color="rgba(255,250,180,1)"/>
+      <stop offset="30%" stop-color="rgba(255,220,100,0.9)"/>
+      <stop offset="60%" stop-color="rgba(255,180,60,0.7)"/>
+      <stop offset="100%" stop-color="rgba(220,120,40,0)"/>
     </radialGradient>
     
-    <filter id="organic" x="-60%" y="-60%" width="220%" height="220%">
-      <feTurbulence baseFrequency="0.01" numOctaves="3" result="flow" type="fractalNoise">
-        <animate attributeName="baseFrequency" values="0.008;0.014;0.01;0.016;0.008" dur="73s" repeatCount="indefinite"/>
+    <!-- Starfield background gradient -->
+    <radialGradient id="spaceBackground" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="rgba(5,15,35,1)"/>
+      <stop offset="40%" stop-color="rgba(3,10,25,1)"/>
+      <stop offset="80%" stop-color="rgba(2,8,20,1)"/>
+      <stop offset="100%" stop-color="rgba(1,5,15,1)"/>
+    </radialGradient>
+    
+    <!-- Nebula gradient -->
+    <radialGradient id="nebula1" cx="30%" cy="40%" r="40%">
+      <stop offset="0%" stop-color="rgba(180,120,255,0.15)"/>
+      <stop offset="50%" stop-color="rgba(120,80,200,0.08)"/>
+      <stop offset="100%" stop-color="rgba(60,40,120,0)"/>
+    </radialGradient>
+    
+    <radialGradient id="nebula2" cx="70%" cy="60%" r="35%">
+      <stop offset="0%" stop-color="rgba(255,150,100,0.12)"/>
+      <stop offset="50%" stop-color="rgba(200,100,60,0.06)"/>
+      <stop offset="100%" stop-color="rgba(120,60,30,0)"/>
+    </radialGradient>
+    
+    <!-- Enhanced particle trail gradient -->
+    <linearGradient id="trail" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(120,200,255,0)"/>
+      <stop offset="40%" stop-color="rgba(80,170,255,0.3)"/>
+      <stop offset="80%" stop-color="rgba(40,140,220,0.6)"/>
+      <stop offset="100%" stop-color="rgba(20,100,180,0.8)"/>
+    </linearGradient>
+    
+    <!-- Enhanced organic filter with more sophisticated turbulence -->
+    <filter id="organic" x="-80%" y="-80%" width="260%" height="260%">
+      <feTurbulence baseFrequency="0.008" numOctaves="4" result="flow" type="fractalNoise" seed="2">
+        <animate attributeName="baseFrequency" values="0.006;0.018;0.008;0.022;0.006" dur="83s" repeatCount="indefinite"/>
       </feTurbulence>
-      <feDisplacementMap in="SourceGraphic" in2="flow" scale="1.5"/>
-      <feGaussianBlur stdDeviation="0.4"/>
+      <feDisplacementMap in="SourceGraphic" in2="flow" scale="2"/>
+      <feGaussianBlur stdDeviation="0.3" result="blur"/>
+      <feColorMatrix in="blur" values="1.3 1.2 1.1 0 0  1.2 1.4 1.6 0 0  1.1 1.6 1.8 0 0  0 0 0 0.9 0"/>
     </filter>
     
-    <filter id="swarm" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="0.8" result="glow"/>
-      <feColorMatrix in="glow" values="1.2 1.1 1 0 0  1.1 1.2 1.3 0 0  1 1.3 1.4 0 0  0 0 0 0.7 0"/>
+    <!-- Enhanced swarm filter with epic glow effects -->
+    <filter id="swarm" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="1.2" result="glow"/>
+      <feColorMatrix in="glow" values="1.5 1.3 1.2 0 0  1.3 1.5 1.8 0 0  1.2 1.8 2 0 0  0 0 0 0.9 0" result="coloredGlow"/>
+      <feGaussianBlur stdDeviation="2.5" in="SourceGraphic" result="bigGlow"/>
+      <feColorMatrix in="bigGlow" values="2 1.8 1.5 0 0  1.8 2.2 2.5 0 0  1.5 2.5 3 0 0  0 0 0 0.6 0" result="epicGlow"/>
       <feMerge>
-        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="epicGlow"/>
+        <feMergeNode in="coloredGlow"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+    
+    <!-- New particle trail effect -->
+    <filter id="trail" x="-100%" y="-50%" width="300%" height="200%">
+      <feGaussianBlur stdDeviation="0.8" result="blur"/>
+      <feColorMatrix in="blur" values="1 1.2 1.5 0 0  1.2 1.5 2 0 0  1.5 2 2.5 0 0  0 0 0 0.7 0"/>
+    </filter>
+    
+    <!-- Star twinkle effect -->
+    <filter id="twinkle">
+      <feGaussianBlur stdDeviation="0.5" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/> 
+      </feMerge>
+    </filter>
+    
+    <!-- Energy ring filter -->
+    <filter id="energyRing" x="-150%" y="-150%" width="400%" height="400%">
+      <feGaussianBlur stdDeviation="3" result="ring"/>
+      <feColorMatrix in="ring" values="2.5 2 1.5 0 0  2 2.8 3.5 0 0  1.5 3.5 4 0 0  0 0 0 0.4 0"/>
+    </filter>
   </defs>
   
-  <rect width="200" height="100" fill="#020814"/>
+  <!-- Enhanced cosmic background -->
+  <rect width="200" height="100" fill="url(#spaceBackground)"/>
   
-  <!-- Global best position - attracts entire swarm -->
-  <circle cx="100" cy="50" r="2.5" fill="url(#leader)" opacity="0.8" filter="url(#swarm)">
+  <!-- Nebula layers for depth -->
+  <ellipse cx="60" cy="30" rx="25" ry="15" fill="url(#nebula1)" opacity="0.6">
+    <animate attributeName="rx" values="23;27;25;29;23" dur="45s" repeatCount="indefinite"/>
+    <animate attributeName="ry" values="13;17;15;19;13" dur="45s" begin="8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0.8;0.6;0.9;0.4" dur="45s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <ellipse cx="140" cy="70" rx="20" ry="12" fill="url(#nebula2)" opacity="0.5">
+    <animate attributeName="rx" values="18;22;20;24;18" dur="52s" repeatCount="indefinite"/>
+    <animate attributeName="ry" values="10;14;12;16;10" dur="52s" begin="12s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0.7;0.5;0.8;0.3" dur="52s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <!-- Enhanced starfield -->
+  <g opacity="0.8">
+    <!-- Large stars -->
+    <circle cx="15" cy="15" r="0.8" fill="rgba(255,255,255,0.9)" filter="url(#twinkle)">
+      <animate attributeName="opacity" values="0.6;1;0.8;1;0.6" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="185" cy="25" r="0.7" fill="rgba(255,245,200,0.9)" filter="url(#twinkle)">
+      <animate attributeName="opacity" values="0.7;1;0.9;1;0.7" dur="9s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="25" cy="85" r="0.6" fill="rgba(200,220,255,0.8)" filter="url(#twinkle)">
+      <animate attributeName="opacity" values="0.5;0.9;0.7;0.9;0.5" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="175" cy="80" r="0.5" fill="rgba(255,200,180,0.8)" filter="url(#twinkle)">
+      <animate attributeName="opacity" values="0.6;0.95;0.8;0.95;0.6" dur="13s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Medium stars -->
+    <circle cx="45" cy="20" r="0.4" fill="rgba(255,255,255,0.7)">
+      <animate attributeName="opacity" values="0.4;0.8;0.6;0.8;0.4" dur="15s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="160" cy="15" r="0.3" fill="rgba(220,240,255,0.7)">
+      <animate attributeName="opacity" values="0.5;0.85;0.7;0.85;0.5" dur="17s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="35" cy="65" r="0.35" fill="rgba(255,220,200,0.6)">
+      <animate attributeName="opacity" values="0.3;0.7;0.5;0.7;0.3" dur="19s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Small stars -->
+    <circle cx="80" cy="10" r="0.2" fill="rgba(255,255,255,0.6)">
+      <animate attributeName="opacity" values="0.3;0.7;0.5;0.7;0.3" dur="21s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="120" cy="12" r="0.15" fill="rgba(200,220,255,0.5)">
+      <animate attributeName="opacity" values="0.2;0.6;0.4;0.6;0.2" dur="23s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="190" cy="55" r="0.2" fill="rgba(255,240,180,0.6)">
+      <animate attributeName="opacity" values="0.25;0.65;0.45;0.65;0.25" dur="25s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="10" cy="45" r="0.18" fill="rgba(180,200,255,0.5)">
+      <animate attributeName="opacity" values="0.3;0.6;0.45;0.6;0.3" dur="27s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Enhanced Global best position with energy rings and epic effects -->
+  
+  <!-- Energy rings around leader -->
+  <circle cx="100" cy="50" r="8" fill="none" stroke="rgba(255,220,100,0.3)" stroke-width="0.5" filter="url(#energyRing)">
     <animateMotion dur="89s" repeatCount="indefinite" 
                    path="M100,50 Q120,35 140,50 Q155,65 170,50 Q185,35 190,20 Q185,5 170,10 Q155,25 140,10 Q125,5 110,20 Q95,35 80,20 Q65,5 50,20 Q35,35 20,50 Q35,65 50,80 Q65,95 80,80 Q95,65 100,50"/>
-    <animate attributeName="r" values="2;3.5;2.5;4;2" dur="89s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.7;0.9;0.8;1;0.7" dur="89s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="6;12;8;15;6" dur="89s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.2;0.6;0.4;0.8;0.2" dur="89s" repeatCount="indefinite"/>
   </circle>
   
-  <!-- Swarm particles following PSO algorithm -->
+  <circle cx="100" cy="50" r="15" fill="none" stroke="rgba(255,180,60,0.2)" stroke-width="0.3" filter="url(#energyRing)">
+    <animateMotion dur="89s" repeatCount="indefinite" 
+                   path="M100,50 Q120,35 140,50 Q155,65 170,50 Q185,35 190,20 Q185,5 170,10 Q155,25 140,10 Q125,5 110,20 Q95,35 80,20 Q65,5 50,20 Q35,35 20,50 Q35,65 50,80 Q65,95 80,80 Q95,65 100,50"/>
+    <animate attributeName="r" values="12;20;15;25;12" dur="89s" begin="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.1;0.4;0.3;0.6;0.1" dur="89s" begin="3s" repeatCount="indefinite"/>
+  </circle>
   
-  <!-- Particle 1 - Explorer -->
-  <circle cx="85" cy="45" r="1.2" fill="url(#particle)" opacity="0.8" filter="url(#organic)">
+  <!-- Leader particle with enhanced glow -->
+  <circle cx="100" cy="50" r="3.5" fill="url(#leader)" opacity="0.9" filter="url(#swarm)">
+    <animateMotion dur="89s" repeatCount="indefinite" 
+                   path="M100,50 Q120,35 140,50 Q155,65 170,50 Q185,35 190,20 Q185,5 170,10 Q155,25 140,10 Q125,5 110,20 Q95,35 80,20 Q65,5 50,20 Q35,35 20,50 Q35,65 50,80 Q65,95 80,80 Q95,65 100,50"/>
+    <animate attributeName="r" values="2.5;4.5;3.5;5.5;2.5" dur="89s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;1;0.9;1;0.8" dur="89s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Leader particle core -->
+  <circle cx="100" cy="50" r="1.5" fill="rgba(255,255,240,0.95)">
+    <animateMotion dur="89s" repeatCount="indefinite" 
+                   path="M100,50 Q120,35 140,50 Q155,65 170,50 Q185,35 190,20 Q185,5 170,10 Q155,25 140,10 Q125,5 110,20 Q95,35 80,20 Q65,5 50,20 Q35,35 20,50 Q35,65 50,80 Q65,95 80,80 Q95,65 100,50"/>
+    <animate attributeName="r" values="1;2;1.5;2.5;1" dur="89s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Enhanced Swarm particles with epic trails and effects -->
+  
+  <!-- Particle 1 - Explorer with trail -->
+  <ellipse cx="85" cy="45" rx="4" ry="0.8" fill="url(#trail)" opacity="0.4" filter="url(#trail)">
     <animateMotion dur="43s" repeatCount="indefinite" 
                    path="M85,45 Q95,30 110,40 Q125,50 140,45 Q155,40 170,50 Q180,60 175,75 Q165,85 150,80 Q135,75 120,85 Q105,95 90,85 Q75,75 65,60 Q55,45 60,30 Q70,20 85,25 Q100,30 85,45"/>
-    <animate attributeName="r" values="1;1.5;1.2;1.8;1" dur="43s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.6;0.9;0.8;1;0.6" dur="43s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate" values="0 85 45;360 85 45" dur="43s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <circle cx="85" cy="45" r="1.5" fill="url(#particle)" opacity="0.9" filter="url(#organic)">
+    <animateMotion dur="43s" repeatCount="indefinite" 
+                   path="M85,45 Q95,30 110,40 Q125,50 140,45 Q155,40 170,50 Q180,60 175,75 Q165,85 150,80 Q135,75 120,85 Q105,95 90,85 Q75,75 65,60 Q55,45 60,30 Q70,20 85,25 Q100,30 85,45"/>
+    <animate attributeName="r" values="1.2;2;1.5;2.5;1.2" dur="43s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;1;0.9;1;0.7" dur="43s" repeatCount="indefinite"/>
   </circle>
   
-  <!-- Particle 2 - Follower -->
-  <circle cx="115" cy="55" r="1" fill="url(#particle)" opacity="0.7" filter="url(#organic)">
+  <!-- Particle 2 - Follower with enhanced trail -->
+  <ellipse cx="115" cy="55" rx="3.5" ry="0.7" fill="url(#trail)" opacity="0.35" filter="url(#trail)">
     <animateMotion dur="37s" repeatCount="indefinite" 
                    path="M115,55 Q125,40 140,50 Q155,60 170,55 Q185,50 180,65 Q170,75 155,70 Q140,65 125,75 Q110,85 95,75 Q80,65 70,50 Q65,35 75,25 Q90,20 105,30 Q115,40 115,55"/>
-    <animate attributeName="r" values="0.8;1.3;1;1.6;0.8" dur="37s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.5;0.8;0.7;0.9;0.5" dur="37s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate" values="0 115 55;360 115 55" dur="37s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <circle cx="115" cy="55" r="1.3" fill="url(#particle)" opacity="0.85" filter="url(#organic)">
+    <animateMotion dur="37s" repeatCount="indefinite" 
+                   path="M115,55 Q125,40 140,50 Q155,60 170,55 Q185,50 180,65 Q170,75 155,70 Q140,65 125,75 Q110,85 95,75 Q80,65 70,50 Q65,35 75,25 Q90,20 105,30 Q115,40 115,55"/>
+    <animate attributeName="r" values="1;1.8;1.3;2.2;1" dur="37s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;1;0.85;1;0.6" dur="37s" repeatCount="indefinite"/>
   </circle>
   
-  <!-- Particle 3 - Social -->
-  <circle cx="95" cy="35" r="0.9" fill="url(#particle)" opacity="0.75" filter="url(#organic)">
+  <!-- Particle 3 - Social with epic trail -->
+  <ellipse cx="95" cy="35" rx="3.2" ry="0.6" fill="url(#trail)" opacity="0.4" filter="url(#trail)">
     <animateMotion dur="41s" repeatCount="indefinite" 
                    path="M95,35 Q105,25 120,35 Q135,45 150,40 Q165,35 175,50 Q180,65 170,75 Q155,80 140,75 Q125,70 110,80 Q95,90 80,80 Q65,70 55,55 Q50,40 60,25 Q75,15 90,20 Q95,25 95,35"/>
-    <animate attributeName="r" values="0.7;1.2;0.9;1.5;0.7" dur="41s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.6;0.85;0.75;0.95;0.6" dur="41s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate" values="0 95 35;360 95 35" dur="41s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <circle cx="95" cy="35" r="1.2" fill="url(#particle)" opacity="0.9" filter="url(#organic)">
+    <animateMotion dur="41s" repeatCount="indefinite" 
+                   path="M95,35 Q105,25 120,35 Q135,45 150,40 Q165,35 175,50 Q180,65 170,75 Q155,80 140,75 Q125,70 110,80 Q95,90 80,80 Q65,70 55,55 Q50,40 60,25 Q75,15 90,20 Q95,25 95,35"/>
+    <animate attributeName="r" values="0.9;1.7;1.2;2.1;0.9" dur="41s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;1;0.9;1;0.7" dur="41s" repeatCount="indefinite"/>
   </circle>
   
-  <!-- Particle 4 - Cognitive -->
-  <circle cx="105" cy="65" r="1.1" fill="url(#particle)" opacity="0.85" filter="url(#organic)">
+  <!-- Particle 4 - Cognitive with enhanced effects -->
+  <ellipse cx="105" cy="65" rx="3.8" ry="0.8" fill="url(#trail)" opacity="0.45" filter="url(#trail)">
     <animateMotion dur="47s" repeatCount="indefinite" 
                    path="M105,65 Q115,50 130,60 Q145,70 160,65 Q175,60 185,75 Q190,90 180,95 Q165,90 150,85 Q135,80 120,90 Q105,100 90,90 Q75,80 60,65 Q50,50 55,35 Q65,25 80,30 Q95,35 105,50 Q105,65 105,65"/>
-    <animate attributeName="r" values="0.9;1.4;1.1;1.7;0.9" dur="47s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.7;0.95;0.85;1;0.7" dur="47s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate" values="0 105 65;360 105 65" dur="47s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <circle cx="105" cy="65" r="1.4" fill="url(#particle)" opacity="0.95" filter="url(#organic)">
+    <animateMotion dur="47s" repeatCount="indefinite" 
+                   path="M105,65 Q115,50 130,60 Q145,70 160,65 Q175,60 185,75 Q190,90 180,95 Q165,90 150,85 Q135,80 120,90 Q105,100 90,90 Q75,80 60,65 Q50,50 55,35 Q65,25 80,30 Q95,35 105,50 Q105,65 105,65"/>
+    <animate attributeName="r" values="1.1;2;1.4;2.5;1.1" dur="47s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;1;0.95;1;0.8" dur="47s" repeatCount="indefinite"/>
   </circle>
   
-  <!-- Particle 5 - Inertial -->
-  <circle cx="125" cy="40" r="0.8" fill="url(#particle)" opacity="0.65" filter="url(#organic)">
+  <!-- Particle 5 - Inertial with trail -->
+  <ellipse cx="125" cy="40" rx="3" ry="0.5" fill="url(#trail)" opacity="0.3" filter="url(#trail)">
     <animateMotion dur="53s" repeatCount="indefinite" 
                    path="M125,40 Q135,25 150,35 Q165,45 180,40 Q195,35 190,50 Q180,60 165,55 Q150,50 135,60 Q120,70 105,60 Q90,50 80,35 Q75,20 85,10 Q100,5 115,15 Q125,25 125,40"/>
-    <animate attributeName="r" values="0.6;1.1;0.8;1.4;0.6" dur="53s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.5;0.8;0.65;0.9;0.5" dur="53s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate" values="0 125 40;360 125 40" dur="53s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <circle cx="125" cy="40" r="1" fill="url(#particle)" opacity="0.8" filter="url(#organic)">
+    <animateMotion dur="53s" repeatCount="indefinite" 
+                   path="M125,40 Q135,25 150,35 Q165,45 180,40 Q195,35 190,50 Q180,60 165,55 Q150,50 135,60 Q120,70 105,60 Q90,50 80,35 Q75,20 85,10 Q100,5 115,15 Q125,25 125,40"/>
+    <animate attributeName="r" values="0.8;1.6;1;2;0.8" dur="53s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;1;0.8;1;0.6" dur="53s" repeatCount="indefinite"/>
   </circle>
   
-  <!-- Particle 6 - Adaptive -->
-  <circle cx="75" cy="60" r="1" fill="url(#particle)" opacity="0.8" filter="url(#organic)">
+  <!-- Particle 6 - Adaptive with epic trail -->
+  <ellipse cx="75" cy="60" rx="3.5" ry="0.7" fill="url(#trail)" opacity="0.4" filter="url(#trail)">
     <animateMotion dur="59s" repeatCount="indefinite" 
                    path="M75,60 Q85,45 100,55 Q115,65 130,60 Q145,55 160,65 Q175,75 170,90 Q160,100 145,95 Q130,90 115,100 Q100,110 85,100 Q70,90 55,75 Q40,60 35,45 Q40,30 55,25 Q70,30 75,45 Q75,60 75,60"/>
-    <animate attributeName="r" values="0.8;1.3;1;1.6;0.8" dur="59s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.6;0.9;0.8;1;0.6" dur="59s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate" values="0 75 60;360 75 60" dur="59s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <circle cx="75" cy="60" r="1.3" fill="url(#particle)" opacity="0.9" filter="url(#organic)">
+    <animateMotion dur="59s" repeatCount="indefinite" 
+                   path="M75,60 Q85,45 100,55 Q115,65 130,60 Q145,55 160,65 Q175,75 170,90 Q160,100 145,95 Q130,90 115,100 Q100,110 85,100 Q70,90 55,75 Q40,60 35,45 Q40,30 55,25 Q70,30 75,45 Q75,60 75,60"/>
+    <animate attributeName="r" values="1;1.8;1.3;2.2;1" dur="59s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;1;0.9;1;0.7" dur="59s" repeatCount="indefinite"/>
   </circle>
   
-  <!-- Particle 7 - Random -->
-  <circle cx="135" cy="70" r="0.9" fill="url(#particle)" opacity="0.7" filter="url(#organic)">
+  <!-- Particle 7 - Random with dynamic effects -->
+  <ellipse cx="135" cy="70" rx="3.2" ry="0.6" fill="url(#trail)" opacity="0.35" filter="url(#trail)">
     <animateMotion dur="61s" repeatCount="indefinite" 
                    path="M135,70 Q145,55 160,65 Q175,75 190,70 Q185,85 170,90 Q155,85 140,95 Q125,105 110,95 Q95,85 80,70 Q70,55 65,40 Q70,25 85,20 Q100,25 115,35 Q130,45 135,60 Q135,70 135,70"/>
-    <animate attributeName="r" values="0.7;1.2;0.9;1.5;0.7" dur="61s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.5;0.8;0.7;0.9;0.5" dur="61s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate" values="0 135 70;360 135 70" dur="61s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <circle cx="135" cy="70" r="1.1" fill="url(#particle)" opacity="0.8" filter="url(#organic)">
+    <animateMotion dur="61s" repeatCount="indefinite" 
+                   path="M135,70 Q145,55 160,65 Q175,75 190,70 Q185,85 170,90 Q155,85 140,95 Q125,105 110,95 Q95,85 80,70 Q70,55 65,40 Q70,25 85,20 Q100,25 115,35 Q130,45 135,60 Q135,70 135,70"/>
+    <animate attributeName="r" values="0.9;1.7;1.1;2.1;0.9" dur="61s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;1;0.8;1;0.6" dur="61s" repeatCount="indefinite"/>
   </circle>
   
-  <!-- Particle 8 - Convergent -->
-  <circle cx="65" cy="30" r="1.1" fill="url(#particle)" opacity="0.85" filter="url(#organic)">
+  <!-- Particle 8 - Convergent with maximum epic effects -->
+  <ellipse cx="65" cy="30" rx="4" ry="0.9" fill="url(#trail)" opacity="0.5" filter="url(#trail)">
     <animateMotion dur="67s" repeatCount="indefinite" 
                    path="M65,30 Q75,15 90,25 Q105,35 120,30 Q135,25 150,35 Q165,45 175,60 Q180,75 170,85 Q155,90 140,85 Q125,80 110,90 Q95,100 80,90 Q65,80 50,65 Q35,50 30,35 Q35,20 50,15 Q65,20 65,30"/>
-    <animate attributeName="r" values="0.9;1.4;1.1;1.7;0.9" dur="67s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.7;0.95;0.85;1;0.7" dur="67s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate" values="0 65 30;360 65 30" dur="67s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <circle cx="65" cy="30" r="1.6" fill="url(#particle)" opacity="0.95" filter="url(#organic)">
+    <animateMotion dur="67s" repeatCount="indefinite" 
+                   path="M65,30 Q75,15 90,25 Q105,35 120,30 Q135,25 150,35 Q165,45 175,60 Q180,75 170,85 Q155,90 140,85 Q125,80 110,90 Q95,100 80,90 Q65,80 50,65 Q35,50 30,35 Q35,20 50,15 Q65,20 65,30"/>
+    <animate attributeName="r" values="1.2;2.2;1.6;2.8;1.2" dur="67s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;1;0.95;1;0.8" dur="67s" repeatCount="indefinite"/>
   </circle>
   
-  <!-- Connection field showing collective intelligence -->
-  <g stroke="rgba(180,220,255,0.15)" fill="none" stroke-width="0.2" opacity="0.5" filter="url(#organic)">
-    <path d="M85,45 Q100,50 115,55">
-      <animate attributeName="opacity" values="0.1;0.4;0.2;0.6;0.1" dur="11s" repeatCount="indefinite"/>
-      <animate attributeName="stroke-width" values="0.1;0.3;0.2;0.4;0.1" dur="11s" repeatCount="indefinite"/>
+  <!-- Enhanced connection field showing collective intelligence with energy flows -->
+  <g stroke="rgba(120,200,255,0.25)" fill="none" stroke-width="0.3" opacity="0.7" filter="url(#organic)">
+    <path d="M85,45 Q100,50 115,55" stroke="url(#trail)">
+      <animate attributeName="opacity" values="0.2;0.8;0.4;1;0.2" dur="11s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-width" values="0.2;0.6;0.3;0.8;0.2" dur="11s" repeatCount="indefinite"/>
     </path>
-    <path d="M95,35 Q100,50 105,65">
-      <animate attributeName="opacity" values="0.2;0.5;0.3;0.7;0.2" dur="13s" repeatCount="indefinite"/>
-      <animate attributeName="stroke-width" values="0.15;0.35;0.25;0.45;0.15" dur="13s" repeatCount="indefinite"/>
+    <path d="M95,35 Q100,50 105,65" stroke="rgba(80,170,255,0.3)">
+      <animate attributeName="opacity" values="0.3;0.9;0.5;1;0.3" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-width" values="0.25;0.7;0.4;0.9;0.25" dur="13s" repeatCount="indefinite"/>
     </path>
-    <path d="M125,40 Q100,50 75,60">
-      <animate attributeName="opacity" values="0.15;0.3;0.25;0.5;0.15" dur="17s" repeatCount="indefinite"/>
-      <animate attributeName="stroke-width" values="0.1;0.25;0.2;0.35;0.1" dur="17s" repeatCount="indefinite"/>
+    <path d="M125,40 Q100,50 75,60" stroke="rgba(40,140,220,0.35)">
+      <animate attributeName="opacity" values="0.25;0.7;0.45;0.9;0.25" dur="17s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-width" values="0.2;0.6;0.35;0.8;0.2" dur="17s" repeatCount="indefinite"/>
     </path>
-    <path d="M135,70 Q100,50 65,30">
-      <animate attributeName="opacity" values="0.1;0.35;0.2;0.4;0.1" dur="19s" repeatCount="indefinite"/>
-      <animate attributeName="stroke-width" values="0.05;0.3;0.15;0.4;0.05" dur="19s" repeatCount="indefinite"/>
+    <path d="M135,70 Q100,50 65,30" stroke="rgba(20,100,180,0.4)">
+      <animate attributeName="opacity" values="0.2;0.8;0.4;0.9;0.2" dur="19s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-width" values="0.15;0.7;0.3;0.9;0.15" dur="19s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Additional energy connections -->
+    <path d="M105,65 Q100,50 125,40" stroke="rgba(255,180,100,0.2)">
+      <animate attributeName="opacity" values="0.1;0.5;0.3;0.7;0.1" dur="23s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-width" values="0.1;0.4;0.25;0.6;0.1" dur="23s" repeatCount="indefinite"/>
+    </path>
+    <path d="M75,60 Q100,50 135,70" stroke="rgba(200,120,255,0.25)">
+      <animate attributeName="opacity" values="0.15;0.6;0.35;0.8;0.15" dur="29s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-width" values="0.12;0.45;0.28;0.65;0.12" dur="29s" repeatCount="indefinite"/>
     </path>
   </g>
   
-  <!-- Optimization landscape - showing search space -->
-  <g fill="rgba(120,180,240,0.05)" opacity="0.3" filter="url(#organic)">
-    <ellipse cx="100" cy="50" rx="45" ry="28">
-      <animate attributeName="rx" values="42;48;45;52;42" dur="29s" repeatCount="indefinite"/>
-      <animate attributeName="ry" values="26;30;28;34;26" dur="29s" begin="5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.1;0.4;0.3;0.5;0.1" dur="29s" repeatCount="indefinite"/>
+  <!-- Enhanced optimization landscape with cosmic energy fields -->
+  <g fill="rgba(120,180,240,0.08)" opacity="0.5" filter="url(#organic)">
+    <ellipse cx="100" cy="50" rx="45" ry="28" fill="url(#nebula1)">
+      <animate attributeName="rx" values="42;52;45;58;42" dur="29s" repeatCount="indefinite"/>
+      <animate attributeName="ry" values="26;34;28;38;26" dur="29s" begin="5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.7;0.5;0.9;0.2" dur="29s" repeatCount="indefinite"/>
     </ellipse>
-    <ellipse cx="100" cy="50" rx="65" ry="40">
-      <animate attributeName="rx" values="62;68;65;72;62" dur="37s" repeatCount="indefinite"/>
-      <animate attributeName="ry" values="38;42;40;46;38" dur="37s" begin="8s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.05;0.2;0.15;0.3;0.05" dur="37s" repeatCount="indefinite"/>
+    <ellipse cx="100" cy="50" rx="65" ry="40" fill="rgba(40,140,220,0.06)">
+      <animate attributeName="rx" values="62;72;65;78;62" dur="37s" repeatCount="indefinite"/>
+      <animate attributeName="ry" values="38;46;40;52;38" dur="37s" begin="8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.1;0.4;0.25;0.6;0.1" dur="37s" repeatCount="indefinite"/>
     </ellipse>
+    <ellipse cx="100" cy="50" rx="85" ry="55" fill="rgba(20,100,180,0.04)">
+      <animate attributeName="rx" values="82;88;85;92;82" dur="43s" repeatCount="indefinite"/>
+      <animate attributeName="ry" values="52;58;55;62;52" dur="43s" begin="12s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.05;0.25;0.15;0.35;0.05" dur="43s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+  
+  <!-- Cosmic dust particles for added depth -->
+  <g opacity="0.4">
+    <circle cx="30" cy="25" r="0.1" fill="rgba(255,255,255,0.6)">
+      <animate attributeName="opacity" values="0.2;0.7;0.4;0.8;0.2" dur="31s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="170" cy="35" r="0.08" fill="rgba(200,220,255,0.5)">
+      <animate attributeName="opacity" values="0.3;0.6;0.45;0.7;0.3" dur="33s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="50" cy="75" r="0.12" fill="rgba(255,200,180,0.6)">
+      <animate attributeName="opacity" values="0.25;0.65;0.4;0.75;0.25" dur="37s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="150" cy="85" r="0.09" fill="rgba(180,200,255,0.5)">
+      <animate attributeName="opacity" values="0.2;0.6;0.35;0.7;0.2" dur="41s" repeatCount="indefinite"/>
+    </circle>
   </g>
 </svg>
