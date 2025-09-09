@@ -26,9 +26,10 @@ Once a U.S. Marine managing legal cases, I'm now a self-taught software engineer
 <details open>
 <summary>Current Projects & Interests</summary>
 
-- **Terminal Jarvis**:
+All of the following projects are what I am actively doing development work on (on the side with the bois) to stay sharp and learn in public. All projects are open for PRs, discussion, and collaboration!
 
-  - A unified command center for AI coding tools. Manage and run claude-code, gemini-cli, qwen-code, opencode, llxprt, codex, and crush from one beautiful terminal interface. 
+- **Terminal Jarvis**:
+  - A unified command center for AI coding tools. Manage and run claude-code, gemini-cli, qwen-code, opencode, llxprt, codex, and crush from one beautiful terminal interface.
     - [![NPM Downloads](https://img.shields.io/npm/dm/terminal-jarvis.svg?logo=npm&label=NPM%20Downloads)](https://www.npmjs.com/package/terminal-jarvis)
     - [![Crates.io Downloads](https://img.shields.io/crates/d/terminal-jarvis.svg?logo=rust&label=Crates.io%20Downloads)](https://crates.io/crates/terminal-jarvis)
     - [![Homebrew](https://img.shields.io/badge/Homebrew-Available-blue.svg?logo=homebrew)](https://github.com/BA-CalderonMorales/homebrew-terminal-jarvis)
@@ -36,9 +37,20 @@ Once a U.S. Marine managing legal cases, I'm now a self-taught software engineer
   - [repo](https://github.com/BA-CalderonMorales/terminal-jarvis): Official Terminal Jarvis repository for folks to fork, explore, and contribute to.
   - [npm](https://www.npmjs.com/package/terminal-jarvis): Official npm package for folks to download the project and test it out on their local.
   - [crates](https://crates.io/crates/terminal-jarvis): Official crates(dot)io package for folks to download the project and test it out on their local.
+ 
+- **Coder - Starter Scripts**:
+  - [repo](https://github.com/BA-CalderonMorales/coder-starter-scripts): Repository for running a local Coder server instance.
+ 
+- **Coder - Templates**:
+  - [repo](https://github.com/BA-CalderonMorales/coder-templates): This repository contains templates and utilities for creating consistent development environments using Coder.
 
-- **Docs-as-Code Portfolio:** [My Life as a Dev](https://ba-calderonmorales.github.io/my-life-as-a-dev/) ([repo](https://github.com/BA-CalderonMorales/my-life-as-a-dev)) showcases MkDocs Material with a custom AI plugin.
+- **Terminal Screensaver**:
+  - [repo](https://github.com/BA-CalderonMorales/terminal-screensaver): A dynamic terminal screen saver crate with plugin architecture that automatically resizes with any screen size.
 
+- **Docs-as-Code Portfolio:**:
+  - [repo](https://github.com/BA-CalderonMorales/my-life-as-a-dev): Simple docs-as-code example project for all projects I've worked on.
+  - [live site](https://ba-calderonmorales.github.io/my-life-as-a-dev/): Live github pages site for folks to browse.
+  
 </details>
 
 <details>
