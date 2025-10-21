@@ -16,6 +16,14 @@ Product-Minded Software Engineer <em>w/ 4 years of XP</em>
 
 </div>
 
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=BA-CalderonMorales&show_icons=true&theme=transparent&hide_border=true&title_color=58a6ff&icon_color=58a6ff&text_color=c9d1d9&bg_color=00000000" alt="GitHub Stats" />
+</p>
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=rust,ts,js,react,nodejs,docker,git,linux&theme=dark" alt="Core Skills" />
+</p>
+
 <details>
 <summary>Quick Intro</summary>
 
@@ -99,5 +107,9 @@ I'm bilingual (English/Spanish), a lifelong learner, and a fan of automating eve
 - Open an issue or start a discussion in this repo if you have questions or just want to say hi.
 
 </details>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/BA-CalderonMorales/BA-CalderonMorales/output/snake.svg" alt="Contribution Snake" />
+</p>
 
 Cheers!
