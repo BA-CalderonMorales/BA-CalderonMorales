@@ -1,115 +1,23 @@
-<p align="center">
-  <em>Art has many forms.</em>
-</p>
-
-<p align="center">
-  <img src="assets/orbit.svg" alt="Animated solar orbit" style="width:75%;" />
-</p>
-
-<p align="center"><em>I like to help people find their art.</em></p>
-
-<div align="center">
-
 # Brandon A. Calderon Morales
 
-Product-Minded Software Engineer <em>w/ 4 years of XP</em>
+Product-minded software engineer (4 yrs) focused on building durable systems with a minimal surface area.
 
-</div>
+---
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=BA-CalderonMorales&show_icons=true&theme=transparent&hide_border=true&title_color=58a6ff&icon_color=58a6ff&text_color=c9d1d9&bg_color=00000000" alt="GitHub Stats" />
-</p>
+### Featured Build: Terminal Jarvis
+- Unified command center for AI coding tools; one consistent UX for Claude, Gemini, Qwen, and more.
+- Distribution everywhere developers live: npm, crates.io, and Homebrew.
+- [Repository](https://github.com/BA-CalderonMorales/terminal-jarvis) · [npm](https://www.npmjs.com/package/terminal-jarvis) · [crates.io](https://crates.io/crates/terminal-jarvis)
 
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=rust,ts,js,react,nodejs,docker,git,linux&theme=dark" alt="Core Skills" />
-</p>
+### Currently Exploring (lightweight)
+- Coder templates for consistent dev environments.
+- Terminal screensavers and TUI polish in Rust.
+- Docs-as-code patterns for shipping fast without losing clarity.
 
-<details>
-<summary>Quick Intro</summary>
+### Philosophy
+- Ship one flagship, iterate in public, and keep the footprint lean.
+- Documentation and code deserve the same level of testing and care.
 
-Once a U.S. Marine managing legal cases, I'm now a self-taught software engineer pursuing a computer science degree. I love turning messy problems into reliable systems and documenting what I learn along the way.
-
-</details>
-
-<details open>
-<summary>Current Projects & Interests</summary>
-
-All of the following projects are what I am actively doing development work on (on the side with the bois) to stay sharp and learn in public. All projects are open for PRs, discussion, and collaboration!
-
-- **Terminal Jarvis**:
-  - A unified command center for AI coding tools. Manage and run claude-code, gemini-cli, qwen-code, opencode, llxprt, codex, and crush from one beautiful terminal interface.
-    - [![NPM Downloads](https://img.shields.io/npm/dm/terminal-jarvis.svg?logo=npm&label=NPM%20Downloads)](https://www.npmjs.com/package/terminal-jarvis)
-    - [![Crates.io Downloads](https://img.shields.io/crates/d/terminal-jarvis.svg?logo=rust&label=Crates.io%20Downloads)](https://crates.io/crates/terminal-jarvis)
-    - [![Homebrew](https://img.shields.io/badge/Homebrew-Available-blue.svg?logo=homebrew)](https://github.com/BA-CalderonMorales/homebrew-terminal-jarvis)
-    - [![GitHub stars](https://img.shields.io/github/stars/BA-CalderonMorales/terminal-jarvis.svg?style=social&label=Star)](https://github.com/BA-CalderonMorales/terminal-jarvis/stargazers)
-  - [repo](https://github.com/BA-CalderonMorales/terminal-jarvis): Official Terminal Jarvis repository for folks to fork, explore, and contribute to.
-  - [npm](https://www.npmjs.com/package/terminal-jarvis): Official npm package for folks to download the project and test it out on their local.
-  - [crates](https://crates.io/crates/terminal-jarvis): Official crates(dot)io package for folks to download the project and test it out on their local.
- 
-- **Coder - Starter Scripts**:
-  - [repo](https://github.com/BA-CalderonMorales/coder-starter-scripts): Repository for running a local Coder server instance.
- 
-- **Coder - Templates**:
-  - [repo](https://github.com/BA-CalderonMorales/coder-templates): This repository contains templates and utilities for creating consistent development environments using Coder.
-
-- **Terminal Screensaver**:
-  - [repo](https://github.com/BA-CalderonMorales/terminal-screensaver): A dynamic terminal screen saver crate with plugin architecture that automatically resizes with any screen size.
-
-- **Docs-as-Code Portfolio:**:
-  - [repo](https://github.com/BA-CalderonMorales/my-life-as-a-dev): Simple docs-as-code example project for all projects I've worked on.
-  - [live site](https://ba-calderonmorales.github.io/my-life-as-a-dev/): Live github pages site for folks to browse.
-  
-</details>
-
-<details>
-<summary>Experiments</summary>
-<br />
-
-Actively testing the actual might of every AI CLI, LLM, SLM, etc. against these three mock legacy repos.
-
-If these still suck, it's because AI in general still isn't quite there.
-
-- **Immersive Awe Canvas:** [repo](https://github.com/BA-CalderonMorales/immersive-awe-canvas): for interactive 3D experiments.
-  - [PROD](https://immersive-awe-canvas.lovable.app): If broken, visit fallback QA link.
-  - [QA](https://ba-calderonmorales.github.io/immersive-awe-canvas): If broken, feel free to contact me to see what's happening.
-
-- **Shadow Scroll Blossom:** [repo](https://github.com/BA-CalderonMorales/shadow-scroll-blossom): is my creative coding playground.
-  - [PROD](https://shadow-scroll-blossom.lovable.app/): If broken, visit fallback QA link.
-  - [QA](https://ba-calderonmorales.github.io/shadow-scroll-blossom): If broken, feel free to contact me to see what's happening.
-
-- **Rust Terminal Forge:** [repo](https://github.com/BA-CalderonMorales/rust-terminal-forge): idea that merges Rust tooling with a React interface.
-  - [PROD - Unstable](https://rust-terminal-forge.lovable.app/): Currently broken, working on a fix. Visit QA below to keep track of updates.
-  - [QA](https://ba-calderonmorales.github.io/rust-terminal-forge/): If broken, feel free to contact me to see what's happening.
-
-</details>
-
-<details>
-<summary>Engineering Philosophy</summary>
-
-- Documentation deserves the same care as code. I version and test it like any other artifact.
-- Modernizing legacy systems is a challenge I enjoy – there's satisfaction in making old code new again.
-- Code should deliver real value, so I approach problems with a product mindset.
-
-</details>
-
-<details>
-<summary>Beyond the Keyboard</summary>
-
-I'm bilingual (English/Spanish), a lifelong learner, and a fan of automating everyday tasks. You'll often find me experimenting with new tooling or helping teammates master their workflows.
-
-</details>
-
-<details>
-<summary>Let's Connect</summary>
-
-- Check out my docs site for a deeper dive into my projects and experiments.
-- Feel free to connect on [LinkedIn](https://www.linkedin.com/in/bcalderonmorales-cmoe/). Mention GitHub so I know where you found me.
-- Open an issue or start a discussion in this repo if you have questions or just want to say hi.
-
-</details>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/BA-CalderonMorales/BA-CalderonMorales/output/snake.svg" alt="Contribution Snake" />
-</p>
-
-Cheers!
+### Connect
+- Portfolio digest: [my-life-as-a-dev](https://ba-calderonmorales.github.io/my-life-as-a-dev/)
+- LinkedIn: [bcalderonmorales-cmoe](https://www.linkedin.com/in/bcalderonmorales-cmoe/)
