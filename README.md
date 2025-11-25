@@ -1,23 +1,30 @@
-# Brandon A. Calderon Morales
+<h1 align="center">Brandon A. Calderon Morales</h1>
 
-Product-minded software engineer (4 yrs) focused on building durable systems with a minimal surface area.
+<p align="center"><em>Product-minded software engineer (4 yrs) building durable, minimal systems.</em></p>
 
----
+<h3 align="center">Featured Build</h3>
+<p align="center">
+  <strong>Terminal Jarvis</strong><br/>
+  One command center for Claude, Gemini, Qwen, and more—same shortcuts everywhere.<br/>
+  <a href="https://github.com/BA-CalderonMorales/terminal-jarvis">Repository</a>
+  &bull; <a href="https://www.npmjs.com/package/terminal-jarvis">npm</a>
+  &bull; <a href="https://crates.io/crates/terminal-jarvis">crates.io</a>
+</p>
 
-### Featured Build: Terminal Jarvis
-- Unified command center for AI coding tools; one consistent UX for Claude, Gemini, Qwen, and more.
-- Distribution everywhere developers live: npm, crates.io, and Homebrew.
-- [Repository](https://github.com/BA-CalderonMorales/terminal-jarvis) · [npm](https://www.npmjs.com/package/terminal-jarvis) · [crates.io](https://crates.io/crates/terminal-jarvis)
+<h3 align="center">What I’m Exploring</h3>
+<p align="center">
+  Coder templates for consistent dev environments · Rust TUI polish · Docs-as-code that ships fast.
+</p>
 
-### Currently Exploring (lightweight)
-- Coder templates for consistent dev environments.
-- Terminal screensavers and TUI polish in Rust.
-- Docs-as-code patterns for shipping fast without losing clarity.
+<h3 align="center">How I Work</h3>
+<p align="center">
+  Ship one flagship, iterate in public, and keep the footprint lean.<br/>
+  Documentation and code get the same testing and care.<br/>
+  Build tools that invite collaboration.
+</p>
 
-### Philosophy
-- Ship one flagship, iterate in public, and keep the footprint lean.
-- Documentation and code deserve the same level of testing and care.
-
-### Connect
-- Portfolio digest: [my-life-as-a-dev](https://ba-calderonmorales.github.io/my-life-as-a-dev/)
-- LinkedIn: [bcalderonmorales-cmoe](https://www.linkedin.com/in/bcalderonmorales-cmoe/)
+<h3 align="center">Connect</h3>
+<p align="center">
+  <a href="https://ba-calderonmorales.github.io/my-life-as-a-dev/">Portfolio digest</a> 
+  &bull; <a href="https://www.linkedin.com/in/bcalderonmorales-cmoe/">LinkedIn</a>
+</p>
