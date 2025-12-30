@@ -1,12 +1,26 @@
 <h1 align="center">Brandon A. Calderon Morales</h1>
 
-<table width="100%" cellspacing="0" cellpadding="14" border="1" bordercolor="#d0d7de">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
 	<tr>
+		<td colspan="3" height="1" bgcolor="#d0d7de"></td>
+	</tr>
+	<tr>
+		<td width="1" bgcolor="#d0d7de"></td>
 		<td align="center" bgcolor="#f6f8fa">
-			<a href="https://ba-calderonmorales.github.io/my-life-as-a-dev/" aria-label="Docs as code site">
-				<img src="assets/images/me-today-cropped.gif" alt="Brandon Calderon Morales" draggable="false" width="220">
-			</a>
+			<table cellspacing="0" cellpadding="14" border="0" bgcolor="#f6f8fa">
+				<tr>
+					<td align="center">
+						<a href="https://ba-calderonmorales.github.io/my-life-as-a-dev/" aria-label="Docs as code site">
+							<img src="assets/images/me-today-cropped.gif" alt="Brandon Calderon Morales" draggable="false" width="220">
+						</a>
+					</td>
+				</tr>
+			</table>
 		</td>
+		<td width="1" bgcolor="#d0d7de"></td>
+	</tr>
+	<tr>
+		<td colspan="3" height="1" bgcolor="#d0d7de"></td>
 	</tr>
 </table>
 
