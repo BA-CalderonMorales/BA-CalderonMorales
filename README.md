@@ -1,15 +1,12 @@
 <h1 align="center">Brandon A. Calderon Morales</h1>
 
-<p align="center"><em>Product-minded software engineer (4+ yrs) exploring agentic workflows and developer tooling.</em></p>
+<p align="center">
+	<a href="https://ba-calderonmorales.github.io/my-life-as-a-dev/" aria-label="Docs as code site">
+		<img src="assets/images/me-today-cropped.gif" alt="Brandon Calderon Morales" draggable="false" width="220">
+	</a>
+</p>
 
-<div align="center">
-<a href="https://ba-calderonmorales.github.io/my-life-as-a-dev/" aria-label="Docs as code site">
-<picture>
-<source srcset="assets/images/me-today-cropped.gif" type="image/gif">
-<img src="assets/images/me-today.png" alt="Brandon Calderon Morales" draggable="false" width="220">
-</picture>
-</a>
-</div>
+<p align="center"><em>Product-minded software engineer (4+ yrs) exploring agentic workflows and developer tooling.</em></p>
 
 ## Current Focus
 Staying close to how AI reshapes day-to-day coding.
