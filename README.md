@@ -6,7 +6,7 @@
 <a href="https://ba-calderonmorales.github.io/my-life-as-a-dev/" aria-label="Docs as code site">
 <picture>
 <source srcset="assets/images/me-today-cropped.gif" type="image/gif">
-<img src="assets/images/me-today.png" alt="Brandon Calderon Morales" draggable="false" style="max-width: 220px; width: 100%; height: auto;">
+<img src="assets/images/me-today.png" alt="Brandon Calderon Morales" draggable="false" width="220">
 </picture>
 </a>
 </div>
