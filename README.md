@@ -3,10 +3,12 @@
 <p align="center"><em>Product-minded software engineer (4+ yrs) exploring agentic workflows and developer tooling.</em></p>
 
 <div align="center">
+<a href="https://ba-calderonmorales.github.io/my-life-as-a-dev/" aria-label="Docs as code site">
 <picture>
 <source srcset="assets/images/me-today-cropped.gif" type="image/gif">
-<img src="assets/images/me-today.png" alt="Brandon Calderon Morales" draggable="false" style="max-width: 300px;">
+<img src="assets/images/me-today.png" alt="Brandon Calderon Morales" draggable="false" style="max-width: 220px; width: 100%; height: auto;">
 </picture>
+</a>
 </div>
 
 ## Current Focus
