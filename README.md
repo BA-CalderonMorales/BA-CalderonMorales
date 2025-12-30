@@ -1,10 +1,14 @@
 <h1 align="center">Brandon A. Calderon Morales</h1>
 
-<p align="center">
-	<a href="https://ba-calderonmorales.github.io/my-life-as-a-dev/" aria-label="Docs as code site">
-		<img src="assets/images/me-today-cropped.gif" alt="Brandon Calderon Morales" draggable="false" width="220">
-	</a>
-</p>
+<table width="100%" cellspacing="0" cellpadding="14" border="1" bordercolor="#d0d7de">
+	<tr>
+		<td align="center" bgcolor="#f6f8fa">
+			<a href="https://ba-calderonmorales.github.io/my-life-as-a-dev/" aria-label="Docs as code site">
+				<img src="assets/images/me-today-cropped.gif" alt="Brandon Calderon Morales" draggable="false" width="220">
+			</a>
+		</td>
+	</tr>
+</table>
 
 <p align="center"><em>Product-minded software engineer (4+ yrs) exploring agentic workflows and developer tooling.</em></p>
 
