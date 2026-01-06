@@ -8,6 +8,10 @@
 
 <p align="center"><em>Product-minded software engineer (4+ yrs) exploring agentic workflows and developer tooling.</em></p>
 
+## Quick Insights
+
+![Alt](https://repobeats.axiom.co/api/embed/04c70e80d6688a373419c1efdbf92332b914c7f5.svg "Repobeats analytics image")
+
 ## Current Focus
 Staying close to how AI reshapes day-to-day coding.
 - Agentic workflows that feel practical, not theatrical.
