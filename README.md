@@ -1,6 +1,6 @@
 ## Overview
 
-I build systems that stay coherent when complexity piles up. Currently senior engineer at Fiserv, leading DevOps standardization across 200+ repositories and working with the GitHub Copilot team on agentic workflows that actually ship.
+I build systems that stay coherent when complexity piles up. Currently senior engineer at Fiserv, leading DevOps standardization across 300+ repositories and working with the GitHub Copilot team on agentic workflows that actually ship.
 
 Before this: Leidos, SAIC, and five years as a Legal Chief and Court Reporter in the USMC, which taught me that operational clarity matters most when stakes are high.
 
