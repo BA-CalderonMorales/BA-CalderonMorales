@@ -22,6 +22,8 @@ Before this: Leidos, SAIC, and five years as a Legal Chief and Court Reporter in
 
 **EverMemOS.** A fork of an enterprise memory system for AI agents, with security auditing workflows for safe experimentation.
 
+**Lumina.** An isolated runtime for agentic workflows that feels... different. Built for operators who want the power of AI automation without renting their toolchain. No subscriptions. No lock-in. Just precise, non-human execution that respects boundaries and keeps your data yours.
+
 ## Tools I reach for
 
 Rust, TypeScript, C#, Python, SQL. React, .NET, FastAPI. Terraform, Ansible, Docker, Podman. GitHub Actions, Jenkins, GitLab CI/CD. AWS, Azure, GCP. PostgreSQL, MSSQL, MongoDB.
