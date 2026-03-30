@@ -29,11 +29,11 @@ Before this: Leidos, SAIC, and five years as a Legal Chief and Court Reporter in
 
 ## What I am building now
 
-**Terminal Jarvis.** CLI orchestration for multiple AI assistants and team workflows, designed for mobile-first development environments. Because serious work should not require a desk.
+**[Terminal Jarvis](https://github.com/BA-CalderonMorales/terminal-jarvis).** CLI orchestration for multiple AI assistants and team workflows, designed for mobile-first development environments. Because serious work should not require a desk.
 
-**Coder Infrastructure.** Templates and automation for self-hosted developer workspaces that stay predictable across teams.
+**[Coder Infrastructure](https://github.com/BA-CalderonMorales/coder-templates).** Templates and automation for self-hosted developer workspaces that stay predictable across teams.
 
-**EverMemOS.** A fork of an enterprise memory system for AI agents, with security auditing workflows for safe experimentation.
+**[EverMemOS](https://github.com/BA-CalderonMorales/EverMemOS).** A fork of an enterprise memory system for AI agents, with security auditing workflows for safe experimentation.
 
 **Lumina.** An isolated runtime for agentic workflows that feels... different. Built for operators who want the power of AI automation without renting their toolchain. No subscriptions. No lock-in. Just precise, non-human execution that respects boundaries and keeps your data yours.
 
