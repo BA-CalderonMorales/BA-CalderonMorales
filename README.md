@@ -1,3 +1,13 @@
+## Table of Contents
+
+- [Overview](#overview)
+- [How I work](#how-i-work)
+- [What I am building now](#what-i-am-building-now)
+- [Tools I reach for](#tools-i-reach-for)
+- [Selected principles](#selected-principles)
+- [Selected Resources](#selected-resources)
+- [Contact](#contact)
+
 ## Overview
 
 I build systems that stay coherent when complexity piles up. Currently senior engineer at Fiserv, leading DevOps standardization across 300+ repositories and working with the GitHub Copilot team on agentic workflows that actually ship.
