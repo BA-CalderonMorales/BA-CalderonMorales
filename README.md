@@ -35,6 +35,12 @@ Rust, TypeScript, C#, Python, SQL. React, .NET, FastAPI. Terraform, Ansible, Doc
 - Mobile-ready environments. My entire development workflow runs in Termux on Android because constraints force clarity.
 - AI-augmented, not AI-dependent. Use agents to reduce friction, not to avoid thinking.
 
+## Selected Resources
+
+- [Kimi Cheat Sheet](https://github.com/BA-CalderonMorales/kimi-cheat-sheet) — Practical guide for Kimi Code CLI
+- [Codex Cheat Sheet](https://github.com/BA-CalderonMorales/codex-cheat-sheet) — Practical guide for OpenAI Codex CLI
+- [my-life-as-a-dev](https://ba-calderonmorales.github.io/my-life-as-a-dev/) — Versioned documentation and project hub
+
 ## Contact
 
 Omaha, Nebraska. Hybrid and remote friendly. Bilingual in English and Spanish.
