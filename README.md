@@ -4,7 +4,7 @@
 - [How I work](#how-i-work)
 - [What I am building now](#what-i-am-building-now)
 - [Tools I reach for](#tools-i-reach-for)
-- [Selected principles](#selected-principles)
+- [Selected Principles](#selected-principles)
 - [Selected Resources](#selected-resources)
 - [Contact](#contact)
 
@@ -38,7 +38,7 @@ Before this: Leidos, SAIC, and five years as a Legal Chief and Court Reporter in
 
 Rust, TypeScript, C#, Python, SQL. React, .NET, FastAPI. Terraform, Ansible, Docker, Podman. GitHub Actions, Jenkins, GitLab CI/CD. AWS, Azure, GCP. PostgreSQL, MSSQL, MongoDB.
 
-## Selected principles
+## Selected Principles
 
 - Small, testable changes. Large refactors fail in production.
 - Version everything. If it is not in git, it does not exist.
