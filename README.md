@@ -8,6 +8,9 @@
 - [Selected Resources](#selected-resources)
 - [Contact](#contact)
 
+
+> *Note: If these links do not respond in the GitHub Mobile app, try viewing in a browser. This is a known platform limitation.*
+
 ## Overview
 
 I build systems that stay coherent when complexity piles up. Currently senior engineer at Fiserv, leading DevOps standardization across 300+ repositories and working with the GitHub Copilot team on agentic workflows that actually ship.
