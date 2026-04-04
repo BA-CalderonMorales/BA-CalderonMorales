@@ -40,3 +40,7 @@ Rust, TypeScript, C#, Python, SQL. React, .NET, FastAPI. Terraform, Ansible, Doc
 Omaha, Nebraska. Hybrid and remote friendly. Bilingual in English and Spanish.
 
 [Email](mailto:b.dev.c.m@gmail.com) | [LinkedIn](https://www.linkedin.com/in/bcalderonmorales-cmoe/) | [Site](https://ba-calderonmorales.github.io/my-life-as-a-dev/)
+
+---
+
+*Docs last reviewed: 2026-04-03. All repositories maintain `README.md` + `AGENTS.md` for both human and AI context.*
