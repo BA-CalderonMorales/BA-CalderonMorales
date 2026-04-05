@@ -1,58 +1,46 @@
 ## Table of Contents
 
 - [Overview](#overview)
-- [How I work](#how-i-work)
-- [What I am building now](#what-i-am-building-now)
-- [Tools I reach for](#tools-i-reach-for)
-- [Selected Principles](#selected-principles)
-- [Selected Resources](#selected-resources)
+- [Current Focus](#current-focus)
+- [Selected Work](#selected-work)
+- [Principles](#principles)
 - [Contact](#contact)
-
 
 > *Note: If these links do not respond in the GitHub Mobile app, try viewing in a browser. This is a known platform limitation.*
 
 ## Overview
 
-I build systems that stay coherent when complexity piles up. Currently senior engineer at Fiserv, leading DevOps standardization across 300+ repositories and working with the GitHub Copilot team on agentic workflows that actually ship.
+I build systems that stay coherent when complexity piles up. Senior engineer at Fiserv, leading DevOps standardization across 300+ repositories.
 
-Before this: Leidos, SAIC, and five years as a Legal Chief and Court Reporter in the USMC, which taught me that operational clarity matters most when stakes are high.
+Background: Leidos, SAIC, five years as Legal Chief and Court Reporter in the USMC.
 
-## How I work
+## Current Focus
 
-**Documentation is part of the product.** I write docs-as-code into the workflow so onboarding and maintenance do not drift apart. See [my-life-as-a-dev](https://github.com/BA-CalderonMorales/my-life-as-a-dev) for how I version knowledge alongside code.
+- **[Terminal Jarvis](https://github.com/BA-CalderonMorales/terminal-jarvis)** - CLI orchestration for AI assistants. Mobile-first development environments.
+- **[Agent Harness](https://github.com/BA-CalderonMorales/agent-harness)** - Clean-room agent harness for coding agents.
+- **Lumina** - Isolated runtime for agentic workflows (private, in development).
 
-**Calm pipelines.** Predictable GitHub Actions and release routines over clever systems that are hard to debug at 2 AM. I have migrated 20+ teams from legacy Jenkins to maintainable automation.
+See [docs/projects.md](docs/projects.md) for extended project descriptions.
 
-**Security as baseline.** Fortify, ScanCentral, dependency hygiene, and access control are part of the build, not cleanup work.
+## Selected Work
 
-**Coach through clarity.** I mentor by pairing, documenting tradeoffs, and keeping operational steps visible. The AGENTS.md files in my repos exist so anyone (human or AI) can understand context without repeating myself.
+| Project | What it is |
+|---------|------------|
+| [terminal-jarvis](https://github.com/BA-CalderonMorales/terminal-jarvis) | CLI orchestration for AI assistants |
+| [agent-harness](https://github.com/BA-CalderonMorales/agent-harness) | Pattern-derived agent harness |
+| [coder-templates](https://github.com/BA-CalderonMorales/coder-templates) | Self-hosted developer workspaces |
+| [EverMemOS](https://github.com/BA-CalderonMorales/EverMemOS) | Memory system for AI agents |
+| [kimi-cheat-sheet](https://github.com/BA-CalderonMorales/kimi-cheat-sheet) | Practical CLI guide |
+| [codex-cheat-sheet](https://github.com/BA-CalderonMorales/codex-cheat-sheet) | Agent workflow patterns |
 
-## What I am building now
-
-**[Terminal Jarvis](https://github.com/BA-CalderonMorales/terminal-jarvis).** CLI orchestration for multiple AI assistants and team workflows, designed for mobile-first development environments. Because serious work should not require a desk.
-
-**[Coder Infrastructure](https://github.com/BA-CalderonMorales/coder-templates).** Templates and automation for self-hosted developer workspaces that stay predictable across teams.
-
-**[EverMemOS](https://github.com/BA-CalderonMorales/EverMemOS).** A fork of an enterprise memory system for AI agents, with security auditing workflows for safe experimentation.
-
-**Lumina.** An isolated runtime for agentic workflows that feels... different. Built for operators who want the power of AI automation without renting their toolchain. No subscriptions. No lock-in. Just precise, non-human execution that respects boundaries and keeps your data yours.
-
-## Tools I reach for
-
-Rust, TypeScript, C#, Python, SQL. React, .NET, FastAPI. Terraform, Ansible, Docker, Podman. GitHub Actions, Jenkins, GitLab CI/CD. AWS, Azure, GCP. PostgreSQL, MSSQL, MongoDB.
-
-## Selected Principles
+## Principles
 
 - Small, testable changes. Large refactors fail in production.
 - Version everything. If it is not in git, it does not exist.
-- Mobile-ready environments. My entire development workflow runs in Termux on Android because constraints force clarity.
-- AI-augmented, not AI-dependent. Use agents to reduce friction, not to avoid thinking.
+- Mobile-ready environments. My workflow runs in Termux on Android.
+- AI-augmented, not AI-dependent.
 
-## Selected Resources
-
-- [Kimi Cheat Sheet](https://github.com/BA-CalderonMorales/kimi-cheat-sheet) — Practical guide for Kimi Code CLI
-- [Codex Cheat Sheet](https://github.com/BA-CalderonMorales/codex-cheat-sheet) — Practical guide for OpenAI Codex CLI
-- [my-life-as-a-dev](https://ba-calderonmorales.github.io/my-life-as-a-dev/) — Versioned documentation and project hub
+See [docs/philosophy.md](docs/philosophy.md) for how I think about building software.
 
 ## Contact
 
@@ -60,4 +48,6 @@ Omaha, Nebraska. Hybrid and remote friendly. Bilingual in English and Spanish.
 
 [Email](mailto:b.dev.c.m@gmail.com) | [LinkedIn](https://www.linkedin.com/in/bcalderonmorales-cmoe/) | [Site](https://ba-calderonmorales.github.io/my-life-as-a-dev/)
 
-> *Last synced: 2026-03-30 via [workspace manager](https://github.com/BA-CalderonMorales)*
+---
+
+*Last synced: 2026-04-04 via [workspace manager](https://github.com/BA-CalderonMorales)*
