@@ -2,7 +2,11 @@
 
 What I am building now.
 
-## Terminal Jarvis
+## Original Work
+
+Projects I created from scratch.
+
+### Terminal Jarvis
 
 CLI orchestration for multiple AI assistants and team workflows, designed for mobile-first development environments.
 
@@ -15,7 +19,7 @@ CLI orchestration for multiple AI assistants and team workflows, designed for mo
 
 [github.com/BA-CalderonMorales/terminal-jarvis](https://github.com/BA-CalderonMorales/terminal-jarvis)
 
-## Agent Harness
+### Agent Harness
 
 A clean-room, pattern-derived agent harness for building coding agents.
 
@@ -28,7 +32,7 @@ A clean-room, pattern-derived agent harness for building coding agents.
 
 [github.com/BA-CalderonMorales/agent-harness](https://github.com/BA-CalderonMorales/agent-harness)
 
-## Lumina
+### Lumina
 
 An isolated runtime for agentic workflows.
 
@@ -36,7 +40,7 @@ An isolated runtime for agentic workflows.
 
 **Status:** Private repository. In active development.
 
-## Coder Infrastructure
+### Coder Infrastructure
 
 Templates and automation for self-hosted developer workspaces.
 
@@ -44,11 +48,28 @@ Templates and automation for self-hosted developer workspaces.
 
 [github.com/BA-CalderonMorales/coder-templates](https://github.com/BA-CalderonMorales/coder-templates)
 
-## EverMemOS
+### Cheat Sheets
+
+Practical guides for CLI tools.
+
+**[Kimi Cheat Sheet](https://github.com/BA-CalderonMorales/kimi-cheat-sheet)** - Patterns I use daily with Kimi Code CLI.
+
+**[Codex Cheat Sheet](https://github.com/BA-CalderonMorales/codex-cheat-sheet)** - Agent workflows that actually work with OpenAI Codex.
+
+## Forks
+
+Projects I contribute to that started elsewhere.
+
+### EverMemOS
 
 A fork of an enterprise memory system for AI agents.
 
 **Why:** AI agents need persistent memory. This adds security auditing workflows for safe experimentation.
+
+**What I added:**
+- Security auditing workflows
+- Safe experimentation patterns
+- Integration with my agent harness philosophy
 
 [github.com/BA-CalderonMorales/EverMemOS](https://github.com/BA-CalderonMorales/EverMemOS)
 
