@@ -13,6 +13,13 @@ This repo holds my GitHub profile README—a focused gateway into who I am and w
 - Plain Markdown with minimal HTML (alignment only).
 - Tone: confident but understated. Show, don't shout.
 
+## Working Rules
+
+- If a prompt would require a major architectural deviation, stop and explain before proceeding.
+- Keep changes and milestones separated into distinct commits.
+- After each change or milestone, commit and push before starting the next one.
+- Do not bundle unrelated work from different prompts into the same commit.
+
 ## Editing
 - Keep updates atomic. One theme per commit.
 - If adding a section, remove something else to preserve focus.
