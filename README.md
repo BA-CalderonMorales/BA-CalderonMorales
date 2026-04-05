@@ -2,7 +2,8 @@
 
 - [Overview](#overview)
 - [Current Focus](#current-focus)
-- [Selected Work](#selected-work)
+- [Original Work](#original-work)
+- [Forks](#forks)
 - [Principles](#principles)
 - [Contact](#contact)
 
@@ -22,16 +23,21 @@ Background: Leidos, SAIC, five years as Legal Chief and Court Reporter in the US
 
 See [docs/projects.md](docs/projects.md) for extended project descriptions.
 
-## Selected Work
+## Original Work
 
 | Project | What it is |
 |---------|------------|
 | [terminal-jarvis](https://github.com/BA-CalderonMorales/terminal-jarvis) | CLI orchestration for AI assistants |
 | [agent-harness](https://github.com/BA-CalderonMorales/agent-harness) | Pattern-derived agent harness |
 | [coder-templates](https://github.com/BA-CalderonMorales/coder-templates) | Self-hosted developer workspaces |
-| [EverMemOS](https://github.com/BA-CalderonMorales/EverMemOS) | Memory system for AI agents |
 | [kimi-cheat-sheet](https://github.com/BA-CalderonMorales/kimi-cheat-sheet) | Practical CLI guide |
 | [codex-cheat-sheet](https://github.com/BA-CalderonMorales/codex-cheat-sheet) | Agent workflow patterns |
+
+## Forks
+
+| Project | What it is |
+|---------|------------|
+| [EverMemOS](https://github.com/BA-CalderonMorales/EverMemOS) | Memory system for AI agents - fork with security auditing workflows |
 
 ## Principles
 
