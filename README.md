@@ -18,9 +18,7 @@ Before this: Leidos, SAIC, and five years in the USMC as a Legal Chief and Court
 
 **Terminal Jarvis.** CLI orchestration for multiple AI assistants and team workflows, designed for mobile-first development environments. Because serious work should not require a desk.
 
-**Coder Infrastructure.** Templates and automation for self-hosted developer workspaces that stay predictable across teams.
-
-**EverMemOS.** A local memory system for AI agents, with security auditing workflows for safe experimentation.
+**Agent Harness.** A clean-room agent harness derived from production agentic coding patterns. Core agent loop, tool dispatch with permission controls, secure credential storage, and a slash command system built for operators who want to understand their tools.
 
 **Lumina.** An isolated runtime for agentic workflows. No subscriptions. No lock-in. Just precise execution that respects boundaries and keeps your data yours.
 
