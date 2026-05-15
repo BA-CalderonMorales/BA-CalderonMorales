@@ -1,52 +1,28 @@
-## Table of Contents
-
-- [Overview](#overview)
-- [Current Focus](#current-focus)
-- [Original Work](#original-work)
-- [Forks](#forks)
-- [Principles](#principles)
-- [Contact](#contact)
-
-> *Note: If these links do not respond in the GitHub Mobile app, try viewing in a browser. This is a known platform limitation.*
-
 ## Overview
 
-I build systems that stay coherent when complexity piles up. Senior engineer at Fiserv, leading DevOps standardization across 300+ repositories.
+I design delivery systems that keep teams moving when complexity piles up. Currently focused on making CI/CD, documentation, and vulnerability remediation repeatable across teams at Fiserv.
 
-Background: Leidos, SAIC, five years as Legal Chief and Court Reporter in the USMC.
+Before this: Leidos, SAIC, and five years in the USMC as a Legal Chief and Court Reporter. Learned early that operational clarity matters most when stakes are high.
 
-## Current Focus
+## How I work
 
-- **[Terminal Jarvis](https://github.com/BA-CalderonMorales/terminal-jarvis)** - CLI orchestration for AI assistants. Mobile-first development environments.
-- **[Agent Harness](https://github.com/BA-CalderonMorales/agent-harness)** - Clean-room agent harness for coding agents.
-- **Lumina** - Isolated runtime for agentic workflows (private, in development).
+**Reduce friction before it becomes process.** I look for the manual steps, tribal knowledge, and one-off fixes that slow teams down, then replace them with defaults that are easy to follow and hard to break.
 
-See [docs/projects.md](docs/projects.md) for extended project descriptions.
+**Documentation as infrastructure.** Onboarding, troubleshooting, and release decisions should not depend on who is online. I treat docs-as-code as part of the delivery system, not an afterthought.
 
-## Original Work
+**Security through repetition.** Vulnerability remediation scales when it is a predictable workflow, not a heroic effort. I help teams move from ad hoc fixes to repeatable patterns they can own.
 
-| Project | What it is |
-|---------|------------|
-| [terminal-jarvis](https://github.com/BA-CalderonMorales/terminal-jarvis) | CLI orchestration for AI assistants |
-| [agent-harness](https://github.com/BA-CalderonMorales/agent-harness) | Pattern-derived agent harness |
-| [coder-templates](https://github.com/BA-CalderonMorales/coder-templates) | Self-hosted developer workspaces |
-| [kimi-cheat-sheet](https://github.com/BA-CalderonMorales/kimi-cheat-sheet) | Practical CLI guide |
-| [codex-cheat-sheet](https://github.com/BA-CalderonMorales/codex-cheat-sheet) | Agent workflow patterns |
+**Coach by making the path visible.** I mentor through pairing, clear tradeoff documentation, and operational steps that stay discoverable. The `AGENTS.md` files in my repos exist so anyone can understand context without repeating myself.
 
-## Forks
+## What I am building now
 
-| Project | What it is |
-|---------|------------|
-| [EverMemOS](https://github.com/BA-CalderonMorales/EverMemOS) | Memory system for AI agents - fork with security auditing workflows |
+**Terminal Jarvis.** CLI orchestration for multiple AI assistants and team workflows, designed for mobile-first development environments. Because serious work should not require a desk.
 
-## Principles
+**Coder Infrastructure.** Templates and automation for self-hosted developer workspaces that stay predictable across teams.
 
-- Small, testable changes. Large refactors fail in production.
-- Version everything. If it is not in git, it does not exist.
-- Mobile-ready environments. My workflow runs in Termux on Android.
-- AI-augmented, not AI-dependent.
+**EverMemOS.** A local memory system for AI agents, with security auditing workflows for safe experimentation.
 
-See [docs/philosophy.md](docs/philosophy.md) for how I think about building software.
+**Lumina.** An isolated runtime for agentic workflows. No subscriptions. No lock-in. Just precise execution that respects boundaries and keeps your data yours.
 
 ## Contact
 
@@ -56,4 +32,4 @@ Omaha, Nebraska. Hybrid and remote friendly. Bilingual in English and Spanish.
 
 ---
 
-*Last synced: 2026-04-04 via [workspace manager](https://github.com/BA-CalderonMorales)*
+*Docs last reviewed: 2026-05-14. All repositories maintain `README.md` + `AGENTS.md` for both human and AI context.*
