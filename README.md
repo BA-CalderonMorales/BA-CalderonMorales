@@ -10,6 +10,8 @@ Neatly balancing work, life, fam, career, hobbies.
 
 ---
 
+#### A bit about me
+
 I build secure, human-in-the-loop AI; the kind that has to be right.
 By day I lead AI strategy for a national fire & life safety company; by night
 I build open-source tools for agentic developer workflows.
@@ -19,11 +21,4 @@ I build open-source tools for agentic developer workflows.
 - **Tools:** Rust · Go · TypeScript · Python · GitHub Actions · Docker · GCP / AWS / Azure
 - **Background:** USMC veteran
 
-#### Projects
-- [terminal-jarvis](https://github.com/BA-CalderonMorales/terminal-jarvis) — provider-agnostic AI tooling layer in Rust
-- [agent-harness](https://github.com/BA-CalderonMorales/agent-harness) — clean-room Go implementation of agentic coding harness patterns
-- [my-life-as-a-dev](https://ba-calderonmorales.github.io/my-life-as-a-dev/latest/) — docs-as-code portfolio with a RAG assistant
-- [algorithm-visual-learning](https://github.com/BA-CalderonMorales/algorithm-visual-learning) — interactive algorithm visualizations
-
-#### Elsewhere
 [LinkedIn](https://linkedin.com/in/bcalderonmorales-cmoe) · [Portfolio](https://ba-calderonmorales.github.io/my-life-as-a-dev/latest/) · [Email](mailto:b.dev.c.m@gmail.com)
