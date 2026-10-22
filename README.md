@@ -1,6 +1,6 @@
 ### Hi, I'm Brandon
 
-**(Incoming) Director of AI · Western States Fire Protection** · Omaha, NE
+**Director of AI · Western States Fire Protection** · Remote
 
 Building, learning, sharing, experimenting.
 
