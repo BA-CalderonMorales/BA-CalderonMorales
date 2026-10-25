@@ -2,11 +2,7 @@
 
 **Director of AI · Western States Fire Protection** · Remote
 
-Building, learning, sharing, experimenting.
-
-Curiosity and tenacity outbeats theatrics.
-
-Neatly balancing work, life, fam, career, hobbies.
+Building, learning, sharing, experimenting · Curiosity and tenacity outbeats theatrics · Neatly balancing work, life, fam, career, hobbies.
 
 ---
 
