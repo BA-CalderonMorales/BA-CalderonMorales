@@ -21,7 +21,7 @@ I build open-source tools for agentic developer workflows.
 
 <details>
 
-  <summary><em>Side notes:</em></summary>
+  <summary><em><ins>Side notes</ins></em></summary>
   </br>
   
   - I think b+ trees are pretty badass.
